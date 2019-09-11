@@ -166,7 +166,7 @@ cv_southern_models <- function (data.analysis, results.store, landscape.models, 
 # Site predictions # 
 ####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-cv_site_predictions <- function(model.coef, landscape.data, climate.data, paspen.data, species.data, species.ID) {
+cv_site_predictions <- function(model.coef, landscape.data, climate.data, paspen.data, species.data, species.ID, landcover.only) {
 
         veg.prediction <- colSums(model.coef$landscape.coef[species.ID, ]*t(landscape.data[ ,colnames(model.coef$landscape.coef)])) # Prediction based on veg types only.
         
@@ -181,6 +181,12 @@ cv_site_predictions <- function(model.coef, landscape.data, climate.data, paspen
         # Calculate the pAspen prediction for each species, same for both current and reference condition.
         
         aspen.prediction <- colSums(model.coef$paspen.coef[species.ID, "paspen"] * t(paspen.data))
+        
+        if (landcover.only == TRUE) {
+                
+                climate.prediction <- 0
+                aspen.prediction <- 0
+        }
         
         # Combine the soil and climate/space based predictions
         

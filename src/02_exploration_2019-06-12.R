@@ -1,7 +1,7 @@
 #
 # Title: Visual exploration of land facet + soil data
 # Created: June 12th, 2019
-# Last Updated: August 16th, 2019
+# Last Updated: August 19th, 2019
 # Author: Brandon Allen
 # Objectives: Visually explore the similarities between the land facet and soils layers
 # Keywords: Initialization, Exploration

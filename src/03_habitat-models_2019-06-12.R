@@ -1,7 +1,7 @@
 #
 # Title: Species habitat models 
 # Created: June 12th, 2019
-# Last Updated: August 16th, 2019
+# Last Updated: August 19th, 2019
 # Author: Brandon Allen
 # Objectives: Species habitat modeling for both land facet and soil data
 # Keywords: Facet models , Soil models 
@@ -62,7 +62,7 @@ model.data <- model.data[, -12] # Remove HFor footprint
 # Merging of data sets and filter of species with less than 20 occurrences
 model.data <- merge.data.frame(model.data, climate.raw, by = "site_year")
 model.data <- merge.data.frame(model.data, species.data, by = "site_year")
-model.data <- model.data[, c(rep(TRUE, 41), as.logical(colSums(ifelse(model.data[, -c(1:41)] > 0, 1, 0)) > 20))]
+model.data <- model.data[, c(rep(TRUE, 40), as.logical(colSums(ifelse(model.data[, -c(1:40)] > 0, 1, 0)) > 20))]
 
 # List containing models that will be looped through by the function
 habitat.models <- list(as.formula(paste("pcount ~ Cool_slopes + Dry + Mesic + Wet + Sloped_mesic + Sloped_wet + Warm_slopes + UrbInd + Crop + TameP + RoughP + SoftLin + HardLin")),
@@ -84,7 +84,7 @@ climate.space.names <- c("Intercept", "AHM", "Eref", "FFP", "MAP", "MAT",
                          "Lat2", "Long2", "LatLong", "MAT2", "MWMT2", 
                          "MAPPET", "MAPFFP", "MATAHM")
 
-species.names <- colnames(model.data)[41:351]
+species.names <- colnames(model.data)[41:350]
 
 
 species.coef <- list(matrix(ncol = length(landscape.names), nrow = length(species.names), dimnames = list(c(species.names), c(landscape.names))), 

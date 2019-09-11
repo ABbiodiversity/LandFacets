@@ -388,7 +388,7 @@ load("results/coef/land-facet-only-auc-vplants_2019-08-16.Rdata")
 
 table(colnames(facet.auc) %in% colnames(soil.auc)) # Confirm all colnames match
 
-spp.sequence <- seq(from = 1, to = ncol(facet.auc)/2, by = 2)
+spp.sequence <- seq(from = 1, to = ncol(facet.auc), by = 2)
 
 for(spp in spp.sequence) {
         
@@ -420,29 +420,82 @@ for(spp in spp.sequence) {
         
 }
 
-save(species.auc, file = "results/coef/soil-facet-only-AUC_2019-08-16.Rdata")
+save(species.auc, file = "results/coef/soil-facet-only-AUC_2019-09-11.Rdata")
 
 # Assess variation between the different approaches
-cor(species.auc[, 1:2]) # They are 97% correlated
+cor(species.auc[, 1:2]) # They are 60.7% correlated
 
-png(filename = "results/figures/facet-soil-only-model-AUC_2019-08-16.png",
+png(filename = "results/figures/facet-soil-only-model-AUC_2019-09-04.png",
     height = 1200,
     width = 1200)
 
 plot(species.auc[, 1] ~ species.auc[, 2], 
      xlab = "Soil", 
-     ylab = "Land facet", 
+     ylab = "Land facet",
+     xlim = c(0.4,1),
+     ylim = c(0.4,1), 
      col = ifelse(species.auc[, 3] < 0.05 & species.auc[, 1] > species.auc[, 2], "red", 
                   ifelse(species.auc[, 3] < 0.05 & species.auc[, 1] < species.auc[, 2], "blue","black")),
-     pch = 15)
+     pch = 15,
+     cex = 2)
 abline(0,1)
 dev.off()
 
-# table(species.auc[, 3] < 0.05 & species.auc[, 1] > species.auc[, 2]) # 48 improved
-# table(species.auc[, 3] < 0.05 & species.auc[, 1] < species.auc[, 2]) # 15 worsened
+# Cluster analysis Facet
+load("results/coef/land-facet-coefficients_vplants_2019-08-16.Rdata")
+
+# Perform PCA on the diversity variability
+pca.out1 <- prcomp(species.coef$landscape.coef, scale = TRUE, center = TRUE)
+summary(pca.out1) # PCA loadinds are much better not having the life strategy separated. 96.7% in the first four axis
+plot(pca.out1$rotation, pch = 15, xlim = c(-0.1, 0.4), ylim = c(-0.5, 0.5))
+text(pca.out1$rotation, labels = rownames(pca.out1$rotation), pos = 2)
+dev.off()
+
+# Cluster analysis Soil
+load("results/coef/soil-coefficients_vplants_2019-08-16.Rdata")
+
+# Perform PCA on the diversity variability
+pca.out1 <- prcomp(species.coef$landscape.coef, scale = TRUE, center = TRUE)
+summary(pca.out1) 
+png(file = "results/figures/soil-pca_2019-09-04.png",
+    height = 800,
+    width = 800)
+plot(pca.out1$rotation, pch = 15, xlim = c(0.1, 0.4), ylim = c(-0.5, 0.5),
+     xlab = "PC1 53.5%",
+     ylab = "PC2 21.5%")
+text(pca.out1$rotation, labels = rownames(pca.out1$rotation), pos = 1)
+dev.off()
+
+# Cluster analysis Facet
+load("results/coef/land-facet-coefficients_vplants_2019-08-16.Rdata")
+
+# Perform PCA on the diversity variability
+pca.out1 <- prcomp(species.coef$landscape.coef, scale = TRUE, center = TRUE)
+summary(pca.out1) 
+png(file = "results/figures/facet-pca_2019-09-04.png",
+    height = 800,
+    width = 800)
+plot(pca.out1$rotation, pch = 15, xlim = c(-0.1, 0.4), ylim = c(-0.5, 0.5),
+     xlab = "PC1 38.6%",
+     ylab = "PC2 18.4%")
+text(pca.out1$rotation, labels = rownames(pca.out1$rotation), pos = 2)
+dev.off()
 
 
 
 
+
+# Native visualization
+
+vplant.pca <- as.data.frame(pca.out1$x)
+vplant.pca["sppid"] <- rownames(vplant.pca)
+
+spp.lookup <- read.csv("data/lookup/vplants-modeled_lookup.csv")
+
+vplant.pca <- merge.data.frame(vplant.pca, spp.lookup, by = "sppid")
+
+plot(x = vplant.pca$PC1, y = vplant.pca$PC2, 
+     pch = 15,
+     col = ifelse(vplant.pca$Origin == "Exotic", "red", "blue"))
 
 

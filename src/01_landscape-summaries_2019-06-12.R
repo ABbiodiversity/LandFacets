@@ -1,7 +1,7 @@
 #
 # Title: Site summaries for both soil and land facet layers
 # Created: June 12th, 2019
-# Last Updated: August 16th, 2019
+# Last Updated: August 19th, 2019
 # Author: Brandon Allen
 # Objectives: Create site and quadrant level summaries of the soil and land facet layers
 # Keywords: Initialization, Long form, Site proportions, Kgrid proportions, Soil quadrant raw
@@ -119,7 +119,7 @@ rm(climate.raw, topo.continuous, name.store)
 # 2_2 = mesic normal = Mesic
 # 2_3 = mesic warm slope = Sloped mesic
 # 3_1 = wet cool sloped = Sloped wet
-# 3_2 = wet normal slopes = Wet
+# 3_2 = wet normal flat = Wet
 # 3_3 = wet warm slopes = Sloped wet
 
 # Create Terrain layer
