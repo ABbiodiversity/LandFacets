@@ -1,0 +1,1203 @@
+sppid,species,scinam,dataname,Rank,Occurrences,nSites,UseAvailability.North,Analysis.North,UseAvailability.South,Analysis.South,Maps,Origin
+AbiesBalsamea,Abies balsamea,Abies balsamea,Abies.balsamea,Species,368,136,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+AbiesBifolia,Abies bifolia,Abies bifolia,Abies.bifolia,Species,56,18,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Acer,Acer,Acer,Acer,Genus,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AcerNegundo,Acer negundo,Acer negundo,Acer.negundo,Species,25,13,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AchilleaAlpina,Achillea alpina,Achillea alpina,Achillea.alpina,Species,274,136,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+AchilleaMillefolium,Achillea millefolium,Achillea millefolium,Achillea.millefolium,Species,2827,932,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AchilleaPtarmica,Achillea ptarmica,Achillea ptarmica,Achillea.ptarmica,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+AchnatherumHymenoides,Achnatherum hymenoides,Achnatherum hymenoides,Achnatherum.hymenoides,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AchnatherumNelsonii,Achnatherum nelsonii,Achnatherum nelsonii,Achnatherum.nelsonii,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AcorusAmericanus,Acorus americanus,Acorus americanus,Acorus.americanus,Species,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ActaeaRubra,Actaea rubra,Actaea rubra,Actaea.rubra,Species,1021,410,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AdoxaMoschatellina,Adoxa moschatellina,Adoxa moschatellina,Adoxa.moschatellina,Species,112,55,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+AegopodiumPodagraria,Aegopodium.podagraria,Aegopodium.podagraria,Aegopodium.podagraria,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+AgastacheFoeniculum,Agastache foeniculum,Agastache foeniculum,Agastache.foeniculum,Species,21,15,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+Agoseris,Agoseris,Agoseris,Agoseris,Genus,11,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AgoserisGlauca,Agoseris glauca,Agoseris glauca,Agoseris.glauca,Species,144,66,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+AgrimoniaStriata,Agrimonia striata,Agrimonia striata,Agrimonia.striata,Species,109,45,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+AgroelymusBowdenii,Agroelymus bowdenii,Agroelymus bowdenii,Agroelymus.bowdenii,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Agropyron,Agropyron,Agropyron,Agropyron,Genus,36,14,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+AgropyronCristatum,Agropyron fragile/cristatum,Agropyron fragile/cristatum,Agropyron.fragile.cristatum,Species,424,160,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+Agrostis,Agrostis,Agrostis,Agrostis,Genus,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AgrostisScabra,Agrostis scabra,Agrostis scabra,Agrostis.scabra,Species,709,290,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AgrostisStolonifera,Agrostis stolonifera,Agrostis stolonifera,Agrostis.stolonifera,Species,27,12,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+AlismaTriviale,Alisma triviale,Alisma triviale,Alisma.triviale,Species,28,14,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AlliumCernuum,Allium cernuum,Allium cernuum,Allium.cernuum,Species,31,17,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AlliumSchoenoprasum,Allium schoenoprasum,Allium schoenoprasum,Allium.schoenoprasum,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AlliumTextile,Allium textile,Allium textile,Allium.textile,Species,55,24,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AlnusIncana,Alnus incana,Alnus incana,Alnus.incana,Species,729,272,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+AlnusViridis,Alnus viridis,Alnus viridis,Alnus.viridis,Species,1069,360,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Alopecurus,Alopecurus,Alopecurus,Alopecurus,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AlopecurusAequalis,Alopecurus aequalis,Alopecurus aequalis,Alopecurus.aequalis,Species,122,59,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+AlopecurusArundinaceus,Alopecurus arundinaceus/pratensis,Alopecurus arundinaceus/pratensis,Alopecurus.arundinaceus.pratensis,Species,11,4,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+AlopecurusCarolinianus,Alopecurus carolinianus,Alopecurus carolinianus,Alopecurus.carolinianus,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AlopecurusGeniculatus,Alopecurus geniculatus,Alopecurus geniculatus,Alopecurus.geniculatus,Species,11,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Alyssum,Alyssum,Alyssum,Alyssum,Genus,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AlyssumAlyssoides,Alyssum alyssoides,Alyssum alyssoides,Alyssum.alyssoides,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Amaranthus,Amaranthus,Amaranthus,Amaranthus,Genus,11,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AmaranthusAlbus,Amaranthus albus,Amaranthus albus,Amaranthus.albus,Species,20,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AmaranthusBlitoides,Amaranthus blitoides,Amaranthus blitoides,Amaranthus.blitoides,Species,22,8,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+AmaranthusRetroflexus,Amaranthus retroflexus,Amaranthus retroflexus,Amaranthus.retroflexus,Species,222,82,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+Ambrosia,Ambrosia,Ambrosia,Ambrosia,Genus,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+AmelanchierAlnifolia,Amelanchier alnifolia,Amelanchier alnifolia,Amelanchier.alnifolia,Species,1197,452,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AnaphalisMargaritacea,Anaphalis margaritacea,Anaphalis margaritacea,Anaphalis.margaritacea,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AndromedaPolifolia,Andromeda polifolia,Andromeda polifolia,Andromeda.polifolia,Species,253,85,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+AndrosaceChamaejasme,Androsace chamaejasme,Androsace chamaejasme,Androsace.chamaejasme,Species,11,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AndrosaceOccidentalis,Androsace occidentalis,Androsace occidentalis,Androsace.occidentalis,Species,54,24,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AndrosaceSeptentrionalis,Androsace septentrionalis,Androsace septentrionalis,Androsace.septentrionalis,Species,199,78,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Anemone,Anemone,Anemone,Anemone,Genus,10,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AnemoneCanadensis,Anemone canadensis,Anemone canadensis,Anemone.canadensis,Species,245,104,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AnemoneCylindrica,Anemone cylindrica,Anemone cylindrica,Anemone.cylindrica,Species,58,29,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AnemoneMultifida,Anemone multifida,Anemone multifida,Anemone.multifida,Species,215,81,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AnemoneOccidentalis,Anemone occidentalis,Anemone occidentalis,Anemone.occidentalis,Species,11,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AnemoneParviflora,Anemone parviflora,Anemone parviflora,Anemone.parviflora,Species,13,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AnemonePatens,Anemone patens,Anemone patens,Anemone.patens,Species,353,115,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+AnemoneRichardsonii,Anemone richardsonii,Anemone richardsonii,Anemone.richardsonii,Species,10,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AnemoneVirginiana,Anemone virginiana,Anemone virginiana,Anemone.virginiana,Species,26,14,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AnethumGraveolens,Anethum graveolens,Anethum graveolens,Anethum.graveolens,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+AngelicaGenuflexa,Angelica genuflexa,Angelica genuflexa,Angelica.genuflexa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Antennaria,Antennaria,Antennaria,Antennaria,Genus,32,17,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AntennariaAlpina,Antennaria alpina,Antennaria alpina,Antennaria.alpina,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaAnaphaloides,Antennaria anaphaloides,Antennaria anaphaloides,Antennaria.anaphaloides,Species,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaHowellii,Antennaria howellii,Antennaria howellii,Antennaria.howellii,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaLanata,Antennaria lanata,Antennaria lanata,Antennaria.lanata,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaMicrophylla,Antennaria microphylla/parvifolia,Antennaria microphylla/parvifolia,Antennaria.microphylla.parvifolia,Species,604,217,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AntennariaNeglecta,Antennaria neglecta,Antennaria neglecta,Antennaria.neglecta,Species,142,68,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+AntennariaPulcherrima,Antennaria pulcherrima,Antennaria pulcherrima,Antennaria.pulcherrima,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaRacemosa,Antennaria racemosa,Antennaria racemosa,Antennaria.racemosa,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AntennariaRosea,Antennaria rosea,Antennaria rosea,Antennaria.rosea,Species,7,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AnthoxanthumHirtum,Anthoxanthum hirtum,Anthoxanthum hirtum,Anthoxanthum.hirtum,Species,19,10,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AnthoxanthumMonticola,Anthoxanthum,Anthoxanthum,Anthoxanthum,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ApiumGraveolens,Apium graveolens,Apium graveolens,Apium.graveolens,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Apocynum,Apocynum,Apocynum,Apocynum,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+ApocynumAndrosaemifolium,Apocynum androsaemifolium,Apocynum androsaemifolium,Apocynum.androsaemifolium,Species,164,68,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ApocynumCannabinum,Apocynum cannabinum,Apocynum cannabinum,Apocynum.cannabinum,Species,8,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Aquilegia,Aquilegia,Aquilegia,Aquilegia,Genus,9,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AquilegiaBrevistyla,Aquilegia brevistyla,Aquilegia brevistyla,Aquilegia.brevistyla,Species,43,23,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+AquilegiaFlavescens,Aquilegia flavescens,Aquilegia flavescens,Aquilegia.flavescens,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AquilegiaFormosa,Aquilegia formosa,Aquilegia formosa,Aquilegia.formosa,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArabidopsisLyrata,Arabidopsis lyrata,Arabidopsis lyrata,Arabidopsis.lyrata,Species,13,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Arabis,Arabis,Arabis,Arabis,Genus,7,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArabisHolboellii,Boechera grahamii/collinsii/retrofracta/pedunculocarpa,Boechera grahamii/collinsii/retrofracta/pedunculocarpa,Boechera.grahamii.collinsii.retrofracta.pedunculocarpa,Species,76,37,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ArabisPycnocarpa,Arabis pycnocarpa,Arabis pycnocarpa,Arabis.pycnocarpa,Species,37,22,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+AraliaNudicaulis,Aralia nudicaulis,Aralia nudicaulis,Aralia.nudicaulis,Species,1230,405,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ArceuthobiumAmericanum,Arceuthobium americanum,Arceuthobium americanum,Arceuthobium.americanum,Species,8,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ArctagrostisLatifolia,Arctagrostis latifolia,Arctagrostis latifolia,Arctagrostis.latifolia,Species,14,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Arctium,Arctium,Arctium,Arctium,Genus,15,9,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Arctostaphylos,Arctostaphylos,Arctostaphylos,Arctostaphylos,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArctostaphylosUvaursi,Arctostaphylos uva-ursi,Arctostaphylos uva-ursi,Arctostaphylos.uva.ursi,Species,732,276,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ArctousRubra,Arctous rubra,Arctous rubra,Arctous.rubra,Species,200,67,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+ArethusaBulbosa,Arethusa bulbosa,Arethusa bulbosa,Arethusa.bulbosa,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Arnica,Arnica,Arnica,Arnica,Genus,13,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ArnicaAngustifolia,Arnica angustifolia,Arnica angustifolia,Arnica.angustifolia,Species,8,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArnicaChamissonis,Arnica chamissonis,Arnica chamissonis,Arnica.chamissonis,Species,66,32,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ArnicaCordifolia,Arnica cordifolia,Arnica cordifolia,Arnica.cordifolia,Species,267,95,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ArnicaFulgens,Arnica fulgens,Arnica fulgens,Arnica.fulgens,Species,114,37,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+ArnicaLatifolia,Arnica latifolia,Arnica latifolia,Arnica.latifolia,Species,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArnicaLonchophylla,Arnica lonchophylla,Arnica lonchophylla,Arnica.lonchophylla,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArnicaMollis,Arnica mollis,Arnica mollis,Arnica.mollis,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArnicaSororia,Arnica sororia,Arnica sororia,Arnica.sororia,Species,38,16,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ArtemisiaAbsinthium,Artemisia absinthium,Artemisia absinthium,Artemisia.absinthium,Species,43,24,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+ArtemisiaBiennis,Artemisia biennis,Artemisia biennis,Artemisia.biennis,Species,80,40,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ArtemisiaCampestris,Artemisia campestris,Artemisia campestris,Artemisia.campestris,Species,107,47,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ArtemisiaCana,Artemisia cana,Artemisia cana,Artemisia.cana,Species,287,92,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+ArtemisiaDracunculus,Artemisia dracunculus,Artemisia dracunculus,Artemisia.dracunculus,Species,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArtemisiaFrigida,Artemisia frigida,Artemisia frigida,Artemisia.frigida,Species,891,261,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ArtemisiaLongifolia,Artemisia longifolia,Artemisia longifolia,Artemisia.longifolia,Species,17,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ArtemisiaLudoviciana,Artemisia ludoviciana,Artemisia ludoviciana,Artemisia.ludoviciana,Species,641,231,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ArtemisiaNorvegica,Artemisia norvegica,Artemisia norvegica,Artemisia.norvegica,Species,7,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ArtemisiaSchmidtiana,Artemisia schmidtiana,Artemisia schmidtiana,Artemisia.schmidtiana,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+AruncusDioicus,Tragopogon dubius,Tragopogon dubius,Tragopogon.dubius,Species,761,256,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+AsclepiasOvalifolia,Asclepias ovalifolia,Asclepias ovalifolia,Asclepias.ovalifolia,Species,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AsclepiasSpeciosa,Asclepias speciosa,Asclepias speciosa,Asclepias.speciosa,Species,6,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AsparagusOfficinalis,Asparagus officinalis,Asparagus officinalis,Asparagus.officinalis,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Aster,Aster,Aster,Aster,Genus,28,9,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+AsterAlpinus,Aster alpinus,Aster alpinus,Aster.alpinus,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Astragalus,Astragalus,Astragalus,Astragalus,Genus,99,49,TRUE,FALSE,TRUE,TRUE,TRUE,NA
+AstragalusAgrestis,Astragalus agrestis,Astragalus agrestis,Astragalus.agrestis,Species,159,64,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AstragalusAlpinus,Astragalus alpinus,Astragalus alpinus,Astragalus.alpinus,Species,18,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusAmericanus,Astragalus americanus/canadensis,Astragalus americanus/canadensis,Astragalus.americanus.canadensis,Species,261,123,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+AstragalusAustralis,Astragalus australis,Astragalus australis,Astragalus.australis,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusBisulcatus,Astragalus bisulcatus,Astragalus bisulcatus,Astragalus.bisulcatus,Species,24,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusBodinii,Astragalus bodinii,Astragalus bodinii,Astragalus.bodinii,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusCicer,Astragalus cicer,Astragalus cicer,Astragalus.cicer,Species,27,12,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+AstragalusCrassicarpus,Astragalus crassicarpus,Astragalus crassicarpus,Astragalus.crassicarpus,Species,46,22,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusDrummondii,Astragalus drummondii,Astragalus drummondii,Astragalus.drummondii,Species,16,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusEucosmus,Astragalus eucosmus,Astragalus eucosmus,Astragalus.eucosmus,Species,9,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusFlexuosus,Astragalus flexuosus,Astragalus flexuosus,Astragalus.flexuosus,Species,109,44,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AstragalusGilviflorus,Astragalus gilviflorus,Astragalus gilviflorus,Astragalus.gilviflorus,Species,7,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusLaxmannii,Astragalus laxmannii,Astragalus laxmannii,Astragalus.laxmannii,Species,148,62,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AstragalusLotiflorus,Astragalus lotiflorus,Astragalus lotiflorus,Astragalus.lotiflorus,Species,15,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusMissouriensis,Astragalus missouriensis,Astragalus missouriensis,Astragalus.missouriensis,Species,11,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+AstragalusPectinatus,Astragalus pectinatus,Astragalus pectinatus,Astragalus.pectinatus,Species,183,78,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AstragalusPurshii,Astragalus purshii,Astragalus purshii,Astragalus.purshii,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusSpatulatus,Astragalus spatulatus,Astragalus spatulatus,Astragalus.spatulatus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusTenellus,Astragalus tenellus,Astragalus tenellus,Astragalus.tenellus,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AstragalusVexilliflexus,Astragalus vexilliflexus,Astragalus vexilliflexus,Astragalus.vexilliflexus,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Athyrium,Athyrium,Athyrium,Athyrium,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AthyriumFilixfemina,Athyrium filix-femina,Athyrium filix-femina,Athyrium.filix.femina,Species,60,25,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Atriplex,Atriplex,Atriplex,Atriplex,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AtriplexArgentea,Atriplex argentea,Atriplex argentea,Atriplex.argentea,Species,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+AtriplexCanescens,Atriplex gardneri/canescens,Atriplex gardneri/canescens,Atriplex.gardneri.canescens,Species,89,38,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AvenaFatua,Avena fatua,Avena fatua,Avena.fatua,Species,311,101,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+AvenaSativa,Avena sativa,Avena sativa,Avena.sativa,Species,36,11,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+AvenulaHookeri,Avenula hookeri,Avenula hookeri,Avenula.hookeri,Species,183,61,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+AxyrisAmaranthoides,Axyris amaranthoides,Axyris amaranthoides,Axyris.amaranthoides,Species,84,39,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+BeckmanniaSyzigachne,Beckmannia syzigachne,Beckmannia syzigachne,Beckmannia.syzigachne,Species,218,116,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Begonia,Begonia,Begonia,Begonia,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+Betula,Betula,Betula,Betula,Genus,9,5,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+BetulaNeoalaskana,Betula neoalaskana/papyrifera,Betula neoalaskana/papyrifera,Betula.neoalaskana.papyrifera,Species,1654,589,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+BetulaOccidentalis,Betula occidentalis,Betula occidentalis,Betula.occidentalis,Species,71,36,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+BetulaPendula,Betula pendula,Betula pendula,Betula.pendula,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+BetulaSargentii,Betula x sargentii,Betula x sargentii,Betula.x.sargentii,Species,1166,388,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Bidens,Bidens,Bidens,Bidens,Genus,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+BidensCernua,Bidens cernua,Bidens cernua,Bidens.cernua,Species,28,17,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+BistortaBistortoides,Bistorta bistortoides,Bistorta bistortoides,Bistorta.bistortoides,Species,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+BistortaVivipara,Bistorta vivipara,Bistorta vivipara,Bistorta.vivipara,Species,35,17,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Boechera,Boechera,Boechera,Boechera,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+BoecheraCollinsii,Boechera collinsii,Boechera collinsii,Boechera.collinsii,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+BoecheraStricta,Boechera stricta,Boechera stricta,Boechera.stricta,Species,9,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+BolboschoenusMaritimus,Bolboschoenus maritimus,Bolboschoenus maritimus,Bolboschoenus.maritimus,Species,26,12,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+BotrychiumDusenii,Botrychium,Botrychium,Botrychium,Species,9,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+BotrychiumVirginianum,Botrychium virginianum,Botrychium virginianum,Botrychium.virginianum,Species,54,35,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+BoutelouaGracilis,Bouteloua gracilis,Bouteloua gracilis,Bouteloua.gracilis,Species,482,148,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Brassica,Brassica,Brassica,Brassica,Genus,18,7,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+BrassicaJuncea,Brassica juncea,Brassica juncea,Brassica.juncea,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+BrassicaNapus,Brassica napus,Brassica napus,Brassica.napus,Species,455,133,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+BrassicaRapa,Brassica rapa,Brassica rapa,Brassica.rapa,Species,92,30,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+Bromus,Bromus,Bromus,Bromus,Genus,50,18,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+BromusBiebersteinii,Bromus biebersteinii,Bromus biebersteinii,Bromus.biebersteinii,Species,43,14,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+BromusCarinatus,Bromus carinatus,Bromus carinatus,Bromus.carinatus,Species,16,8,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+BromusCiliatus,Bromus ciliatus,Bromus ciliatus,Bromus.ciliatus,Species,298,126,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+BromusCommutatus,Bromus commutatus,Bromus commutatus,Bromus.commutatus,Species,13,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+BromusInermis,Bromus inermis,Bromus inermis,Bromus.inermis,Species,1163,395,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+BromusJaponicus,Bromus japonicus,Bromus japonicus,Bromus.japonicus,Species,16,5,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+BromusLatiglumis,Bromus latiglumis,Bromus latiglumis,Bromus.latiglumis,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+BromusPorteri,Bromus porteri,Bromus porteri,Bromus.porteri,Species,32,13,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+BromusPumpellianus,Bromus pumpellianus,Bromus pumpellianus,Bromus.pumpellianus,Species,56,23,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+BromusSquarrosus,Bromus squarrosus,Bromus squarrosus,Bromus.squarrosus,Species,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+BromusTectorum,Bromus tectorum,Bromus tectorum,Bromus.tectorum,Species,103,41,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+BupleurumAmericanum,Bupleurum americanum,Bupleurum americanum,Bupleurum.americanum,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Calamagrostis,Calamagrostis,Calamagrostis,Calamagrostis,Genus,23,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CalamagrostisCanadensis,Calamagrostis canadensis,Calamagrostis canadensis,Calamagrostis.canadensis,Species,2548,770,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+CalamagrostisMontanensis,Calamagrostis montanensis,Calamagrostis montanensis,Calamagrostis.montanensis,Species,125,39,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+CalamagrostisRubescens,Calamagrostis rubescens,Calamagrostis rubescens,Calamagrostis.rubescens,Species,33,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CalamagrostisStricta,Calamagrostis stricta,Calamagrostis stricta,Calamagrostis.stricta,Species,227,104,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+CalamovilfaLongifolia,Calamovilfa longifolia,Calamovilfa longifolia,Calamovilfa.longifolia,Species,67,20,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CallaPalustris,Calla palustris,Calla palustris,Calla.palustris,Species,73,37,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CallitricheHermaphroditica,Callitriche hermaphroditica/stenoptera,Callitriche hermaphroditica/stenoptera,Callitriche.hermaphroditica.stenoptera,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CallitrichePalustris,Callitriche palustris,Callitriche palustris,Callitriche.palustris,Species,10,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CalthaNatans,Caltha natans,Caltha natans,Caltha.natans,Species,11,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CalthaPalustris,Caltha palustris,Caltha palustris,Caltha.palustris,Species,452,186,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CalypsoBulbosa,Calypso bulbosa,Calypso bulbosa,Calypso.bulbosa,Species,11,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CamassiaQuamash,Camassia quamash,Camassia quamash,Camassia.quamash,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CamelinaMicrocarpa,Camelina microcarpa,Camelina microcarpa,Camelina.microcarpa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Campanula,Campanula,Campanula,Campanula,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CampanulaRapunculoides,Campanula rapunculoides,Campanula rapunculoides,Campanula.rapunculoides,Species,11,5,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+CampanulaRotundifolia,Campanula rotundifolia,Campanula rotundifolia,Campanula.rotundifolia,Species,695,267,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+CampanulaUniflora,Campanula uniflora,Campanula uniflora,Campanula.uniflora,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CanadanthusModestus,Canadanthus modestus,Canadanthus modestus,Canadanthus.modestus,Species,17,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CannabisSativa,Cannabis sativa,Cannabis sativa,Cannabis.sativa,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+CapsellaBursapastoris,Capsella bursa-pastoris,Capsella bursa-pastoris,Capsella.bursa.pastoris,Species,287,121,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+CapsicumAnnuum,Capsicum annuum,Capsicum annuum,Capsicum.annuum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+CaraganaArborescens,Caragana arborescens,Caragana arborescens,Caragana.arborescens,Species,20,12,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Cardamine,Cardamine,Cardamine,Cardamine,Genus,11,4,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+CardaminePensylvanica,Cardamine pensylvanica,Cardamine pensylvanica,Cardamine.pensylvanica,Species,33,25,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Carex,Carex,Carex,Carex,Genus,791,300,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+CarexAdusta,Carex adusta,Carex adusta,Carex.adusta,Species,8,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexAquatilis,Carex aquatilis,Carex aquatilis,Carex.aquatilis,Species,863,338,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexAtherodes,Carex atherodes,Carex atherodes,Carex.atherodes,Species,238,99,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+CarexAtratiformis,Carex atratiformis,Carex atratiformis,Carex.atratiformis,Species,24,13,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexAtrosquama,Carex atrosquama,Carex atrosquama,Carex.atrosquama,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexAurea,Carex aurea,Carex aurea,Carex.aurea,Species,126,76,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexBackii,Carex backii,Carex backii,Carex.backii,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexBebbii,Carex bebbii,Carex bebbii,Carex.bebbii,Species,171,83,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexBrevior,Carex brevior,Carex brevior,Carex.brevior,Species,16,11,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CarexBrunnescens,Carex brunnescens,Carex brunnescens,Carex.brunnescens,Species,206,109,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexBuxbaumii,Carex buxbaumii,Carex buxbaumii,Carex.buxbaumii,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexCanescens,Carex canescens,Carex canescens,Carex.canescens,Species,314,149,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexCapillaris,Carex capillaris,Carex capillaris,Carex.capillaris,Species,55,27,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexCapitata,Carex capitata,Carex capitata,Carex.capitata,Species,20,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexChordorrhiza,Carex chordorrhiza,Carex chordorrhiza,Carex.chordorrhiza,Species,82,34,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexConcinna,Carex concinna,Carex concinna,Carex.concinna,Species,6,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexCrawfordii,Carex crawfordii,Carex crawfordii,Carex.crawfordii,Species,38,20,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexDeflexa,Carex deflexa,Carex deflexa,Carex.deflexa,Species,21,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexDeweyana,Carex deweyana,Carex deweyana,Carex.deweyana,Species,76,46,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexDiandra,Carex diandra,Carex diandra,Carex.diandra,Species,184,73,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexDisperma,Carex disperma,Carex disperma,Carex.disperma,Species,530,237,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexDouglasii,Carex douglasii,Carex douglasii,Carex.douglasii,Species,27,14,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CarexDuriuscula,Carex duriuscula,Carex duriuscula,Carex.duriuscula,Species,318,93,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+CarexFilifolia,Carex filifolia,Carex filifolia,Carex.filifolia,Species,59,20,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CarexFoenea,Carex foenea,Carex foenea,Carex.foenea,Species,254,105,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexGynocrates,Carex gynocrates,Carex gynocrates,Carex.gynocrates,Species,156,66,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexHoodii,Carex hoodii,Carex hoodii,Carex.hoodii,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexHookerana,Carex hookerana,Carex hookerana,Carex.hookerana,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexHoughtoniana,Carex houghtoniana,Carex houghtoniana,Carex.houghtoniana,Species,12,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexInops,Carex inops,Carex inops,Carex.inops,Species,203,65,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+CarexInterior,Carex interior,Carex interior,Carex.interior,Species,65,27,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexLacustris,Carex lacustris,Carex lacustris,Carex.lacustris,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexLasiocarpa,Carex lasiocarpa,Carex lasiocarpa,Carex.lasiocarpa,Species,59,25,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexLeptalea,Carex leptalea,Carex leptalea,Carex.leptalea,Species,41,18,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexLimosa,Carex limosa,Carex limosa,Carex.limosa,Species,89,35,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexLivida,Carex livida,Carex livida,Carex.livida,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexLoliacea,Carex loliacea,Carex loliacea,Carex.loliacea,Species,21,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexMagellanica,Carex magellanica,Carex magellanica,Carex.magellanica,Species,312,130,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexMedia,Carex media,Carex media,Carex.media,Species,75,40,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexMicroptera,Carex microptera,Carex microptera,Carex.microptera,Species,30,16,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexNardina,Carex nardina,Carex nardina,Carex.nardina,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexNebrascensis,Carex nebrascensis,Carex nebrascensis,Carex.nebrascensis,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexObtusata,Carex obtusata,Carex obtusata,Carex.obtusata,Species,97,33,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+CarexOligosperma,Carex oligosperma,Carex oligosperma,Carex.oligosperma,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexPauciflora,Carex pauciflora,Carex pauciflora,Carex.pauciflora,Species,41,17,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexPeckii,Carex peckii,Carex peckii,Carex.peckii,Species,9,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexPellita,Carex pellita,Carex pellita,Carex.pellita,Species,71,37,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+CarexPraegracilis,Carex praegracilis,Carex praegracilis,Carex.praegracilis,Species,83,34,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+CarexPrairea,Carex prairea,Carex prairea,Carex.prairea,Species,43,16,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexPraticola,Carex praticola,Carex praticola,Carex.praticola,Species,92,46,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexPseudocyperus,Carex pseudocyperus,Carex pseudocyperus,Carex.pseudocyperus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexRaynoldsii,Carex raynoldsii,Carex raynoldsii,Carex.raynoldsii,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexRetrorsa,Carex retrorsa,Carex retrorsa,Carex.retrorsa,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexRichardsonii,Carex richardsonii,Carex richardsonii,Carex.richardsonii,Species,6,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexRossii,Carex rossii,Carex rossii,Carex.rossii,Species,9,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexRostrata,Carex rostrata,Carex rostrata,Carex.rostrata,Species,53,27,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexSartwellii,Carex sartwellii,Carex sartwellii,Carex.sartwellii,Species,64,29,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexScirpoidea,Carex scirpoidea,Carex scirpoidea,Carex.scirpoidea,Species,22,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexSiccata,Carex siccata,Carex siccata,Carex.siccata,Species,187,81,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexSimulata,Carex simulata,Carex simulata,Carex.simulata,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexSprengelii,Carex sprengelii,Carex sprengelii,Carex.sprengelii,Species,14,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CarexStipata,Carex stipata,Carex stipata,Carex.stipata,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexSychnocephala,Carex sychnocephala,Carex sychnocephala,Carex.sychnocephala,Species,11,10,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexTenera,Carex tenera,Carex tenera,Carex.tenera,Species,30,17,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+CarexTenuiflora,Carex tenuiflora,Carex tenuiflora,Carex.tenuiflora,Species,119,60,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexTonsa,Carex tonsa/umbellata,Carex tonsa/umbellata,Carex.tonsa.umbellata,Species,23,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CarexTrisperma,Carex trisperma,Carex trisperma,Carex.trisperma,Species,51,22,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexUtriculata,Carex utriculata,Carex utriculata,Carex.utriculata,Species,279,132,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CarexVaginata,Carex vaginata,Carex vaginata,Carex.vaginata,Species,210,93,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CarexViridula,Carex viridula,Carex viridula,Carex.viridula,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CarexXerantica,Carex xerantica,Carex xerantica,Carex.xerantica,Species,12,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CarumCarvi,Carum carvi,Carum carvi,Carum.carvi,Species,16,11,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+CassiopeTetragona,Cassiope tetragona,Cassiope tetragona,Cassiope.tetragona,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Castilleja,Castilleja,Castilleja,Castilleja,Genus,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CastillejaLutescens,Castilleja lutescens,Castilleja lutescens,Castilleja.lutescens,Species,23,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CastillejaMiniata,Castilleja miniata,Castilleja miniata,Castilleja.miniata,Species,216,91,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CastillejaOccidentalis,Castilleja occidentalis,Castilleja occidentalis,Castilleja.occidentalis,Species,4,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CastillejaRaupii,Castilleja raupii,Castilleja raupii,Castilleja.raupii,Species,34,14,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CentaureaCyanus,Centaurea cyanus,Centaurea cyanus,Centaurea.cyanus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Cerastium,Cerastium,Cerastium,Cerastium,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CerastiumArvense,Cerastium arvense,Cerastium arvense,Cerastium.arvense,Species,154,68,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+CerastiumBeeringianum,Cerastium beeringianum,Cerastium beeringianum,Cerastium.beeringianum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CerastiumFontanum,Cerastium fontanum,Cerastium fontanum,Cerastium.fontanum,Species,46,25,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+CerastiumNutans,Cerastium nutans,Cerastium nutans,Cerastium.nutans,Species,27,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CeratophyllumDemersum,Ceratophyllum demersum,Ceratophyllum demersum,Ceratophyllum.demersum,Species,26,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ChaenorhinumMinus,Chaenorhinum minus,Chaenorhinum minus,Chaenorhinum.minus,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ChamaedaphneCalyculata,Chamaedaphne calyculata,Chamaedaphne calyculata,Chamaedaphne.calyculata,Species,385,135,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+ChamaerhodosErecta,Chamaerhodos erecta,Chamaerhodos erecta,Chamaerhodos.erecta,Species,37,18,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ChamerionAngustifolium,Chamerion angustifolium,Chamerion angustifolium,Chamerion.angustifolium,Species,2857,874,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ChamerionLatifolium,Chamerion latifolium,Chamerion latifolium,Chamerion.latifolium,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Chara,Chara,Chara,Chara,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+Chenopodium,Chenopodium,Chenopodium,Chenopodium,Genus,59,31,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+ChenopodiumAlbum,Chenopodium album,Chenopodium album,Chenopodium.album,Species,609,250,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+ChenopodiumAtrovirens,Chenopodium atrovirens,Chenopodium atrovirens,Chenopodium.atrovirens,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ChenopodiumCapitatum,Chenopodium capitatum,Chenopodium capitatum,Chenopodium.capitatum,Species,14,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ChenopodiumDesiccatum,Chenopodium other ,Chenopodium other ,Chenopodium.other.,Species,126,62,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ChenopodiumGlaucum,Chenopodium glaucum,Chenopodium glaucum,Chenopodium.glaucum,Species,38,21,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ChimaphilaUmbellata,Ericaceae,Ericaceae,Ericaceae,Species,7,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ChrysospleniumIowense,Chrysosplenium tetrandrum/iowense,Chrysosplenium tetrandrum/iowense,Chrysosplenium.tetrandrum.iowense,Species,61,39,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CichoriumIntybus,Cichorium intybus,Cichorium intybus,Cichorium.intybus,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+CicutaBulbifera,Cicuta bulbifera,Cicuta bulbifera,Cicuta.bulbifera,Species,40,23,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CicutaMaculata,Cicuta maculata,Cicuta maculata,Cicuta.maculata,Species,175,85,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CicutaVirosa,Cicuta virosa,Cicuta virosa,Cicuta.virosa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CinnaLatifolia,Cinna latifolia,Cinna latifolia,Cinna.latifolia,Species,53,25,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CircaeaAlpina,Circaea alpina,Circaea alpina,Circaea.alpina,Species,172,71,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Cirsium,Cirsium,Cirsium,Cirsium,Genus,20,12,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+CirsiumArvense,Cirsium arvense,Cirsium arvense,Cirsium.arvense,Species,1277,452,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+CirsiumDrummondii,Cirsium drummondii,Cirsium drummondii,Cirsium.drummondii,Species,17,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CirsiumFlodmanii,Cirsium flodmanii,Cirsium flodmanii,Cirsium.flodmanii,Species,219,92,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+CirsiumFoliosum,Cirsium foliosum,Cirsium foliosum,Cirsium.foliosum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CirsiumUndulatum,Cirsium undulatum,Cirsium undulatum,Cirsium.undulatum,Species,117,49,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+CirsiumVulgare,Cirsium vulgare,Cirsium vulgare,Cirsium.vulgare,Species,67,31,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+ClaytoniaLanceolata,Claytonia lanceolata,Claytonia lanceolata,Claytonia.lanceolata,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Clematis,Clematis,Clematis,Clematis,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+ClematisOccidentalis,Clematis occidentalis,Clematis occidentalis,Clematis.occidentalis,Species,19,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CollomiaLinearis,Collomia linearis,Collomia linearis,Collomia.linearis,Species,87,47,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ComandraUmbellata,Comandra umbellata,Comandra umbellata,Comandra.umbellata,Species,424,160,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ComarumPalustre,Comarum palustre,Comarum palustre,Comarum.palustre,Species,565,220,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+ConvolvulusArvensis,Convolvulus arvensis,Convolvulus arvensis,Convolvulus.arvensis,Species,47,15,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+ConyzaCanadensis,Conyza canadensis,Conyza canadensis,Conyza.canadensis,Species,151,65,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+CoptisTrifolia,Coptis trifolia,Coptis trifolia,Coptis.trifolia,Species,66,30,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CorallorhizaMaculata,Corallorhiza maculata,Corallorhiza maculata,Corallorhiza.maculata,Species,77,53,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CorallorhizaStriata,Corallorhiza striata,Corallorhiza striata,Corallorhiza.striata,Species,16,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CorallorhizaTrifida,Corallorhiza trifida,Corallorhiza trifida,Corallorhiza.trifida,Species,73,54,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CoreopsisTinctoria,Coreopsis tinctoria,Coreopsis tinctoria,Coreopsis.tinctoria,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CoriandrumSativum,Coriandrum sativum,Coriandrum sativum,Coriandrum.sativum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Corispermum,Corispermum,Corispermum,Corispermum,Genus,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CorispermumAmericanum,Corispermum americanum,Corispermum americanum,Corispermum.americanum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Cornus,Cornus,Cornus,Cornus,Genus,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CornusCanadensis,Cornus canadensis,Cornus canadensis,Cornus.canadensis,Species,2677,788,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CornusSericea,Cornus sericea,Cornus sericea,Cornus.sericea,Species,806,322,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Corydalis,Corydalis,Corydalis,Corydalis,Genus,8,7,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+CorydalisAurea,Corydalis aurea,Corydalis aurea,Corydalis.aurea,Species,28,15,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CorydalisSempervirens,Corydalis sempervirens,Corydalis sempervirens,Corydalis.sempervirens,Species,91,38,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+CorylusCornuta,Corylus cornuta,Corylus cornuta,Corylus.cornuta,Species,278,98,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+CotoneasterAcutifolius,Cotoneaster lucidus,Cotoneaster lucidus,Cotoneaster.lucidus,Species,6,4,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+CrataegusChrysocarpa,Crataegus chrysocarpa,Crataegus chrysocarpa,Crataegus.chrysocarpa,Species,6,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Crepis,Crepis,Crepis,Crepis,Genus,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CrepisElegans,Crepis elegans,Crepis elegans,Crepis.elegans,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CrepisOccidentalis,Crepis occidentalis,Crepis occidentalis,Crepis.occidentalis,Species,5,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CrepisRuncinata,Crepis runcinata,Crepis runcinata,Crepis.runcinata,Species,13,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+CrepisTectorum,Crepis tectorum,Crepis tectorum,Crepis.tectorum,Species,716,277,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+CryptanthaCelosioides,Cryptantha celosioides,Cryptantha celosioides,Cryptantha.celosioides,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CryptanthaFendleri,Cryptantha fendleri,Cryptantha fendleri,Cryptantha.fendleri,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+CryptogrammaAcrostichoides,Cryptogramma acrostichoides,Cryptogramma acrostichoides,Cryptogramma.acrostichoides,Species,31,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CyclachaenaXanthiifolia,Cyclachaena xanthiifolia,Cyclachaena xanthiifolia,Cyclachaena.xanthiifolia,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+CynoglossumOfficinale,Cynoglossum officinale,Cynoglossum officinale,Cynoglossum.officinale,Species,7,4,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Cypripedium,Cypripedium,Cypripedium,Cypripedium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+CypripediumAcaule,Cypripedium acaule,Cypripedium acaule,Cypripedium.acaule,Species,10,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CypripediumParviflorum,Cypripedium parviflorum,Cypripedium parviflorum,Cypripedium.parviflorum,Species,12,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CypripediumPasserinum,Cypripedium passerinum,Cypripedium passerinum,Cypripedium.passerinum,Species,13,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+CystopterisFragilis,Cystopteris fragilis,Cystopteris fragilis,Cystopteris.fragilis,Species,7,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DactylisGlomerata,Dactylis glomerata,Dactylis glomerata,Dactylis.glomerata,Species,119,48,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+DactylorhizaViridis,Dactylorhiza viridis,Dactylorhiza viridis,Dactylorhiza.viridis,Species,58,33,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+DaleaCandida,Dalea candida,Dalea candida,Dalea.candida,Species,13,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+DaleaPurpurea,Dalea purpurea,Dalea purpurea,Dalea.purpurea,Species,92,40,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+DanthoniaCalifornica,Danthonia californica,Danthonia californica,Danthonia.californica,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DanthoniaIntermedia,Danthonia intermedia,Danthonia intermedia,Danthonia.intermedia,Species,34,15,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+DanthoniaParryi,Danthonia parryi,Danthonia parryi,Danthonia.parryi,Species,13,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DanthoniaUnispicata,Danthonia unispicata,Danthonia unispicata,Danthonia.unispicata,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DasiphoraFruticosa,Dasiphora fruticosa,Dasiphora fruticosa,Dasiphora.fruticosa,Species,162,60,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Delphinium,Delphinium,Delphinium,Delphinium,Genus,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+DelphiniumBicolor,Delphinium bicolor,Delphinium bicolor,Delphinium.bicolor,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DelphiniumGlaucum,Delphinium glaucum,Delphinium glaucum,Delphinium.glaucum,Species,284,129,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+DeschampsiaCespitosa,Deschampsia cespitosa,Deschampsia cespitosa,Deschampsia.cespitosa,Species,249,100,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+DescurainiaIncana,Descurainia incana,Descurainia incana,Descurainia.incana,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DescurainiaPinnata,Descurainia pinnata,Descurainia pinnata,Descurainia.pinnata,Species,23,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+DescurainiaSophia,Descurainia sophia,Descurainia sophia,Descurainia.sophia,Species,544,212,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+DicentraSpectabilis,Dicentra spectabilis,Dicentra spectabilis,Dicentra.spectabilis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+DichantheliumAcuminatum,Dichanthelium acuminatum,Dichanthelium acuminatum,Dichanthelium.acuminatum,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+DieteriaCanescens,Dieteria canescens,Dieteria canescens,Dieteria.canescens,Species,6,3,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+DiphasiastrumAlpinum,Diphasiastrum alpinum,Diphasiastrum alpinum,Diphasiastrum.alpinum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DiphasiastrumComplanatum,Diphasiastrum complanatum,Diphasiastrum complanatum,Diphasiastrum.complanatum,Species,244,121,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+DiphasiastrumSitchense,Diphasiastrum sitchense,Diphasiastrum sitchense,Diphasiastrum.sitchense,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DiplotaxisMuralis,Diplotaxis muralis,Diplotaxis muralis,Diplotaxis.muralis,Species,9,4,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+DistichlisSpicata,Distichlis spicata,Distichlis spicata,Distichlis.spicata,Species,91,35,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+DoellingeriaUmbellata,Doellingeria umbellata,Doellingeria umbellata,Doellingeria.umbellata,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Draba,Draba,Draba,Draba,Genus,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+DrabaCana,Draba cana,Draba cana,Draba.cana,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DrabaNemorosa,Draba nemorosa,Draba nemorosa,Draba.nemorosa,Species,32,15,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+Dracaena,Dracaena,Dracaena,Dracaena,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+DracocephalumParviflorum,Dracocephalum parviflorum,Dracocephalum parviflorum,Dracocephalum.parviflorum,Species,79,32,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+DroseraAnglica,Drosera anglica,Drosera anglica,Drosera.anglica,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DroseraLinearis,Drosera linearis,Drosera linearis,Drosera.linearis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DroseraRotundifolia,Drosera rotundifolia,Drosera rotundifolia,Drosera.rotundifolia,Species,265,107,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+DryasDrummondii,Dryas drummondii,Dryas drummondii,Dryas.drummondii,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DryasHookeriana,Dryas hookeriana,Dryas hookeriana,Dryas.hookeriana,Species,8,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+DrymocallisArguta,Drymocallis arguta,Drymocallis arguta,Drymocallis.arguta,Species,127,58,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Dryopteris,Dryopteris,Dryopteris,Dryopteris,Genus,8,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+DryopterisCarthusiana,Dryopteris carthusiana,Dryopteris carthusiana,Dryopteris.carthusiana,Species,140,71,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+DryopterisExpansa,Dryopteris expansa,Dryopteris expansa,Dryopteris.expansa,Species,100,50,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+DryopterisFragrans,Dryopteris fragrans,Dryopteris fragrans,Dryopteris.fragrans,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+EchinochloaCrusgalli,Echinochloa crusgalli,Echinochloa crusgalli,Echinochloa.crusgalli,Species,62,30,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Echinops,Echinops,Echinops,Echinops,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+EchinopsisPeruviana,Echinopsis peruviana,Echinopsis peruviana,Echinopsis.peruviana,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ElaeagnusAngustifolia,Elaeagnus angustifolia,Elaeagnus angustifolia,Elaeagnus.angustifolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ElaeagnusCommutata,Elaeagnus commutata,Elaeagnus commutata,Elaeagnus.commutata,Species,155,63,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Elatine,Elatine,Elatine,Elatine,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+Eleocharis,Eleocharis,Eleocharis,Eleocharis,Genus,12,5,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+EleocharisAcicularis,Eleocharis acicularis,Eleocharis acicularis,Eleocharis.acicularis,Species,50,20,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+EleocharisErythropoda,Eleocharis palustris s.l.,Eleocharis palustris s.l.,Eleocharis.palustris.s.l.,Species,166,81,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+EleocharisQuinqueflora,Eleocharis quinqueflora,Eleocharis quinqueflora,Eleocharis.quinqueflora,Species,4,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ElodeaCanadensis,Elodea canadensis,Elodea canadensis,Elodea.canadensis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Elyhordeum,Elyhordeum,Elyhordeum,Elyhordeum,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+ElyhordeumMacounii,Elyhordeum macounii,Elyhordeum macounii,Elyhordeum.macounii,Species,7,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ElyleymusHirtiflorus,Elyleymus hirtiflorus,Elyleymus hirtiflorus,Elyleymus.hirtiflorus,Species,14,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Elymus,Elymus,Elymus,Elymus,Genus,18,9,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+ElymusAlbicans,Elymus albicans/lanceolatus,Elymus albicans/lanceolatus,Elymus.albicans.lanceolatus,Species,246,96,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ElymusCanadensis,Elymus canadensis,Elymus canadensis,Elymus.canadensis,Species,12,6,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+ElymusElymoides,Elymus elymoides,Elymus elymoides,Elymus.elymoides,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ElymusGlaucus,Elymus glaucus,Elymus glaucus,Elymus.glaucus,Species,11,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ElymusRepens,Elymus repens,Elymus repens,Elymus.repens,Species,584,220,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+ElymusTrachycaulus,Elymus trachycaulus,Elymus trachycaulus,Elymus.trachycaulus,Species,701,275,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ElymusViolaceus,Elymus violaceus,Elymus violaceus,Elymus.violaceus,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+EmpetrumNigrum,Empetrum nigrum,Empetrum nigrum,Empetrum.nigrum,Species,213,84,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Epilobium,Epilobium,Epilobium,Epilobium,Genus,34,17,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+EpilobiumBrachycarpum,Epilobium brachycarpum,Epilobium brachycarpum,Epilobium.brachycarpum,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+EpilobiumCiliatum,Epilobium ciliatum,Epilobium ciliatum,Epilobium.ciliatum,Species,262,131,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+EpilobiumLeptophyllum,Epilobium leptophyllum,Epilobium leptophyllum,Epilobium.leptophyllum,Species,45,18,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+EpilobiumPalustre,Epilobium palustre,Epilobium palustre,Epilobium.palustre,Species,166,83,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Equisetum,Equisetum,Equisetum,Equisetum,Genus,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+EquisetumArvense,Equisetum arvense,Equisetum arvense,Equisetum.arvense,Species,2095,713,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+EquisetumFluviatile,Equisetum fluviatile,Equisetum fluviatile,Equisetum.fluviatile,Species,355,135,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+EquisetumHyemale,Equisetum hyemale,Equisetum hyemale,Equisetum.hyemale,Species,184,82,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+EquisetumLaevigatum,Equisetum laevigatum,Equisetum laevigatum,Equisetum.laevigatum,Species,18,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+EquisetumPalustre,Equisetum palustre,Equisetum palustre,Equisetum.palustre,Species,28,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+EquisetumPratense,Equisetum pratense,Equisetum pratense,Equisetum.pratense,Species,582,224,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+EquisetumScirpoides,Equisetum scirpoides,Equisetum scirpoides,Equisetum.scirpoides,Species,570,227,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+EquisetumSylvaticum,Equisetum sylvaticum,Equisetum sylvaticum,Equisetum.sylvaticum,Species,1900,600,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+EquisetumVariegatum,Equisetum variegatum,Equisetum variegatum,Equisetum.variegatum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+EremogoneCongesta,Eremogone congesta,Eremogone congesta,Eremogone.congesta,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+EricameriaNauseosa,Ericameria nauseosa,Ericameria nauseosa,Ericameria.nauseosa,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Erigeron,Erigeron,Erigeron,Erigeron,Genus,8,6,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+ErigeronAcris,Erigeron acris,Erigeron acris,Erigeron.acris,Species,32,19,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronAnnuus,Erigeron annuus,Erigeron annuus,Erigeron.annuus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronCaespitosus,Erigeron caespitosus,Erigeron caespitosus,Erigeron.caespitosus,Species,255,96,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+ErigeronCompositus,Erigeron compositus,Erigeron compositus,Erigeron.compositus,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronElatus,Erigeron elatus,Erigeron elatus,Erigeron.elatus,Species,9,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronGlabellus,Erigeron glabellus,Erigeron glabellus,Erigeron.glabellus,Species,120,51,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ErigeronLonchophyllus,Erigeron lonchophyllus,Erigeron lonchophyllus,Erigeron.lonchophyllus,Species,43,23,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+ErigeronNivalis,Erigeron nivalis,Erigeron nivalis,Erigeron.nivalis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronPeregrinus,Erigeron peregrinus,Erigeron peregrinus,Erigeron.peregrinus,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ErigeronPhiladelphicus,Erigeron philadelphicus,Erigeron philadelphicus,Erigeron.philadelphicus,Species,119,66,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ErigeronPumilus,Erigeron pumilus,Erigeron pumilus,Erigeron.pumilus,Species,45,23,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ErigeronSpeciosus,Erigeron speciosus,Erigeron speciosus,Erigeron.speciosus,Species,18,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ErigeronTrifidus,Erigeron trifidus,Erigeron trifidus,Erigeron.trifidus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Eriogonum,Eriogonum,Eriogonum,Eriogonum,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+EriogonumFlavum,Eriogonum flavum,Eriogonum flavum,Eriogonum.flavum,Species,31,16,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Eriophorum,Eriophorum,Eriophorum,Eriophorum,Genus,6,4,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+EriophorumAngustifolium,Eriophorum angustifolium,Eriophorum angustifolium,Eriophorum.angustifolium,Species,73,32,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+EriophorumBrachyantherum,Eriophorum brachyantherum,Eriophorum brachyantherum,Eriophorum.brachyantherum,Species,42,20,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+EriophorumChamissonis,Eriophorum chamissonis,Eriophorum chamissonis,Eriophorum.chamissonis,Species,19,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+EriophorumGracile,Eriophorum gracile,Eriophorum gracile,Eriophorum.gracile,Species,28,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+EriophorumVaginatum,Eriophorum vaginatum,Eriophorum vaginatum,Eriophorum.vaginatum,Species,364,136,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+EriophorumViridicarinatum,Eriophorum viridicarinatum,Eriophorum viridicarinatum,Eriophorum.viridicarinatum,Species,26,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ErodiumCicutarium,Erodium cicutarium,Erodium cicutarium,Erodium.cicutarium,Species,38,14,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+ErucastrumGallicum,Erucastrum gallicum,Erucastrum gallicum,Erucastrum.gallicum,Species,28,13,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Erysimum,Erysimum,Erysimum,Erysimum,Genus,43,17,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+ErysimumAsperum,Erysimum asperum,Erysimum asperum,Erysimum.asperum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ErysimumCheiranthoides,Erysimum cheiranthoides,Erysimum cheiranthoides,Erysimum.cheiranthoides,Species,191,93,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ErysimumInconspicuum,Erysimum inconspicuum,Erysimum inconspicuum,Erysimum.inconspicuum,Species,180,75,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+EscobariaVivipara,Escobaria vivipara,Escobaria vivipara,Escobaria.vivipara,Species,90,52,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+EuphorbiaEsula,Euphorbia esula,Euphorbia esula,Euphorbia.esula,Species,20,8,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+EuphorbiaGlyptosperma,Euphorbia glyptosperma,Euphorbia glyptosperma,Euphorbia.glyptosperma,Species,5,3,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+EuphorbiaSerpyllifolia,Euphorbia serpyllifolia,Euphorbia serpyllifolia,Euphorbia.serpyllifolia,Species,44,15,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+EuphrasiaNemorosa,Euphrasia nemorosa,Euphrasia nemorosa,Euphrasia.nemorosa,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+EurybiaConspicua,Eurybia conspicua,Eurybia conspicua,Eurybia.conspicua,Species,1064,369,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+EuthamiaGraminifolia,Euthamia graminifolia,Euthamia graminifolia,Euthamia.graminifolia,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Fagopyrum,Fagopyrum,Fagopyrum,Fagopyrum,Genus,44,14,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+FagopyrumEsculentum,Fagopyrum esculentum,Fagopyrum esculentum,Fagopyrum.esculentum,Species,48,16,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+FagopyrumTataricum,Fagopyrum tataricum,Fagopyrum tataricum,Fagopyrum.tataricum,Species,164,54,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+FallopiaConvolvulus,Fallopia convolvulus,Fallopia convolvulus,Fallopia.convolvulus,Species,560,187,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+Festuca,Festuca,Festuca,Festuca,Genus,30,13,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+FestucaBrachyphylla,Festuca brachyphylla,Festuca brachyphylla,Festuca.brachyphylla,Species,12,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+FestucaCampestris,Festuca campestris,Festuca campestris,Festuca.campestris,Species,20,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+FestucaHallii,Festuca hallii,Festuca hallii,Festuca.hallii,Species,236,79,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+FestucaIdahoensis,Festuca idahoensis,Festuca idahoensis,Festuca.idahoensis,Species,58,17,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+FestucaOvina,Festuca ovina,Festuca ovina,Festuca.ovina,Species,13,5,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+FestucaRubra,Festuca rubra,Festuca rubra,Festuca.rubra,Species,142,60,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+FestucaSaximontana,Festuca saximontana,Festuca saximontana,Festuca.saximontana,Species,232,82,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Floribunda,Floribunda,Floribunda,Floribunda,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+FragariaVesca,Fragaria vesca/virginiana,Fragaria vesca/virginiana,Fragaria.vesca.virginiana,Species,2439,771,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Fraxinus,Fraxinus,Fraxinus,Fraxinus,Genus,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+FraxinusAmericana,Fraxinus americana,Fraxinus americana,Fraxinus.americana,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+FraxinusPennsylvanica,Fraxinus pennsylvanica,Fraxinus pennsylvanica,Fraxinus.pennsylvanica,Species,9,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+GaillardiaAristata,Gaillardia aristata,Gaillardia aristata,Gaillardia.aristata,Species,353,137,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+GalearisRotundifolia,Galearis rotundifolia,Galearis rotundifolia,Galearis.rotundifolia,Species,66,32,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Galeopsis,Galeopsis,Galeopsis,Galeopsis,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GaleopsisTetrahit,Galeopsis tetrahit,Galeopsis tetrahit,Galeopsis.tetrahit,Species,357,160,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+Galium,Galium,Galium,Galium,Galium,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+GaliumAparine,Galium aparine/spurium,Galium aparine/spurium,Galium.aparine.spurium,Species,188,67,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+GaliumBoreale,Galium boreale,Galium boreale,Galium.boreale,Species,2334,762,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+GaliumLabradoricum,Galium labradoricum,Galium labradoricum,Galium.labradoricum,Species,65,27,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+GaliumTrifidum,Galium trifidum,Galium trifidum,Galium.trifidum,Species,441,181,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+GaliumTriflorum,Galium triflorum,Galium triflorum,Galium.triflorum,Species,1191,430,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+GaultheriaHispidula,Gaultheria hispidula,Gaultheria hispidula,Gaultheria.hispidula,Species,41,15,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Gentiana,Gentiana,Gentiana,Gentiana,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GentianaAffinis,Gentiana affinis,Gentiana affinis,Gentiana.affinis,Species,4,3,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+GentianellaAmarella,Gentianella amarella,Gentianella amarella,Gentianella.amarella,Species,83,45,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+GentianopsisDentosa,Gentianopsis dentosa,Gentianopsis dentosa,Gentianopsis.dentosa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Geocaulon,Geocaulon,Geocaulon,Geocaulon,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GeocaulonLividum,Geocaulon lividum,Geocaulon lividum,Geocaulon.lividum,Species,563,241,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Geranium,Geranium,Geranium,Geranium,Genus,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GeraniumBicknellii,Geranium bicknellii,Geranium bicknellii,Geranium.bicknellii,Species,144,67,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+GeraniumPratense,Geranium pratense,Geranium pratense,Geranium.pratense,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+GeraniumRichardsonii,Geranium richardsonii,Geranium richardsonii,Geranium.richardsonii,Species,75,24,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+GeraniumViscosissimum,Geranium viscosissimum,Geranium viscosissimum,Geranium.viscosissimum,Species,64,26,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Geum,Geum,Geum,Geum,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GeumAleppicum,Geum aleppicum/macrophyllum/rivale,Geum aleppicum/macrophyllum/rivale,Geum.aleppicum.macrophyllum.rivale,Species,708,314,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+GeumTriflorum,Geum triflorum,Geum triflorum,Geum.triflorum,Species,328,129,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+GlechomaHederacea,Glechoma hederacea,Glechoma hederacea,Glechoma.hederacea,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Glyceria,Glyceria,Glyceria,Glyceria,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GlyceriaBorealis,Glyceria borealis,Glyceria borealis,Glyceria.borealis,Species,9,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+GlyceriaGrandis,Glyceria grandis,Glyceria grandis,Glyceria.grandis,Species,104,54,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+GlyceriaPulchella,Glyceria pulchella,Glyceria pulchella,Glyceria.pulchella,Species,33,17,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+GlyceriaStriata,Glyceria striata,Glyceria striata,Glyceria.striata,Species,55,27,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+GlycyrrhizaLepidota,Glycyrrhiza lepidota,Glycyrrhiza lepidota,Glycyrrhiza.lepidota,Species,106,51,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Gnaphalium,Gnaphalium,Gnaphalium,Gnaphalium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GnaphaliumPalustre,Gnaphalium palustre,Gnaphalium palustre,Gnaphalium.palustre,Species,46,24,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+GnaphaliumUliginosum,Gnaphalium uliginosum,Gnaphalium uliginosum,Gnaphalium.uliginosum,Species,23,13,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+Goodyera,Goodyera,Goodyera,Goodyera,Genus,0,0,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GoodyeraOblongifolia,Goodyera oblongifolia,Goodyera oblongifolia,Goodyera.oblongifolia,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+GoodyeraRepens,Goodyera repens,Goodyera repens,Goodyera.repens,Species,128,75,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+GratiolaNeglecta,Gratiola neglecta,Gratiola neglecta,Gratiola.neglecta,Species,12,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+GrindeliaSquarrosa,Grindelia squarrosa,Grindelia squarrosa,Grindelia.squarrosa,Species,418,148,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+GutierreziaSarothrae,Gutierrezia sarothrae,Gutierrezia sarothrae,Gutierrezia.sarothrae,Species,314,113,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Gymnocarpium,Gymnocarpium,Gymnocarpium,Gymnocarpium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+GymnocarpiumDryopteris,Gymnocarpium dryopteris,Gymnocarpium dryopteris,Gymnocarpium.dryopteris,Species,281,131,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+GypsophilaPaniculata,Gypsophila paniculata,Gypsophila paniculata,Gypsophila.paniculata,Species,10,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HackeliaDeflexa,Hackelia deflexa,Hackelia deflexa,Hackelia.deflexa,Species,24,15,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HaleniaDeflexa,Halenia deflexa,Halenia deflexa,Halenia.deflexa,Species,131,66,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+HedeomaHispida,Hedeoma hispida,Hedeoma hispida,Hedeoma.hispida,Species,20,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HedysarumAlpinum,Hedysarum alpinum,Hedysarum alpinum,Hedysarum.alpinum,Species,123,58,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+HedysarumBoreale,Hedysarum boreale,Hedysarum boreale,Hedysarum.boreale,Species,10,6,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+HedysarumSulphurescens,Hedysarum sulphurescens,Hedysarum sulphurescens,Hedysarum.sulphurescens,Species,12,5,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+HeleniumAutumnale,Helenium autumnale,Helenium autumnale,Helenium.autumnale,Species,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Helianthus,Helianthus,Helianthus,Helianthus,Genus,9,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HelianthusAnnuus,Helianthus annuus,Helianthus annuus,Helianthus.annuus,Species,17,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HelianthusNuttallii,Helianthus nuttallii,Helianthus nuttallii,Helianthus.nuttallii,Species,8,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HelianthusPauciflorus,Helianthus pauciflorus,Helianthus pauciflorus,Helianthus.pauciflorus,Species,16,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HelianthusPetiolaris,Helianthus petiolaris,Helianthus petiolaris,Helianthus.petiolaris,Species,7,3,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HelictotrichonSempervirens,Helictotrichon sempervirens,Helictotrichon sempervirens,Helictotrichon.sempervirens,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HemerocallisStella,Hemerocallis 'Stella de Oro',Hemerocallis 'Stella de Oro',Hemerocallis.Stella.de.Oro.,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Heracleum,Heracleum,Heracleum,Heracleum,Genus,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HeracleumSphondylium,Heracleum sphondylium,Heracleum sphondylium,Heracleum.sphondylium,Species,405,149,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+HesperisMatronalis,Hesperis matronalis,Hesperis matronalis,Hesperis.matronalis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HesperostipaComata,Hesperostipa comata/curtiseta,Hesperostipa comata/curtiseta,Hesperostipa.comata.curtiseta,Species,678,197,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+HesperostipaSpartea,Hesperostipa spartea,Hesperostipa spartea,Hesperostipa.spartea,Species,36,13,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HeterothecaVillosa,Heterotheca villosa,Heterotheca villosa,Heterotheca.villosa,Species,494,168,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Heuchera,Heuchera,Heuchera,Heuchera,Genus,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HeucheraCylindrica,Heuchera cylindrica,Heuchera cylindrica,Heuchera.cylindrica,Species,10,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+HeucheraParvifolia,Heuchera richardsonii,Heuchera richardsonii,Heuchera.richardsonii,Species,155,77,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Hieracium,Hieracium,Hieracium,Hieracium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HieraciumAlbiflorum,Hieracium albiflorum,Hieracium albiflorum,Hieracium.albiflorum,Species,11,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+HieraciumAurantiacum,Hieracium aurantiacum,Hieracium aurantiacum,Hieracium.aurantiacum,Species,7,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HieraciumTriste,Hieracium triste,Hieracium triste,Hieracium.triste,Species,4,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+HieraciumUmbellatum,Hieracium umbellatum,Hieracium umbellatum,Hieracium.umbellatum,Species,635,286,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+HippophaeRhamnoides,Hippophae rhamnoides,Hippophae rhamnoides,Hippophae.rhamnoides,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HippurisVulgaris,Hippuris vulgaris,Hippuris vulgaris,Hippuris.vulgaris,Species,65,34,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+HordeumJubatum,Hordeum jubatum,Hordeum jubatum,Hordeum.jubatum,Species,915,351,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+HordeumVulgare,Hordeum vulgare,Hordeum vulgare,Hordeum.vulgare,Species,259,78,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+Hosta,Hosta,Hosta,Hosta,Genus,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HoustoniaLongifolia,Houstonia longifolia,Houstonia longifolia,Houstonia.longifolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+HudsoniaTomentosa,Hudsonia tomentosa,Hudsonia tomentosa,Hudsonia.tomentosa,Species,43,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+HumulusLupulus,Humulus lupulus,Humulus lupulus,Humulus.lupulus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Hydrophyllum,Hydrophyllum,Hydrophyllum,Hydrophyllum,Genus,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+HymenoxysRichardsonii,Hymenoxys richardsonii,Hymenoxys richardsonii,Hymenoxys.richardsonii,Species,53,23,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+HyoscyamusNiger,Hyoscyamus niger,Hyoscyamus niger,Hyoscyamus.niger,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+HypericumMajus,Hypericum majus,Hypericum majus,Hypericum.majus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+HypopitysMonotropa,Hypopitys monotropa,Hypopitys monotropa,Hypopitys.monotropa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Impatiens,Impatiens,Impatiens,Impatiens,Genus,38,18,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+ImpatiensCapensis,Impatiens capensis/noli-tangere,Impatiens capensis/noli-tangere,Impatiens.capensis.noli.tangere,Species,58,30,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+IpomoeaPurpurea,Ipomoea purpurea,Ipomoea purpurea,Ipomoea.purpurea,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Iris,Iris,Iris,Iris,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+IsoetesEchinospora,Isoetes echinospora,Isoetes echinospora,Isoetes.echinospora,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+IvaAxillaris,Iva axillaris,Iva axillaris,Iva.axillaris,Species,17,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Juncus,Juncus,Juncus,Juncus,Genus,11,7,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+JuncusAlbescens,Juncus albescens,Juncus albescens,Juncus.albescens,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusAlpinoarticulatus,Juncus alpinoarticulatus,Juncus alpinoarticulatus,Juncus.alpinoarticulatus,Species,25,15,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusArcticus,Juncus arcticus,Juncus arcticus,Juncus.arcticus,Species,322,139,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+JuncusBufonius,Juncus bufonius,Juncus bufonius,Juncus.bufonius,Species,56,30,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+JuncusConfusus,Juncus confusus,Juncus confusus,Juncus.confusus,Species,13,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+JuncusDudleyi,Juncus dudleyi,Juncus dudleyi,Juncus.dudleyi,Species,11,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusFiliformis,Juncus filiformis,Juncus filiformis,Juncus.filiformis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusLongistylis,Juncus longistylis,Juncus longistylis,Juncus.longistylis,Species,6,5,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusNodosus,Juncus nodosus,Juncus nodosus,Juncus.nodosus,Species,15,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+JuncusTenuis,Juncus tenuis,Juncus tenuis,Juncus.tenuis,Species,72,36,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+JuncusVaseyi,Juncus vaseyi,Juncus vaseyi,Juncus.vaseyi,Species,21,15,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+Juniperus,Juniperus,Juniperus,Juniperus,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+JuniperusChinensis,Juniperus chinensis,Juniperus chinensis,Juniperus.chinensis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+JuniperusCommunis,Juniperus communis,Juniperus communis,Juniperus.communis,Species,54,24,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+JuniperusHorizontalis,Juniperus horizontalis,Juniperus horizontalis,Juniperus.horizontalis,Species,52,22,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+JuniperusSabina,Juniperus sabina,Juniperus sabina,Juniperus.sabina,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+KalmiaMicrophylla,Kalmia microphylla,Kalmia microphylla,Kalmia.microphylla,Species,9,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+KalmiaPolifolia,Kalmia polifolia,Kalmia polifolia,Kalmia.polifolia,Species,177,64,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+KnautiaArvensis,Knautia arvensis,Knautia arvensis,Knautia.arvensis,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+KobresiaSimpliciuscula,Kobresia simpliciuscula,Kobresia simpliciuscula,Kobresia.simpliciuscula,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Kochia,Kochia,Kochia,Kochia,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+KochiaScoparia,Kochia scoparia,Kochia scoparia,Kochia.scoparia,Species,286,104,FALSE,FALSE,TRUE,TRUE,TRUE,Exotic
+KoeleriaMacrantha,Koeleria macrantha,Koeleria macrantha,Koeleria.macrantha,Species,727,225,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+KrascheninnikoviaLanata,Krascheninnikovia lanata,Krascheninnikovia lanata,Krascheninnikovia.lanata,Species,97,42,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Lactuca,Lactuca,Lactuca,Lactuca,Genus,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LactucaSerriola,Lactuca serriola,Lactuca serriola,Lactuca.serriola,Species,182,85,FALSE,FALSE,TRUE,TRUE,TRUE,Exotic
+LamiumAmplexicaule,Lamium amplexicaule,Lamium amplexicaule,Lamium.amplexicaule,Species,8,3,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Lappula,Lappula,Lappula,Lappula,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LappulaOccidentalis,Lappula occidentalis,Lappula occidentalis,Lappula.occidentalis,Species,25,14,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+LappulaSquarrosa,Lappula squarrosa,Lappula squarrosa,Lappula.squarrosa,Species,90,47,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+LarixLaricina,Larix laricina,Larix laricina,Larix.laricina,Species,894,326,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Lathyrus,Lathyrus,Lathyrus,Lathyrus,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LathyrusOchroleucus,Lathyrus ochroleucus,Lathyrus ochroleucus,Lathyrus.ochroleucus,Species,1676,571,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+LathyrusPalustris,Lathyrus palustris,Lathyrus palustris,Lathyrus.palustris,Species,9,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LathyrusVenosus,Fabaceae,Fabaceae,Fabaceae,Species,9,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LavateraTrimestris,Lavatera trimestris,Lavatera trimestris,Lavatera.trimestris,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Lavendula,Lavendula,Lavendula,Lavendula,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LecheaIntermedia,Lechea intermedia,Lechea intermedia,Lechea.intermedia,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LemnaTrisulca,Lemna trisulca,Lemna trisulca,Lemna.trisulca,Species,14,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+LemnaTurionifera,Lemna turionifera,Lemna turionifera,Lemna.turionifera,Species,163,71,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+LensCulinaris,Lens culinaris,Lens culinaris,Lens.culinaris,Species,11,4,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Lepidium,Lepidium,Lepidium,Lepidium,Genus,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LepidiumDensiflorum,Lepidium densiflorum/ramosissimum,Lepidium densiflorum/ramosissimum,Lepidium.densiflorum.ramosissimum,Species,349,155,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+LeucanthemumVulgare,Leucanthemum vulgare,Leucanthemum vulgare,Leucanthemum.vulgare,Species,22,9,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+LeucophysalisGrandiflora,Leucophysalis grandiflora,Leucophysalis grandiflora,Leucophysalis.grandiflora,Species,15,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+LeymusCinereus,Leymus cinereus,Leymus cinereus,Leymus.cinereus,Species,8,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+LeymusInnovatus,Leymus innovatus,Leymus innovatus,Leymus.innovatus,Species,1017,367,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+LiatrisLigulistylis,Liatris ligulistylis,Liatris ligulistylis,Liatris.ligulistylis,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LiatrisPunctata,Liatris punctata,Liatris punctata,Liatris.punctata,Species,96,41,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+LiliumPhiladelphicum,Lilium philadelphicum,Lilium philadelphicum,Lilium.philadelphicum,Species,217,107,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+LimosellaAquatica,Limosella aquatica,Limosella aquatica,Limosella.aquatica,Species,25,11,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+LinariaDalmatica,Linaria dalmatica,Linaria dalmatica,Linaria.dalmatica,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+LinariaVulgaris,Linaria vulgaris,Linaria vulgaris,Linaria.vulgaris,Species,50,23,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+LinnaeaBorealis,Linnaea borealis,Linnaea borealis,Linnaea.borealis,Species,2300,697,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+LinumLewisii,Linum lewisii,Linum lewisii,Linum.lewisii,Species,78,40,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+LinumRigidum,Linum rigidum,Linum rigidum,Linum.rigidum,Species,76,31,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+LinumUsitatissimum,Linum usitatissimum,Linum usitatissimum,Linum.usitatissimum,Species,10,4,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+LiparisLoeselii,Liparis loeselii,Liparis loeselii,Liparis.loeselii,Species,4,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ListeraBorealis,Listera borealis,Listera borealis,Listera.borealis,Species,5,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ListeraCordata,Listera cordata,Listera cordata,Listera.cordata,Species,88,54,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+LithospermumIncisum,Lithospermum incisum,Lithospermum incisum,Lithospermum.incisum,Species,61,26,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+LithospermumRuderale,Lithospermum ruderale,Lithospermum ruderale,Lithospermum.ruderale,Species,69,28,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Lobelia,Lobelia,Lobelia,Lobelia,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LobeliaDortmanna,Lobelia dortmanna,Lobelia dortmanna,Lobelia.dortmanna,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LogfiaArvensis,Logfia arvensis,Logfia arvensis,Logfia.arvensis,Species,28,14,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+LoliumPerenne,Lolium perenne,Lolium perenne,Lolium.perenne,Species,11,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+LoliumPersicum,Lolium persicum,Lolium persicum,Lolium.persicum,Species,14,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+LomatiumFoeniculaceum,Lomatium foeniculaceum,Lomatium foeniculaceum,Lomatium.foeniculaceum,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LomatiumMacrocarpum,Lomatium macrocarpum,Lomatium macrocarpum,Lomatium.macrocarpum,Species,9,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Lonicera,Lonicera,Lonicera,Lonicera,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LoniceraDioica,Lonicera dioica/involucrata,Lonicera dioica/involucrata,Lonicera.dioica.involucrata,Species,1527,515,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+LoniceraTatarica,Lonicera tatarica,Lonicera tatarica,Lonicera.tatarica,Species,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+LoniceraUtahensis,Lonicera utahensis,Lonicera utahensis,Lonicera.utahensis,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LoniceraVillosa,Lonicera villosa,Lonicera villosa,Lonicera.villosa,Species,199,92,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+LotusCorniculatus,Lotus corniculatus,Lotus corniculatus,Lotus.corniculatus,Species,15,9,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+Lupinus,Lupinus,Lupinus,Lupinus,Genus,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+LupinusArgenteus,Lupinus argenteus,Lupinus argenteus,Lupinus.argenteus,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LupinusNootkatensis,Lupinus nootkatensis,Lupinus nootkatensis,Lupinus.nootkatensis,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LupinusSericeus,Lupinus sericeus,Lupinus sericeus,Lupinus.sericeus,Species,56,19,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Luzula,Luzula,Luzula,Luzula,Genus,7,4,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+LuzulaAcuminata,Luzula acuminata,Luzula acuminata,Luzula.acuminata,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LuzulaMultiflora,Luzula multiflora,Luzula multiflora,Luzula.multiflora,Species,12,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+LuzulaParviflora,Luzula parviflora,Luzula parviflora,Luzula.parviflora,Species,116,70,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+LychnisChalcedonica,Lychnis chalcedonica,Lychnis chalcedonica,Lychnis.chalcedonica,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+LycopodiumAnnotinum,Lycopodium annotinum/dendroideum,Lycopodium annotinum/dendroideum,Lycopodium.annotinum.dendroideum,Species,703,296,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+LycopodiumLagopus,Lycopodium lagopus,Lycopodium lagopus,Lycopodium.lagopus,Species,63,28,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+LycopusAmericanus,Lycopus americanus,Lycopus americanus,Lycopus.americanus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LycopusAsper,Lycopus asper,Lycopus asper,Lycopus.asper,Species,16,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+LycopusUniflorus,Lycopus uniflorus,Lycopus uniflorus,Lycopus.uniflorus,Species,18,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+LygodesmiaJuncea,Lygodesmia juncea,Lygodesmia juncea,Lygodesmia.juncea,Species,181,74,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+LysimachiaCiliata,Lysimachia ciliata,Lysimachia ciliata,Lysimachia.ciliata,Species,39,21,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+LysimachiaHybrida,Lysimachia hybrida,Lysimachia hybrida,Lysimachia.hybrida,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+LysimachiaMaritima,Lysimachia maritima,Lysimachia maritima,Lysimachia.maritima,Species,14,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+LysimachiaThyrsiflora,Lysimachia thyrsiflora,Lysimachia thyrsiflora,Lysimachia.thyrsiflora,Species,109,50,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+MachaerantheraTanacetifolia,Machaeranthera tanacetifolia,Machaeranthera tanacetifolia,Machaeranthera.tanacetifolia,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+MaianthemumCanadense,Maianthemum canadense,Maianthemum canadense,Maianthemum.canadense,Species,1619,545,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+MaianthemumRacemosum,Maianthemum racemosum,Maianthemum racemosum,Maianthemum.racemosum,Species,32,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MaianthemumStellatum,Maianthemum stellatum,Maianthemum stellatum,Maianthemum.stellatum,Species,415,177,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+MaianthemumTrifolium,Maianthemum trifolium,Maianthemum trifolium,Maianthemum.trifolium,Species,1127,373,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+MalaxisMonophyllos,Malaxis monophyllos,Malaxis monophyllos,Malaxis.monophyllos,Species,5,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MalaxisPaludosa,Malaxis paludosa,Malaxis paludosa,Malaxis.paludosa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Malva,Malva rotundifolia sensu lato,Malva rotundifolia sensu lato,Malva.rotundifolia.sensu.lato,Genus,57,22,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+MarsileaVestita,Marsilea vestita,Marsilea vestita,Marsilea.vestita,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+MatricariaChamomilla,Matricaria chamomilla,Matricaria chamomilla,Matricaria.chamomilla,Species,5,3,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+MatricariaDiscoidea,Matricaria discoidea,Matricaria discoidea,Matricaria.discoidea,Species,166,73,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+MatteucciaStruthiopteris,Matteuccia struthiopteris,Matteuccia struthiopteris,Matteuccia.struthiopteris,Species,15,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Medicago,Medicago,Medicago,Medicago,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+MedicagoLupulina,Medicago lupulina,Medicago lupulina,Medicago.lupulina,Species,153,74,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+MedicagoSativa,Medicago sativa,Medicago sativa,Medicago.sativa,Species,654,243,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+MelampyrumLineare,Melampyrum lineare,Melampyrum lineare,Melampyrum.lineare,Species,64,31,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+MelicaSpectabilis,Melica spectabilis,Melica spectabilis,Melica.spectabilis,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Melilotus,Melilotus,Melilotus,Melilotus,Genus,9,5,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+MelilotusAlbus,Melilotus albus,Melilotus albus,Melilotus.albus,Species,331,139,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+MelilotusOfficinalis,Melilotus officinalis,Melilotus officinalis,Melilotus.officinalis,Species,451,184,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+MenthaArvensis,Mentha arvensis,Mentha arvensis,Mentha.arvensis,Species,278,146,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+MenthaSpicata,Mentha spicata,Mentha spicata,Mentha.spicata,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+MenyanthesTrifoliata,Menyanthes trifoliata,Menyanthes trifoliata,Menyanthes.trifoliata,Species,145,48,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+MenziesiaFerruginea,Menziesia ferruginea,Menziesia ferruginea,Menziesia.ferruginea,Species,7,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Mertensia,Mertensia,Mertensia,Mertensia,Genus,12,4,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+MertensiaPaniculata,Mertensia paniculata,Mertensia paniculata,Mertensia.paniculata,Species,1825,572,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+MicranthesOccidentalis,Micranthes occidentalis,Micranthes occidentalis,Micranthes.occidentalis,Species,7,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MirabilisAlbida,Mirabilis albida,Mirabilis albida,Mirabilis.albida,Species,6,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+MirabilisLinearis,Mirabilis linearis,Mirabilis linearis,Mirabilis.linearis,Species,6,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+MitellaNuda,Mitella nuda,Mitella nuda,Mitella.nuda,Species,1725,566,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+MitellaPentandra,Mitella pentandra,Mitella pentandra,Mitella.pentandra,Species,25,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MoehringiaLateriflora,Moehringia lateriflora,Moehringia lateriflora,Moehringia.lateriflora,Species,247,126,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+MonardaFistulosa,Monarda fistulosa,Monarda fistulosa,Monarda.fistulosa,Species,100,40,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+MonesesUniflora,Moneses uniflora,Moneses uniflora,Moneses.uniflora,Species,156,95,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+MonolepisNuttalliana,Monolepis nuttalliana,Monolepis nuttalliana,Monolepis.nuttalliana,Species,71,33,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+MonotropaUniflora,Monotropa uniflora,Monotropa uniflora,Monotropa.uniflora,Species,8,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MuhlenbergiaAsperifolia,Muhlenbergia asperifolia,Muhlenbergia asperifolia,Muhlenbergia.asperifolia,Species,21,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+MuhlenbergiaCuspidata,Muhlenbergia cuspidata,Muhlenbergia cuspidata,Muhlenbergia.cuspidata,Species,20,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+MuhlenbergiaGlomerata,Muhlenbergia glomerata,Muhlenbergia glomerata,Muhlenbergia.glomerata,Species,7,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MuhlenbergiaRichardsonis,Muhlenbergia richardsonis,Muhlenbergia richardsonis,Muhlenbergia.richardsonis,Species,64,29,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+MulgediumPulchellum,Mulgedium pulchellum,Mulgedium pulchellum,Mulgedium.pulchellum,Species,155,67,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+MusineonDivaricatum,Musineon divaricatum,Musineon divaricatum,Musineon.divaricatum,Species,7,3,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+MyosotisAsiatica,Myosotis asiatica,Myosotis asiatica,Myosotis.asiatica,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+MyricaGale,Myrica gale,Myrica gale,Myrica.gale,Species,72,25,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+MyriophyllumSibiricum,Myriophyllum sibiricum,Myriophyllum sibiricum,Myriophyllum.sibiricum,Species,12,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+MyriophyllumVerticillatum,Myriophyllum verticillatum,Myriophyllum verticillatum,Myriophyllum.verticillatum,Species,8,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+NajasFlexilis,Najas flexilis,Najas flexilis,Najas.flexilis,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+NassellaViridula,Nassella viridula,Nassella viridula,Nassella.viridula,Species,287,113,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Nasturtium,Nasturtium,Nasturtium,Nasturtium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+NasturtiumOfficinale,Nasturtium officinale,Nasturtium officinale,Nasturtium.officinale,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Nemesia,Nemesia,Nemesia,Nemesia,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+NesliaPaniculata,Neslia paniculata,Neslia paniculata,Neslia.paniculata,Species,27,13,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+NupharVariegata,Nuphar variegata,Nuphar variegata,Nuphar.variegata,Species,17,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+OenotheraBiennis,Oenothera biennis,Oenothera biennis,Oenothera.biennis,Species,18,11,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+OenotheraCespitosa,Oenothera cespitosa,Oenothera cespitosa,Oenothera.cespitosa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OenotheraNuttallii,Oenothera nuttallii,Oenothera nuttallii,Oenothera.nuttallii,Species,41,18,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+OenotheraSerrulata,Oenothera serrulata,Oenothera serrulata,Oenothera.serrulata,Species,3,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OenotheraSuffrutescens,Oenothera suffrutescens,Oenothera suffrutescens,Oenothera.suffrutescens,Species,283,103,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+OnobrychisViciifolia,Onobrychis viciifolia,Onobrychis viciifolia,Onobrychis.viciifolia,Species,10,5,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+OnosmodiumMolle,Onosmodium molle,Onosmodium molle,Onosmodium.molle,Species,11,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OplopanaxHorridus,Oplopanax horridus,Oplopanax horridus,Oplopanax.horridus,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+OpuntiaFragilis,Opuntia fragilis/polyacantha,Opuntia fragilis/polyacantha,Opuntia.fragilis.polyacantha,Species,195,72,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+OrobancheFasciculata,Orobanche fasciculata,Orobanche fasciculata,Orobanche.fasciculata,Species,38,24,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+OrobancheLudoviciana,Orobanche ludoviciana,Orobanche ludoviciana,Orobanche.ludoviciana,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OrthiliaSecunda,Orthilia secunda,Orthilia secunda,Orthilia.secunda,Species,768,359,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+OrthocarpusLuteus,Orthocarpus luteus,Orthocarpus luteus,Orthocarpus.luteus,Species,82,44,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+OryzopsisAsperifolia,Oryzopsis asperifolia,Oryzopsis asperifolia,Oryzopsis.asperifolia,Species,101,40,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Osmorhiza,Osmorhiza,Osmorhiza,Osmorhiza,Genus,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+OsmorhizaBerteroi,Osmorhiza berteroi,Osmorhiza berteroi,Osmorhiza.berteroi,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OsmorhizaDepauperata,Osmorhiza depauperata,Osmorhiza depauperata,Osmorhiza.depauperata,Species,186,85,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+OsmorhizaLongistylis,Osmorhiza longistylis,Osmorhiza longistylis,Osmorhiza.longistylis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OxalisStricta,Oxalis stricta,Oxalis stricta,Oxalis.stricta,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+OxyriaDigyna,Oxyria digyna,Oxyria digyna,Oxyria.digyna,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Oxytropis,Oxytropis,Oxytropis,Oxytropis,Genus,7,4,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+OxytropisBorealis,Oxytropis borealis,Oxytropis borealis,Oxytropis.borealis,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OxytropisCampestris,Oxytropis campestris,Oxytropis campestris,Oxytropis.campestris,Species,141,62,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+OxytropisDeflexa,Oxytropis deflexa,Oxytropis deflexa,Oxytropis.deflexa,Species,48,27,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+OxytropisPodocarpa,Oxytropis podocarpa,Oxytropis podocarpa,Oxytropis.podocarpa,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+OxytropisSericea,Oxytropis sericea,Oxytropis sericea,Oxytropis.sericea,Species,60,27,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+OxytropisSplendens,Oxytropis splendens,Oxytropis splendens,Oxytropis.splendens,Species,30,14,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+PackeraCana,Packera cana,Packera cana,Packera.cana,Species,80,33,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PackeraIndecora,Packera indecora,Packera indecora,Packera.indecora,Species,3,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PackeraPaupercula,Packera paupercula,Packera paupercula,Packera.paupercula,Species,133,70,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+PackeraPseudaurea,Packera pseudaurea,Packera pseudaurea,Packera.pseudaurea,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PackeraStreptanthifolia,Packera streptanthifolia,Packera streptanthifolia,Packera.streptanthifolia,Species,13,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PaeoniaOfficinalis,Paeonia officinalis,Paeonia officinalis,Paeonia.officinalis,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Papaver,Papaver,Papaver,Papaver,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PapaverSomniferum,Papaver somniferum,Papaver somniferum,Papaver.somniferum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Parnassia,Parnassia,Parnassia,Parnassia,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+ParnassiaFimbriata,Parnassia fimbriata,Parnassia fimbriata,Parnassia.fimbriata,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ParnassiaKotzebuei,Parnassia kotzebuei,Parnassia kotzebuei,Parnassia.kotzebuei,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ParnassiaPalustris,Parnassia palustris,Parnassia palustris,Parnassia.palustris,Species,203,101,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ParonychiaSessiliflora,Paronychia sessiliflora,Paronychia sessiliflora,Paronychia.sessiliflora,Species,27,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ParthenocissusQuinquefolia,Parthenocissus quinquefolia,Parthenocissus quinquefolia,Parthenocissus.quinquefolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PascopyrumSmithii,Pascopyrum smithii,Pascopyrum smithii,Pascopyrum.smithii,Species,898,287,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PastinacaSativa,Pastinaca sativa,Pastinaca sativa,Pastinaca.sativa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Pedicularis,Pedicularis,Pedicularis,Pedicularis,Genus,5,5,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PedicularisBracteosa,Pedicularis bracteosa,Pedicularis bracteosa,Pedicularis.bracteosa,Species,37,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PedicularisCapitata,Pedicularis capitata,Pedicularis capitata,Pedicularis.capitata,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PedicularisGroenlandica,Pedicularis groenlandica,Pedicularis groenlandica,Pedicularis.groenlandica,Species,32,17,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PedicularisLabradorica,Pedicularis labradorica,Pedicularis labradorica,Pedicularis.labradorica,Species,243,108,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PedicularisParviflora,Pedicularis parviflora,Pedicularis parviflora,Pedicularis.parviflora,Species,31,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PediomelumArgophyllum,Pediomelum argophyllum,Pediomelum argophyllum,Pediomelum.argophyllum,Species,23,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PediomelumEsculentum,Pediomelum esculentum,Pediomelum esculentum,Pediomelum.esculentum,Species,26,14,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Pelargonium,Pelargonium,Pelargonium,Pelargonium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+Penstemon,Penstemon,Penstemon,Penstemon,Genus,11,8,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PenstemonAlbidus,Penstemon albidus,Penstemon albidus,Penstemon.albidus,Species,20,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PenstemonConfertus,Penstemon confertus,Penstemon confertus,Penstemon.confertus,Species,17,9,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PenstemonGracilis,Penstemon gracilis,Penstemon gracilis,Penstemon.gracilis,Species,26,19,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PenstemonNitidus,Penstemon nitidus,Penstemon nitidus,Penstemon.nitidus,Species,23,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PenstemonProcerus,Penstemon procerus,Penstemon procerus,Penstemon.procerus,Species,132,64,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+PerideridiaGairdneri,Perideridia gairdneri,Perideridia gairdneri,Perideridia.gairdneri,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PeritomaSerrulata,Peritoma serrulata,Peritoma serrulata,Peritoma.serrulata,Species,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Persicaria,Persicaria,Persicaria,Persicaria,Genus,11,4,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+PersicariaAmphibia,Persicaria amphibia,Persicaria amphibia,Persicaria.amphibia,Species,174,90,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PersicariaLapathifolia,Persicaria maculosa/lapathifolium,Persicaria maculosa/lapathifolium,Persicaria.maculosa.lapathifolium,Species,144,61,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Petasites,Petasites,Petasites,Petasites,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PetasitesFrigidus,Petasites frigidus,Petasites frigidus,Petasites.frigidus,Species,2603,772,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Petunia,Petunia,Petunia,Petunia,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PetuniaHybrida,Petunia hybrida,Petunia hybrida,Petunia.hybrida,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PhaceliaFranklinii,Phacelia franklinii,Phacelia franklinii,Phacelia.franklinii,Species,15,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PhalarisArundinacea,Phalaris arundinacea,Phalaris arundinacea,Phalaris.arundinacea,Species,170,75,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PhaseolusVulgaris,Phaseolus vulgaris,Phaseolus vulgaris,Phaseolus.vulgaris,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PhleumAlpinum,Phleum alpinum,Phleum alpinum,Phleum.alpinum,Species,9,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PhleumPratense,Phleum pratense,Phleum pratense,Phleum.pratense,Species,838,296,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+PhloxAlyssifolia,Phlox alyssifolia,Phlox alyssifolia,Phlox.alyssifolia,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PhloxHoodii,Phlox hoodii,Phlox hoodii,Phlox.hoodii,Species,284,99,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PhragmitesAustralis,Phragmites australis,Phragmites australis,Phragmites.australis,Species,10,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PhyllodoceEmpetriformis,Phyllodoce empetriformis,Phyllodoce empetriformis,Phyllodoce.empetriformis,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PhysariaArenosa,Physaria arenosa,Physaria arenosa,Physaria.arenosa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PhysariaSpatulata,Physaria spatulata,Physaria spatulata,Physaria.spatulata,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PiceaEngelmannii,Picea engelmannii,Picea engelmannii,Picea.engelmannii,Species,40,14,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PiceaGlauca,Picea glauca,Picea glauca,Picea.glauca,Species,1895,593,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+PiceaMariana,Picea mariana,Picea mariana,Picea.mariana,Species,1699,480,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PiceaPungens,Picea pungens,Picea pungens,Picea.pungens,Species,7,5,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+PicradeniopsisOppositifolia,Picradeniopsis oppositifolia,Picradeniopsis oppositifolia,Picradeniopsis.oppositifolia,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PinguiculaVillosa,Pinguicula villosa,Pinguicula villosa,Pinguicula.villosa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Pinus,Pinus,Pinus,Pinus,Genus,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PinusBanksiana,Pinus banksiana,Pinus banksiana,Pinus.banksiana,Species,772,257,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PinusContorta,Pinus contorta,Pinus contorta,Pinus.contorta,Species,391,122,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PinusMurraybanksiana,Pinus murraybanksiana,Pinus murraybanksiana,Pinus.murraybanksiana,Species,18,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PinusSylvestris,Pinus sylvestris,Pinus sylvestris,Pinus.sylvestris,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PiptatherumPungens,Piptatherum pungens,Piptatherum pungens,Piptatherum.pungens,Species,193,67,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Pisum,Pisum,Pisum,Pisum,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PisumSativum,Pisum sativum,Pisum sativum,Pisum.sativum,Species,59,24,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+PlagiobothrysScouleri,Plagiobothrys scouleri,Plagiobothrys scouleri,Plagiobothrys.scouleri,Species,18,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Plantago,Plantago,Plantago,Plantago,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PlantagoElongata,Plantago elongata,Plantago elongata,Plantago.elongata,Species,8,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PlantagoEriopoda,Plantago eriopoda,Plantago eriopoda,Plantago.eriopoda,Species,13,6,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PlantagoMajor,Plantago major,Plantago major,Plantago.major,Species,543,235,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+PlantagoPatagonica,Plantago patagonica,Plantago patagonica,Plantago.patagonica,Species,111,44,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Platanthera,Platanthera,Platanthera,Platanthera,Genus,6,5,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+PlatantheraDilatata,Platanthera dilatata,Platanthera dilatata,Platanthera.dilatata,Species,22,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PlatantheraHuronensis,Platanthera huronensis,Platanthera huronensis,Platanthera.huronensis,Species,324,169,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+PlatantheraObtusata,Platanthera obtusata,Platanthera obtusata,Platanthera.obtusata,Species,102,58,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PlatantheraOrbiculata,Platanthera orbiculata,Platanthera orbiculata,Platanthera.orbiculata,Species,117,75,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Poa,Poa,Poa,Poa,Genus,43,17,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+PoaAlpina,Poa alpina,Poa alpina,Poa.alpina,Species,5,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PoaAnnua,Poa annua,Poa annua,Poa.annua,Species,9,4,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+PoaArctica,Poa arctica,Poa arctica,Poa.arctica,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PoaArida,Poa arida,Poa arida,Poa.arida,Species,93,36,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PoaCompressa,Poa compressa,Poa compressa,Poa.compressa,Species,53,23,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+PoaCusickii,Poa cusickii,Poa cusickii,Poa.cusickii,Species,10,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PoaGlauca,Poa glauca,Poa glauca,Poa.glauca,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PoaInterior,Poa palustris/interior/nemoralis,Poa palustris/interior/nemoralis,Poa.palustris.interior.nemoralis,Species,884,347,TRUE,TRUE,TRUE,TRUE,TRUE,Native/Exotic
+PoaPratensis,Poa pratensis,Poa pratensis,Poa.pratensis,Species,1545,522,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PoaSecunda,Poa secunda,Poa secunda,Poa.secunda,Species,177,64,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Polemonium,Polemonium,Polemonium,Polemonium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PolemoniumAcutiflorum,Polemonium acutiflorum,Polemonium acutiflorum,Polemonium.acutiflorum,Species,96,47,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PolemoniumPulcherrimum,Polemonium pulcherrimum,Polemonium pulcherrimum,Polemonium.pulcherrimum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PolygalaSenega,Polygala senega,Polygala senega,Polygala.senega,Species,9,5,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Polygonum,Polygonum,Polygonum,Polygonum,Genus,23,9,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+PolygonumAviculare,Polygonum aviculare,Polygonum aviculare,Polygonum.aviculare,Species,213,101,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+PolygonumErectum,Polygonum erectum,Polygonum erectum,Polygonum.erectum,Species,40,20,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+PolygonumRamosissimum,Polygonum ramosissimum,Polygonum ramosissimum,Polygonum.ramosissimum,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PolypodiumHesperium,Polypodium,Polypodium,Polypodium,Species,33,14,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PolypogonMonspeliensis,Polypogon monspeliensis,Polypogon monspeliensis,Polypogon.monspeliensis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Populus,Populus,Populus,Populus,Genus,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PopulusAngustifolia,Populus angustifolia,Populus angustifolia,Populus.angustifolia,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PopulusBalsamifera,Populus balsamifera,Populus balsamifera,Populus.balsamifera,Species,1710,595,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PopulusDeltoides,Populus deltoides,Populus deltoides,Populus.deltoides,Species,9,5,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PopulusNigra,Populus nigra,Populus nigra,Populus.nigra,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PopulusTremuloides,Populus tremuloides,Populus tremuloides,Populus.tremuloides,Species,2661,844,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PortulacaOleracea,Portulaca oleracea,Portulaca oleracea,Portulaca.oleracea,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Potamogeton,Potamogeton,Potamogeton,Potamogeton,Genus,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PotamogetonAlpinus,Potamogeton alpinus,Potamogeton alpinus,Potamogeton.alpinus,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonFriesii,Potamogeton friesii,Potamogeton friesii,Potamogeton.friesii,Species,8,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonGramineus,Potamogeton gramineus,Potamogeton gramineus,Potamogeton.gramineus,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonNatans,Potamogeton natans,Potamogeton natans,Potamogeton.natans,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonPusillus,Potamogeton pusillus,Potamogeton pusillus,Potamogeton.pusillus,Species,13,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonRichardsonii,Potamogeton richardsonii,Potamogeton richardsonii,Potamogeton.richardsonii,Species,13,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PotamogetonZosteriformis,Potamogeton zosteriformis,Potamogeton zosteriformis,Potamogeton.zosteriformis,Species,5,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Potentilla,Potentilla,Potentilla,Potentilla,Genus,35,14,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+PotentillaAnserina,Potentilla anserina,Potentilla anserina,Potentilla.anserina,Species,130,62,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaArgentea,Potentilla argentea,Potentilla argentea,Potentilla.argentea,Species,62,30,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+PotentillaBimundorum,Potentilla bimundorum,Potentilla bimundorum,Potentilla.bimundorum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PotentillaBipinnatifida,Potentilla bipinnatifida,Potentilla bipinnatifida,Potentilla.bipinnatifida,Species,159,68,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaConcinna,Potentilla concinna,Potentilla concinna,Potentilla.concinna,Species,57,28,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaGracilis,Potentilla gracilis,Potentilla gracilis,Potentilla.gracilis,Species,211,89,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaHippiana,Potentilla hippiana,Potentilla hippiana,Potentilla.hippiana,Species,191,76,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaNivea,Potentilla nivea,Potentilla nivea,Potentilla.nivea,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PotentillaNorvegica,Potentilla norvegica,Potentilla norvegica,Potentilla.norvegica,Species,514,239,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PotentillaPensylvanica,Potentilla pensylvanica,Potentilla pensylvanica,Potentilla.pensylvanica,Species,323,116,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+PotentillaRivalis,Potentilla rivalis,Potentilla rivalis,Potentilla.rivalis,Species,14,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PotentillaSupina,Potentilla supina,Potentilla supina,Potentilla.supina,Species,6,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PrimulaConjugens,Primula conjugens,Primula conjugens,Primula.conjugens,Species,13,7,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PrimulaIncana,Primula incana,Primula incana,Primula.incana,Species,8,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+PrimulaPauciflora,Primula pauciflora,Primula pauciflora,Primula.pauciflora,Species,11,5,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+ProsartesTrachycarpa,Prosartes trachycarpa,Prosartes trachycarpa,Prosartes.trachycarpa,Species,356,144,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Prunus,Prunus,Prunus,Prunus,Genus,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+PrunusAmericana,Prunus americana,Prunus americana,Prunus.americana,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+PrunusPensylvanica,Prunus pensylvanica/virginiana,Prunus pensylvanica/virginiana,Prunus.pensylvanica.virginiana,Species,440,191,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PsathyrostachysJuncea,Psathyrostachys juncea,Psathyrostachys juncea,Psathyrostachys.juncea,Species,24,10,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+PseudoroegneriaSpicata,Pseudoroegneria spicata,Pseudoroegneria spicata,Pseudoroegneria.spicata,Species,5,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PsoralidiumLanceolatum,Psoralidium lanceolatum,Psoralidium lanceolatum,Psoralidium.lanceolatum,Species,51,18,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+PteridiumAquilinum,Pteridium aquilinum,Pteridium aquilinum,Pteridium.aquilinum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+PuccinelliaDistans,Puccinellia distans,Puccinellia distans,Puccinellia.distans,Species,47,21,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+PuccinelliaNuttalliana,Puccinellia nuttalliana,Puccinellia nuttalliana,Puccinellia.nuttalliana,Species,90,36,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+Pyrola,Pyrola,Pyrola,Pyrola,Genus,15,8,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+PyrolaAsarifolia,Pyrola asarifolia,Pyrola asarifolia,Pyrola.asarifolia,Species,1486,550,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+PyrolaChlorantha,Pyrola chlorantha,Pyrola chlorantha,Pyrola.chlorantha,Species,202,103,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+PyrolaElliptica,Pyrola elliptica,Pyrola elliptica,Pyrola.elliptica,Species,26,15,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+PyrolaMinor,Pyrola minor,Pyrola minor,Pyrola.minor,Species,36,22,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+PyrrocomaLanceolata,Pyrrocoma lanceolata,Pyrrocoma lanceolata,Pyrrocoma.lanceolata,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Quercus,Quercus,Quercus,Quercus,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+QuercusAlba,Quercus alba,Quercus alba,Quercus.alba,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Ranunculus,Ranunculus,Ranunculus,Ranunculus,Genus,9,6,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+RanunculusAbortivus,Ranunculus abortivus,Ranunculus abortivus,Ranunculus.abortivus,Species,35,20,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+RanunculusAcris,Ranunculus acris,Ranunculus acris,Ranunculus.acris,Species,144,63,TRUE,TRUE,TRUE,FALSE,TRUE,Exotic
+RanunculusAquatilis,Ranunculus aquatilis,Ranunculus aquatilis,Ranunculus.aquatilis,Species,15,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RanunculusCardiophyllus,Ranunculus cardiophyllus,Ranunculus cardiophyllus,Ranunculus.cardiophyllus,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+RanunculusCymbalaria,Ranunculus cymbalaria,Ranunculus cymbalaria,Ranunculus.cymbalaria,Species,82,40,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+RanunculusGmelinii,Ranunculus gmelinii,Ranunculus gmelinii,Ranunculus.gmelinii,Species,78,47,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RanunculusHyperboreus,Ranunculus hyperboreus,Ranunculus hyperboreus,Ranunculus.hyperboreus,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+RanunculusLapponicus,Ranunculus lapponicus,Ranunculus lapponicus,Ranunculus.lapponicus,Species,114,61,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+RanunculusMacounii,Ranunculus macounii,Ranunculus macounii,Ranunculus.macounii,Species,131,72,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RanunculusPedatifidus,Ranunculus pedatifidus,Ranunculus pedatifidus,Ranunculus.pedatifidus,Species,8,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+RanunculusPensylvanicus,Ranunculus pensylvanicus,Ranunculus pensylvanicus,Ranunculus.pensylvanicus,Species,13,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RanunculusRepens,Ranunculus repens,Ranunculus repens,Ranunculus.repens,Species,4,3,TRUE,FALSE,FALSE,FALSE,FALSE,Exotic
+RanunculusSceleratus,Ranunculus sceleratus,Ranunculus sceleratus,Ranunculus.sceleratus,Species,65,37,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RanunculusUncinatus,Ranunculus uncinatus,Ranunculus uncinatus,Ranunculus.uncinatus,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+RatibidaColumnifera,Ratibida columnifera,Ratibida columnifera,Ratibida.columnifera,Species,256,91,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+RhamnusAlnifolia,Rhamnus alnifolia,Rhamnus alnifolia,Rhamnus.alnifolia,Species,28,19,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RheumRhabarbarum,Rheum rhabarbarum,Rheum rhabarbarum,Rheum.rhabarbarum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+RhinanthusMinor,Rhinanthus minor,Rhinanthus minor,Rhinanthus.minor,Species,140,66,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Rhododendron,Rhododendron,Rhododendron,Rhododendron,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+RhododendronAlbiflorum,Rhododendron albiflorum,Rhododendron albiflorum,Rhododendron.albiflorum,Species,23,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RhododendronGroenlandicum,Rhododendron groenlandicum,Rhododendron groenlandicum,Rhododendron.groenlandicum,Species,2205,687,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RhododendronTomentosum,Rhododendron tomentosum,Rhododendron tomentosum,Rhododendron.tomentosum,Species,103,33,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+RhusTrilobata,Rhus trilobata,Rhus trilobata,Rhus.trilobata,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Ribes,Ribes,Ribes,Ribes,Genus,37,21,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+RibesAmericanum,Ribes americanum,Ribes americanum,Ribes.americanum,Species,78,44,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RibesAureum,Ribes aureum,Ribes aureum,Ribes.aureum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+RibesGlandulosum,Ribes glandulosum,Ribes glandulosum,Ribes.glandulosum,Species,437,208,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RibesHirtellum,Ribes oxyacanthoides,Ribes oxyacanthoides,Ribes.oxyacanthoides,Species,1438,530,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RibesHudsonianum,Ribes hudsonianum,Ribes hudsonianum,Ribes.hudsonianum,Species,373,177,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RibesLacustre,Ribes lacustre,Ribes lacustre,Ribes.lacustre,Species,633,282,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RibesTriste,Ribes triste,Ribes triste,Ribes.triste,Species,1222,445,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Rorippa,Rorippa,Rorippa,Rorippa,Genus,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+RorippaPalustris,Rorippa palustris,Rorippa palustris,Rorippa.palustris,Species,76,41,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RorippaSylvestris,Rorippa sylvestris,Rorippa sylvestris,Rorippa.sylvestris,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Rosa,Rosa,Rosa,Rosa,Genus,13,5,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+RosaAcicularis,Rosa acicularis/woodsii,Rosa acicularis/woodsii,Rosa.acicularis.woodsii,Species,3339,1003,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RosaArkansana,Rosa arkansana,Rosa arkansana,Rosa.arkansana,Species,390,138,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+RosaRugosa,Rosa rugosa,Rosa rugosa,Rosa.rugosa,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+RubusArcticus,Rubus arcticus,Rubus arcticus,Rubus.arcticus,Species,766,274,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+RubusChamaemorus,Rubus chamaemorus,Rubus chamaemorus,Rubus.chamaemorus,Species,889,298,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+RubusIdaeus,Rubus idaeus,Rubus idaeus,Rubus.idaeus,Species,1815,610,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RubusParviflorus,Rubus parviflorus,Rubus parviflorus,Rubus.parviflorus,Species,27,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RubusPedatus,Rubus pedatus,Rubus pedatus,Rubus.pedatus,Species,74,22,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+RubusPubescens,Rubus pubescens,Rubus pubescens,Rubus.pubescens,Species,2070,647,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RudbeckiaHirta,Rudbeckia hirta,Rudbeckia hirta,Rudbeckia.hirta,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Rumex,Rumex,Rumex,Rumex,Genus,64,34,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+RumexAcetosella,Rumex acetosella,Rumex acetosella,Rumex.acetosella,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+RumexBritannica,Rumex britannica,Rumex britannica,Rumex.britannica,Species,12,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+RumexConfertus,Rumex confertus,Rumex confertus,Rumex.confertus,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+RumexCrispus,Rumex crispus/pseudonatronatus,Rumex crispus/pseudonatronatus,Rumex.crispus.pseudonatronatus,Species,288,124,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+RumexFueginus,Rumex fueginus,Rumex fueginus,Rumex.fueginus,Species,28,20,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+RumexLongifolius,Rumex longifolius,Rumex longifolius,Rumex.longifolius,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+RumexOccidentalis,Rumex occidentalis,Rumex occidentalis,Rumex.occidentalis,Species,220,108,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+RumexStenophyllus,Rumex stenophyllus,Rumex stenophyllus,Rumex.stenophyllus,Species,12,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+RumexTriangulivalvis,Rumex triangulivalvis,Rumex triangulivalvis,Rumex.triangulivalvis,Species,67,35,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+RumexVenosus,Rumex venosus,Rumex venosus,Rumex.venosus,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SagittariaCuneata,Sagittaria cuneata,Sagittaria cuneata,Sagittaria.cuneata,Species,24,10,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SagittariaLatifolia,Sagittaria latifolia,Sagittaria latifolia,Sagittaria.latifolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SalicorniaRubra,Salicornia rubra,Salicornia rubra,Salicornia.rubra,Species,4,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Salix,Salix,Salix,Salix,Genus,886,337,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixAmygdaloides,Salix amygdaloides,Salix amygdaloides,Salix.amygdaloides,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SalixArbusculoides,Salix arbusculoides,Salix arbusculoides,Salix.arbusculoides,Species,166,71,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixAthabascensis,Salix athabascensis,Salix athabascensis,Salix.athabascensis,Species,113,45,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixBebbiana,Salix bebbiana,Salix bebbiana,Salix.bebbiana,Species,1500,547,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SalixBoothii,Salix myrtillifolia,Salix myrtillifolia,Salix.myrtillifolia,Species,448,164,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixBrachycarpa,Salix brachycarpa,Salix brachycarpa,Salix.brachycarpa,Species,25,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SalixCandida,Salix candida,Salix candida,Salix.candida,Species,134,53,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixDiscolor,Salix discolor,Salix discolor,Salix.discolor,Species,252,113,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixDrummondiana,Salix drummondiana,Salix drummondiana,Salix.drummondiana,Species,23,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SalixExigua,Salix exigua sensu lato,Salix exigua sensu lato,Salix.exigua.sensu.lato,Species,65,26,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SalixFamelica,Salix famelica,Salix famelica,Salix.famelica,Species,26,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SalixFarriae,Salix farriae,Salix farriae,Salix.farriae,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SalixGlauca,Salix glauca,Salix glauca,Salix.glauca,Species,178,71,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixLasiandra,Salix lasiandra,Salix lasiandra,Salix.lasiandra,Species,67,35,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixMaccalliana,Salix maccalliana,Salix maccalliana,Salix.maccalliana,Species,142,60,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixPedicellaris,Salix pedicellaris,Salix pedicellaris,Salix.pedicellaris,Species,251,96,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixPetiolaris,Salix petiolaris,Salix petiolaris,Salix.petiolaris,Species,251,107,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SalixPlanifolia,Salix planifolia,Salix planifolia,Salix.planifolia,Species,679,257,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixProlixa,Salix prolixa,Salix prolixa,Salix.prolixa,Species,25,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SalixPseudomonticola,Salix pseudomonticola,Salix pseudomonticola,Salix.pseudomonticola,Species,108,40,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixPseudomyrsinites,Salix pseudomyrsinites,Salix pseudomyrsinites,Salix.pseudomyrsinites,Species,199,83,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SalixPyrifolia,Salix pyrifolia,Salix pyrifolia,Salix.pyrifolia,Species,395,170,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixScouleriana,Salix scouleriana,Salix scouleriana,Salix.scouleriana,Species,254,112,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixSerissima,Salix serissima,Salix serissima,Salix.serissima,Species,61,26,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SalixStolonifera,Salix stolonifera,Salix stolonifera,Salix.stolonifera,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SalixVestita,Salix vestita,Salix vestita,Salix.vestita,Species,18,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Salsola,Salsola,Salsola,Salsola,Genus,11,5,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+SalsolaTragus,Salsola tragus/collina,Salsola tragus/collina,Salsola.tragus.collina,Species,100,40,FALSE,FALSE,TRUE,TRUE,TRUE,Exotic
+SalviaNemorosa,Salvia nemorosa,Salvia nemorosa,Salvia.nemorosa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SambucusRacemosa,Sambucus racemosa,Sambucus racemosa,Sambucus.racemosa,Species,5,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SaniculaMarilandica,Sanicula marilandica,Sanicula marilandica,Sanicula.marilandica,Species,114,49,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SarcobatusVermiculatus,Sarcobatus vermiculatus,Sarcobatus vermiculatus,Sarcobatus.vermiculatus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SarraceniaPurpurea,Sarracenia purpurea,Sarracenia purpurea,Sarracenia.purpurea,Species,24,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SaussureaNuda,Saussurea nuda,Saussurea nuda,Saussurea.nuda,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Saxifraga,Saxifraga,Saxifraga,Saxifraga,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SaxifragaCernua,Saxifraga cernua,Saxifraga cernua,Saxifraga.cernua,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SaxifragaCespitosa,Saxifraga cespitosa,Saxifraga cespitosa,Saxifraga.cespitosa,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SaxifragaOppositifolia,Saxifraga oppositifolia,Saxifraga oppositifolia,Saxifraga.oppositifolia,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SaxifragaTricuspidata,Saxifraga tricuspidata,Saxifraga tricuspidata,Saxifraga.tricuspidata,Species,33,16,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SchedonnardusPaniculatus,Schedonnardus paniculatus,Schedonnardus paniculatus,Schedonnardus.paniculatus,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SchedonorusArundinaceus,Schedonorus arundinaceus,Schedonorus arundinaceus,Schedonorus.arundinaceus,Species,12,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SchedonorusPratensis,Schedonorus pratensis,Schedonorus pratensis,Schedonorus.pratensis,Species,19,9,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+ScheuchzeriaPalustris,Scheuchzeria palustris,Scheuchzeria palustris,Scheuchzeria.palustris,Species,15,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SchizachnePurpurascens,Schizachne purpurascens,Schizachne purpurascens,Schizachne.purpurascens,Species,200,97,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SchoenoplectusAcutus,Schoenoplectus acutus,Schoenoplectus acutus,Schoenoplectus.acutus,Species,28,14,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SchoenoplectusPungens,Schoenoplectus pungens,Schoenoplectus pungens,Schoenoplectus.pungens,Species,25,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+SchoenoplectusTabernaemontani,Schoenoplectus tabernaemontani,Schoenoplectus tabernaemontani,Schoenoplectus.tabernaemontani,Species,48,27,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+ScirpusCyperinus,Scirpus cyperinus,Scirpus cyperinus,Scirpus.cyperinus,Species,37,16,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ScirpusMicrocarpus,Scirpus microcarpus,Scirpus microcarpus,Scirpus.microcarpus,Species,99,53,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ScolochloaFestucacea,Scolochloa festucacea,Scolochloa festucacea,Scolochloa.festucacea,Species,26,12,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+ScutellariaGalericulata,Scutellaria galericulata,Scutellaria galericulata,Scutellaria.galericulata,Species,337,155,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SecaleCereale,Secale cereale,Secale cereale,Secale.cereale,Species,8,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Sedum,Sedum,Sedum,Sedum,Genus,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SedumKamtschaticum,Sedum kamtschaticum,Sedum kamtschaticum,Sedum.kamtschaticum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SedumLanceolatum,Sedum lanceolatum,Sedum lanceolatum,Sedum.lanceolatum,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SelaginellaDensa,Selaginella densa,Selaginella densa,Selaginella.densa,Species,458,134,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+Senecio,Senecio,Senecio,Senecio,Genus,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SenecioEremophilus,Senecio eremophilus,Senecio eremophilus,Senecio.eremophilus,Species,47,30,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SenecioIntegerrimus,Senecio integerrimus,Senecio integerrimus,Senecio.integerrimus,Species,12,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SenecioLugens,Senecio lugens,Senecio lugens,Senecio.lugens,Species,12,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SenecioTriangularis,Senecio triangularis,Senecio triangularis,Senecio.triangularis,Species,23,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SenecioVulgaris,Senecio vulgaris,Senecio vulgaris,Senecio.vulgaris,Species,109,50,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+Setaria,Setaria,Setaria,Setaria,Genus,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+SetariaPumila,Setaria pumila,Setaria pumila,Setaria.pumila,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SetariaViridis,Setaria viridis,Setaria viridis,Setaria.viridis,Species,76,27,FALSE,FALSE,TRUE,TRUE,TRUE,Exotic
+ShepherdiaArgentea,Shepherdia argentea,Shepherdia argentea,Shepherdia.argentea,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ShepherdiaCanadensis,Shepherdia canadensis,Shepherdia canadensis,Shepherdia.canadensis,Species,1145,426,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SibbaldiaProcumbens,Sibbaldia procumbens,Sibbaldia procumbens,Sibbaldia.procumbens,Species,4,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SibbaldiopsisTridentata,Sibbaldiopsis tridentata,Sibbaldiopsis tridentata,Sibbaldiopsis.tridentata,Species,158,75,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+Silene,Silene,Silene,Silene,Genus,7,3,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+SileneAcaulis,Silene acaulis,Silene acaulis,Silene.acaulis,Species,5,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SileneConoidea,Silene conoidea,Silene conoidea,Silene.conoidea,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SileneDrummondii,Silene drummondii,Silene drummondii,Silene.drummondii,Species,42,27,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+SileneLatifolia,Silene latifolia,Silene latifolia,Silene.latifolia,Species,77,37,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+SileneNoctiflora,Silene noctiflora,Silene noctiflora,Silene.noctiflora,Species,25,15,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+SileneUralensis,Silene uralensis,Silene uralensis,Silene.uralensis,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SinapisAlba,Sinapis alba,Sinapis alba,Sinapis.alba,Species,10,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SinapisArvensis,Sinapis arvensis,Sinapis arvensis,Sinapis.arvensis,Species,35,14,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+Sisymbrium,Sisymbrium,Sisymbrium,Sisymbrium,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+SisymbriumAltissimum,Sisymbrium altissimum/loeselii,Sisymbrium altissimum/loeselii,Sisymbrium.altissimum.loeselii,Species,57,34,FALSE,FALSE,TRUE,TRUE,TRUE,Exotic
+SisyrinchiumMontanum,Sisyrinchium montanum,Sisyrinchium montanum,Sisyrinchium.montanum,Species,202,106,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SisyrinchiumSeptentrionale,Sisyrinchium septentrionale,Sisyrinchium septentrionale,Sisyrinchium.septentrionale,Species,11,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+SiumSuave,Sium suave,Sium suave,Sium.suave,Species,118,72,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SmelowskiaAmericana,Smelowskia americana,Smelowskia americana,Smelowskia.americana,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SolanumLycopersicum,Solanum lycopersicum,Solanum lycopersicum,Solanum.lycopersicum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SolanumNigrum,Solanum nigrum,Solanum nigrum,Solanum.nigrum,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SolanumSarrachoides,Solanum sarrachoides,Solanum sarrachoides,Solanum.sarrachoides,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SolanumTriflorum,Solanum triflorum,Solanum triflorum,Solanum.triflorum,Species,48,27,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+SolanumTuberosum,Solanum tuberosum,Solanum tuberosum,Solanum.tuberosum,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Solidago,Solidago,Solidago,Solidago,Genus,66,40,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+SolidagoAltissima,Solidago altissima/lepida,Solidago altissima/lepida,Solidago.altissima.lepida,Species,618,263,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SolidagoCanadensis,Solidago canadensis s.l.,Solidago canadensis s.l.,Solidago.canadensis.s.l.,Species,8,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SolidagoGigantea,Solidago gigantea,Solidago gigantea,Solidago.gigantea,Species,24,10,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SolidagoMissouriensis,Solidago missouriensis,Solidago missouriensis,Solidago.missouriensis,Species,429,150,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+SolidagoMollis,Solidago mollis,Solidago mollis,Solidago.mollis,Species,25,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+SolidagoMultiradiata,Solidago multiradiata,Solidago multiradiata,Solidago.multiradiata,Species,106,53,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SolidagoNemoralis,Solidago nemoralis,Solidago nemoralis,Solidago.nemoralis,Species,13,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SolidagoRigida,Solidago rigida,Solidago rigida,Solidago.rigida,Species,60,26,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+SolidagoSimplex,Solidago simplex,Solidago simplex,Solidago.simplex,Species,158,67,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Sonchus,Sonchus,Sonchus,Sonchus,Genus,22,10,TRUE,FALSE,TRUE,FALSE,FALSE,NA
+SonchusArvensis,Sonchus arvensis,Sonchus arvensis,Sonchus.arvensis,Species,482,207,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+SonchusAsper,Sonchus asper/oleraceus,Sonchus asper/oleraceus,Sonchus.asper.oleraceus,Species,163,67,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+SorbariaSorbifolia,Sorbaria sorbifolia,Sorbaria sorbifolia,Sorbaria.sorbifolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Sorbus,Sorbus,Sorbus,Sorbus,Genus,13,9,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+SorbusDecora,Sorbus decora,Sorbus decora,Sorbus.decora,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SorbusScopulina,Sorbus scopulina,Sorbus scopulina,Sorbus.scopulina,Species,66,34,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Sparganium,Sparganium,Sparganium,Sparganium,Genus,8,5,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+SparganiumAngustifolium,Sparganium angustifolium/emersum,Sparganium angustifolium/emersum,Sparganium.angustifolium.emersum,Species,16,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SparganiumEurycarpum,Sparganium eurycarpum,Sparganium eurycarpum,Sparganium.eurycarpum,Species,9,6,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+SpartinaGracilis,Spartina gracilis,Spartina gracilis,Spartina.gracilis,Species,25,13,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+SpergulaArvensis,Spergula arvensis,Spergula arvensis,Spergula.arvensis,Species,30,14,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+SpergulariaSalina,Spergularia salina,Spergularia salina,Spergularia.salina,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SphaeralceaCoccinea,Sphaeralcea coccinea,Sphaeralcea coccinea,Sphaeralcea.coccinea,Species,442,137,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+SphenopholisIntermedia,Sphenopholis intermedia,Sphenopholis intermedia,Sphenopholis.intermedia,Species,7,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Spiraea,Spiraea,Spiraea,Spiraea,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+SpiraeaAlba,Spiraea alba,Spiraea alba,Spiraea.alba,Species,46,19,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SpiraeaJaponica,Spiraea japonica,Spiraea japonica,Spiraea.japonica,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SpiraeaLucida,Spiraea lucida,Spiraea lucida,Spiraea.lucida,Species,102,35,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+SpiranthesRomanzoffiana,Spiranthes romanzoffiana,Spiranthes romanzoffiana,Spiranthes.romanzoffiana,Species,140,75,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+SpirodelaPolyrhiza,Spirodela polyrhiza,Spirodela polyrhiza,Spirodela.polyrhiza,Species,5,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SporobolusCryptandrus,Sporobolus cryptandrus,Sporobolus cryptandrus,Sporobolus.cryptandrus,Species,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SporobolusNeglectus,Sporobolus neglectus,Sporobolus neglectus,Sporobolus.neglectus,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+StachysPalustris,Stachys palustris,Stachys palustris,Stachys.palustris,Species,236,111,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Stellaria,Stellaria,Stellaria,Stellaria,Genus,7,4,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+StellariaBorealis,Stellaria borealis,Stellaria borealis,Stellaria.borealis,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+StellariaCalycantha,Stellaria calycantha,Stellaria calycantha,Stellaria.calycantha,Species,63,33,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+StellariaCrassifolia,Stellaria crassifolia,Stellaria crassifolia,Stellaria.crassifolia,Species,11,7,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+StellariaCrispa,Stellaria crispa,Stellaria crispa,Stellaria.crispa,Species,6,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+StellariaLongifolia,Stellaria longifolia,Stellaria longifolia,Stellaria.longifolia,Species,626,298,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+StellariaLongipes,Stellaria longipes,Stellaria longipes,Stellaria.longipes,Species,118,60,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+StellariaMedia,Stellaria media,Stellaria media,Stellaria.media,Species,130,52,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+StenanthiumOccidentale,Stenanthium occidentale,Stenanthium occidentale,Stenanthium.occidentale,Species,12,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+Stipa,Stipa,Stipa,Stipa,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+StreptopusAmplexifolius,Streptopus amplexifolius,Streptopus amplexifolius,Streptopus.amplexifolius,Species,99,41,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+StuckeniaFiliformis,Stuckenia filiformis,Stuckenia filiformis,Stuckenia.filiformis,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+StuckeniaPectinata,Stuckenia pectinata,Stuckenia pectinata,Stuckenia.pectinata,Species,9,3,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+StuckeniaVaginata,Stuckenia vaginata,Stuckenia vaginata,Stuckenia.vaginata,Species,2,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SuaedaCalceoliformis,Suaeda calceoliformis,Suaeda calceoliformis,Suaeda.calceoliformis,Species,20,11,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Symphoricarpos,Symphoricarpos,Symphoricarpos,Symphoricarpos,Genus,24,9,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+SymphoricarposAlbus,Symphoricarpos albus,Symphoricarpos albus,Symphoricarpos.albus,Species,801,284,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SymphoricarposOccidentalis,Symphoricarpos occidentalis,Symphoricarpos occidentalis,Symphoricarpos.occidentalis,Species,920,304,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+Symphyotrichum,Symphyotrichum,Symphyotrichum,Symphyotrichum,Genus,31,16,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+SymphyotrichumAscendens,Symphyotrichum ascendens,Symphyotrichum ascendens,Symphyotrichum.ascendens,Species,4,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+SymphyotrichumBoreale,Symphyotrichum boreale,Symphyotrichum boreale,Symphyotrichum.boreale,Species,32,17,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SymphyotrichumCiliatum,Symphyotrichum ciliatum,Symphyotrichum ciliatum,Symphyotrichum.ciliatum,Species,29,16,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+SymphyotrichumCiliolatum,Symphyotrichum ciliolatum,Symphyotrichum ciliolatum,Symphyotrichum.ciliolatum,Species,1392,491,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SymphyotrichumEricoides,Symphyotrichum ericoides/falcatum,Symphyotrichum ericoides/falcatum,Symphyotrichum.ericoides.falcatum,Species,533,179,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+SymphyotrichumLaeve,Symphyotrichum laeve,Symphyotrichum laeve,Symphyotrichum.laeve,Species,282,125,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+SymphyotrichumLanceolatum,Symphyotrichum lanceolatum,Symphyotrichum lanceolatum,Symphyotrichum.lanceolatum,Species,95,47,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+SymphyotrichumPuniceum,Symphyotrichum puniceum,Symphyotrichum puniceum,Symphyotrichum.puniceum,Species,314,147,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+Syringa,Syringa,Syringa,Syringa,Genus,3,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+SyringaReticulata,Syringa reticulata,Syringa reticulata,Syringa.reticulata,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+SyringaVulgaris,Syringa vulgaris,Syringa vulgaris,Syringa.vulgaris,Species,6,4,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+TanacetumBipinnatum,Tanacetum vulgare,Tanacetum vulgare,Tanacetum.vulgare,Species,35,21,TRUE,FALSE,TRUE,FALSE,FALSE,Exotic
+TaraxacumCeratophorum,Taraxacum ceratophorum,Taraxacum ceratophorum,Taraxacum.ceratophorum,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+TaraxacumOfficinale,Taraxacum officinale / erythrospermum,Taraxacum officinale / erythrospermum,Taraxacum.officinale...erythrospermum,Species,2651,856,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+Taxus,Taxus,Taxus,Taxus,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+TephroserisPalustris,Tephroseris palustris,Tephroseris palustris,Tephroseris.palustris,Species,9,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Thalictrum,Thalictrum,Thalictrum,Thalictrum,Genus,12,6,FALSE,FALSE,TRUE,FALSE,FALSE,NA
+ThalictrumDasycarpum,Thalictrum dasycarpum,Thalictrum dasycarpum,Thalictrum.dasycarpum,Species,37,13,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ThalictrumOccidentale,Thalictrum occidentale,Thalictrum occidentale,Thalictrum.occidentale,Species,33,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ThalictrumSparsiflorum,Thalictrum sparsiflorum,Thalictrum sparsiflorum,Thalictrum.sparsiflorum,Species,30,19,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ThalictrumVenulosum,Thalictrum venulosum,Thalictrum venulosum,Thalictrum.venulosum,Species,500,212,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ThermopsisRhombifolia,Thermopsis rhombifolia,Thermopsis rhombifolia,Thermopsis.rhombifolia,Species,555,195,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ThinopyrumIntermedium,Thinopyrum intermedium,Thinopyrum intermedium,Thinopyrum.intermedium,Species,12,5,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+ThlaspiArvense,Thlaspi arvense,Thlaspi arvense,Thlaspi.arvense,Species,549,215,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+ThunbergiaAlata,Thunbergia alata,Thunbergia alata,Thunbergia.alata,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+TiarellaTrifoliata,Tiarella trifoliata,Tiarella trifoliata,Tiarella.trifoliata,Species,12,5,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+TorreyochloaPallida,Torreyochloa pallida,Torreyochloa pallida,Torreyochloa.pallida,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ToxicoscordionVenenosum,Toxicoscordion venenosum,Toxicoscordion venenosum,Toxicoscordion.venenosum,Species,67,31,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+TragopogonPratensis,Tragopogon pratensis,Tragopogon pratensis,Tragopogon.pratensis,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+TrianthaGlutinosa,Triantha glutinosa,Triantha glutinosa,Triantha.glutinosa,Species,15,8,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+TrichophorumAlpinum,Trichophorum alpinum,Trichophorum alpinum,Trichophorum.alpinum,Species,8,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+TrientalisBorealis,Trientalis borealis,Trientalis borealis,Trientalis.borealis,Species,576,230,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+TrientalisEuropaea,Trientalis europaea,Trientalis europaea,Trientalis.europaea,Species,14,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Trifolium,Trifolium,Trifolium,Trifolium,Genus,9,4,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+TrifoliumHybridum,Trifolium hybridum,Trifolium hybridum,Trifolium.hybridum,Species,763,285,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+TrifoliumPratense,Trifolium pratense,Trifolium pratense,Trifolium.pratense,Species,406,162,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+TrifoliumRepens,Trifolium repens,Trifolium repens,Trifolium.repens,Species,516,189,TRUE,TRUE,TRUE,TRUE,TRUE,Exotic
+TriglochinMaritima,Triglochin maritima,Triglochin maritima,Triglochin.maritima,Species,163,60,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+TriglochinPalustris,Triglochin palustris,Triglochin palustris,Triglochin.palustris,Species,16,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+TripleurospermumInodorum,Tripleurospermum inodorum,Tripleurospermum inodorum,Tripleurospermum.inodorum,Species,70,34,TRUE,TRUE,TRUE,FALSE,TRUE,Exotic
+TrisetumSpicatum,Trisetum spicatum,Trisetum spicatum,Trisetum.spicatum,Species,22,10,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Triticosecale,Triticosecale,Triticosecale,Triticosecale,Genus,22,6,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Triticum,Triticum,Triticum,Triticum,Genus,487,135,TRUE,FALSE,TRUE,TRUE,TRUE,Exotic
+TrolliusAlbiflorus,Trollius albiflorus,Trollius albiflorus,Trollius.albiflorus,Species,7,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+TurritisGlabra,Turritis glabra,Turritis glabra,Turritis.glabra,Species,42,16,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+TyphaLatifolia,Typha latifolia,Typha latifolia,Typha.latifolia,Species,281,137,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+UlmusAmericana,Ulmus americana,Ulmus americana,Ulmus.americana,Species,8,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+UlmusPumila,Ulmus pumila,Ulmus pumila,Ulmus.pumila,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+Urtica,Urtica,Urtica,Urtica,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+UrticaDioica,Urtica dioica,Urtica dioica,Urtica.dioica,Species,442,213,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+UtriculariaIntermedia,Utricularia intermedia,Utricularia intermedia,Utricularia.intermedia,Species,29,11,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+UtriculariaMinor,Utricularia minor,Utricularia minor,Utricularia.minor,Species,4,4,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+UtriculariaVulgaris,Utricularia vulgaris,Utricularia vulgaris,Utricularia.vulgaris,Species,57,23,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+VaccariaHispanica,Vaccaria hispanica,Vaccaria hispanica,Vaccaria.hispanica,Species,40,13,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Vaccinium,Vaccinium,Vaccinium,Vaccinium,Genus,37,14,TRUE,FALSE,FALSE,FALSE,FALSE,NA
+VacciniumCespitosum,Vaccinium cespitosum,Vaccinium cespitosum,Vaccinium.cespitosum,Species,293,124,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+VacciniumMembranaceum,Vaccinium membranaceum,Vaccinium membranaceum,Vaccinium.membranaceum,Species,63,21,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+VacciniumMyrtilloides,Vaccinium myrtilloides,Vaccinium myrtilloides,Vaccinium.myrtilloides,Species,1370,455,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+VacciniumMyrtillus,Vaccinium myrtillus,Vaccinium myrtillus,Vaccinium.myrtillus,Species,2,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+VacciniumOxycoccos,Vaccinium oxycoccos,Vaccinium oxycoccos,Vaccinium.oxycoccos,Species,1024,332,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+VacciniumScoparium,Vaccinium scoparium,Vaccinium scoparium,Vaccinium.scoparium,Species,10,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+VacciniumUliginosum,Vaccinium uliginosum,Vaccinium uliginosum,Vaccinium.uliginosum,Species,69,26,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+VacciniumVitisidaea,Vaccinium vitis-idaea,Vaccinium vitis-idaea,Vaccinium.vitis.idaea,Species,2078,627,TRUE,TRUE,FALSE,FALSE,TRUE,Native
+ValerianaDioica,Valeriana dioica,Valeriana dioica,Valeriana.dioica,Species,21,12,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ValerianaSitchensis,Valeriana sitchensis,Valeriana sitchensis,Valeriana.sitchensis,Species,12,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+VeratrumViride,Veratrum viride,Veratrum viride,Veratrum.viride,Species,10,3,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+Verbena,Verbena,Verbena,Verbena,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+VerbenaBracteata,Verbena bracteata,Verbena bracteata,Verbena.bracteata,Species,15,10,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+Veronica,Veronica,Veronica,Veronica,Genus,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,NA
+VeronicaAmericana,Veronica americana,Veronica americana,Veronica.americana,Species,36,22,TRUE,FALSE,TRUE,FALSE,FALSE,Native
+VeronicaPeregrina,Veronica peregrina,Veronica peregrina,Veronica.peregrina,Species,76,40,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+VeronicaScutellata,Veronica scutellata,Veronica scutellata,Veronica.scutellata,Species,11,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+VeronicaSerpyllifolia,Veronica serpyllifolia,Veronica serpyllifolia,Veronica.serpyllifolia,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+VeronicaSpicata,Veronica spicata,Veronica spicata,Veronica.spicata,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ViburnumEdule,Viburnum edule,Viburnum edule,Viburnum.edule,Species,1812,580,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ViburnumOpulus,Viburnum opulus,Viburnum opulus,Viburnum.opulus,Species,37,22,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ViciaAmericana,Vicia americana,Vicia americana,Vicia.americana,Species,2219,742,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ViciaCracca,Vicia cracca,Vicia cracca,Vicia.cracca,Species,10,4,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+Viola,Viola,Viola,Viola,Genus,116,57,TRUE,TRUE,TRUE,FALSE,TRUE,NA
+ViolaAdunca,Viola adunca,Viola adunca,Viola.adunca,Species,175,87,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ViolaCanadensis,Viola canadensis,Viola canadensis,Viola.canadensis,Species,640,252,TRUE,TRUE,TRUE,TRUE,TRUE,Native
+ViolaNephrophylla,Viola nephrophylla,Viola nephrophylla,Viola.nephrophylla,Species,8,4,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ViolaNuttallii,Viola nuttallii,Viola nuttallii,Viola.nuttallii,Species,3,2,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ViolaPalustris,Viola palustris,Viola palustris,Viola.palustris,Species,14,9,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+ViolaPedunculata,Viola pedunculata,Viola pedunculata,Viola.pedunculata,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ViolaRenifolia,Viola renifolia,Viola renifolia,Viola.renifolia,Species,829,325,TRUE,TRUE,TRUE,FALSE,TRUE,Native
+ViolaSelkirkii,Viola selkirkii,Viola selkirkii,Viola.selkirkii,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+ViolaTricolor,Viola tricolor,Viola tricolor,Viola.tricolor,Species,5,4,FALSE,FALSE,TRUE,FALSE,FALSE,Exotic
+ViolaWittrockiana,Viola Wittrockiana,Viola Wittrockiana,Viola.Wittrockiana,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+VulpiaOctoflora,Poaceae,Poaceae,Poaceae,Species,1,1,FALSE,FALSE,FALSE,FALSE,FALSE,Native
+WoodsiaIlvensis,Woodsia ilvensis,Woodsia ilvensis,Woodsia.ilvensis,Species,8,7,TRUE,FALSE,FALSE,FALSE,FALSE,Native
+XanthismaSpinulosum,Xanthisma spinulosum,Xanthisma spinulosum,Xanthisma.spinulosum,Species,126,59,FALSE,FALSE,TRUE,TRUE,TRUE,Native
+XanthiumStrumarium,Xanthium strumarium,Xanthium strumarium,Xanthium.strumarium,Species,4,4,FALSE,FALSE,TRUE,FALSE,FALSE,Native
+ZeaMays,Zea mays,Zea mays,Zea.mays,Species,11,3,FALSE,FALSE,FALSE,FALSE,FALSE,Exotic
+ZigadenusElegans,Zigadenus elegans,Zigadenus elegans,Zigadenus.elegans,Species,92,42,TRUE,FALSE,TRUE,TRUE,TRUE,Native
+ZiziaAptera,Zizia aptera,Zizia aptera,Zizia.aptera,Species,77,42,TRUE,FALSE,TRUE,TRUE,TRUE,Native
