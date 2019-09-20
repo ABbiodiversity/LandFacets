@@ -1,7 +1,7 @@
 #
 # Title: Visual exploration of land facet + soil data
 # Created: June 12th, 2019
-# Last Updated: August 19th, 2019
+# Last Updated: September 19th, 2019
 # Author: Brandon Allen
 # Objectives: Visually explore the similarities between the land facet and soils layers
 # Keywords: Initialization, Exploration
@@ -121,5 +121,67 @@ for (x in 1:length(variable.occurrence)) {
 dev.off()
 
 
+#
+# Climate Correlations
+# Prediction grid
+pm <- read.csv("data/lookup/prediction-matrix/predictionmatrix_terrain-water-dunes.csv")
+rownames(pm) <- colnames(pm)
 
+# Landscape, climate, space
+load("data/processed/facet-soil-proportions_2019-08-16.Rdata")
+load("data/processed/spatial-climate_2019-08-16.Rdata")
+
+# Add the number of visits to the climate data
+site.visit <- table(droplevels(climate.raw$abmi_site))
+colnames(climate.raw)[4] <- "visit"
+climate.raw$visit <- rep(0, nrow(climate.raw))
+
+for(x in 1:length(site.visit)) {
+    
+    climate.raw[climate.raw$abmi_site %in% names(site.visit)[x], "visit"] <- as.numeric(site.visit[x])
+    
+}
+
+rm(site.visit, x)
+
+# Species data, some sites are not found across data sets after accounting for name changes
+# 103 sites still do not match up after reclassification
+site.reclass <- read.csv("data/lookup/site-reclass_2019-06-14.csv")
+species.data <- read.csv("data/base/species/vplants_SiteBinom_2018-05-29.csv")
+species.data$site_year <- as.character(species.data$site_year)
+species.data$site_year[species.data$site_year %in% site.reclass$species_data] <- as.character(site.reclass$site_data)
+
+# Current landscape, space, and climate 
+model.data <- as.data.frame(landscape.summaries$landfacet.site$curr)
+model.data["site_year"] <- rownames(model.data)
+model.data <- model.data[, -12] # Remove HFor footprint
+model.data <- merge.data.frame(model.data, climate.raw, by = "site_year")
+
+# Correlation for current landscape
+
+cormat <- cor(model.data[, -c(1, 16:18, 33)])
+
+# Get upper triangle of the correlation matrix
+
+get_lower_tri<-function(cormat){
+    cormat[upper.tri(cormat)] <- NA
+    return(cormat)
+}
+
+upper_tri <- get_lower_tri(cormat)
+
+melted_cormat <- melt(upper_tri, na.rm = TRUE)
+
+# Plot heatmap
+png(filename = "results/figures/facet-climate_corr_2019-09-19.png", width = 800, height = 800)
+ggplot(data = melted_cormat, aes(x=Var1, y=Var2, fill=value)) + # Visualization
+    geom_tile(color = "white")+
+    scale_fill_gradient2(low = "blue", high = "red", mid = "white", 
+                         midpoint = 0, limit = c(-1,1), space = "Lab", 
+                         name="Pearson\nCorrelation") +
+    theme_minimal()+ 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+                                     size = 12, hjust = 1))+
+    coord_fixed()
+dev.off()
 
