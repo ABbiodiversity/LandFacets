@@ -16,6 +16,10 @@ As this layer combines several data sources, there are a few issues we should be
 
 ## Exploration
 
+
+![Distribution of landcover variables across ABMI sites (2003-2018)](results/figures/facet-soil-hf_distributions_2021-10-07.png)
+
+
 We explored the following relationships:
 1) Correlations between land facets and soil data
 2) Correlations between land facets and human footprint
