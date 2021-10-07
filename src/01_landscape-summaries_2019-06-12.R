@@ -1,13 +1,12 @@
 #
 # Title: Site summaries for both soil and land facet layers
 # Created: June 12th, 2019
-# Last Updated: August 19th, 2019
+# Last Updated: October 7th, 2021
 # Author: Brandon Allen
 # Objectives: Create site and quadrant level summaries of the soil and land facet layers
-# Keywords: Initialization, Long form, Site proportions, Kgrid proportions, Soil quadrant raw
-# Notes: Does the land facet layer count as the reference condition, 
-# stamp the human footprint onto the layer and then backfill based on the surrounding landscape?
-
+# Keywords: Initialization, Long form, Site proportions, Kgrid proportions
+# Notes: 1) Updated the soil and human footprint lookup tables to the 2021 standard
+#
 
 ##################
 # Initialization # 
@@ -18,12 +17,13 @@ gc()
 
 # Load relevant libraries, scripts, and lookups
 library(DBI)
-library(rgdal)
+library(ggplot2)
 library(mefa4)
+library(rgdal)
 library(RSQLite)
 
 source("src/landscape-summary-functions_2019-06-13.R")
-soil.facet.hf.lookup <- read.csv("data/lookup/soil-facet-hf-lookup-v61_2019.csv")
+soil.facet.hf.lookup <- read.csv("data/lookup/soil-facet-hf-lookup-v61_2021.csv")
 
 # Load and clean land facet data 
 f <- file.path("data/base/habitat/20190318_SummaryTables_1ha_TerrestrialSites_Veg61_vHF_LandFacets_SurveyYear_2003_2018.sqlite")
@@ -42,8 +42,8 @@ landscape.raw <- data.frame(quadrant = landscape.raw$Section,
                             shape_area = landscape.raw$Shape_Area,
                             nr = landscape.raw$NRNAME,
                             nsr = landscape.raw$NSRNAME,
-                            soil_class = landscape.raw$Soil_Type_1,
-                            feature_ty = landscape.raw$FEATURE_TY,
+                            soil_class = factor(landscape.raw$Soil_Type_1),
+                            feature_ty = factor(landscape.raw$FEATURE_TY),
                             cti_123 = landscape.raw$cti_123,
                             solar_123 = landscape.raw$solar_123,
                             water_01 = landscape.raw$water_01,
@@ -88,7 +88,7 @@ colnames(topo.continuous) <- c("site_year", name.store[-1])
 topo.continuous$site_year <- as.factor(topo.continuous$site_year)
 climate.raw <- merge.data.frame(climate.raw, topo.continuous, by = "site_year")
 
-save(climate.raw, file = "data/processed/spatial-climate_2019-08-16.Rdata")
+save(climate.raw, file = "data/processed/spatial-climate_2021-10-07.Rdata")
 
 rm(climate.raw, topo.continuous, name.store)
 
@@ -138,13 +138,15 @@ landscape.raw$Terrain[landscape.raw$Terrain == "3_3"] <- "Sloped_wet"
 # Terrain x water_01 x springs_01 x snowice_01 = Terrain
 # If any of the three water groups = 1, replace value from the Terrain model
 
-# Create Terrain_Water layer
-landscape.raw["Terrain_Water"] <- landscape.raw$Terrain
-landscape.raw$Terrain_Water[landscape.raw$water_01 == 1] <- "Water"
-landscape.raw$Terrain_Water[landscape.raw$snowice_01 == 1] <- "Snowice"
-landscape.raw$Terrain_Water[landscape.raw$springs_01 == 1] <- "Springs"
+# Create land_facet layer
+landscape.raw["land_facet"] <- landscape.raw$Terrain
+landscape.raw$land_facet[landscape.raw$water_01 == 1] <- "Water"
+landscape.raw$land_facet[landscape.raw$snowice_01 == 1] <- "Snowice"
+landscape.raw$land_facet[landscape.raw$springs_01 == 1] <- "Springs"
 
-colnames(landscape.raw)[15] <- "land_facet"
+# Factor the land facet and soil categories
+landscape.raw$land_facet <- factor(landscape.raw$land_facet)
+landscape.raw$soil_class <- factor(landscape.raw$soil_class)
 
 # In this analysis, we are going to exclude Dunes from the layer set as it is more dificult to perform the summaries myself.
 # If Eric has time, it would be good to perform the summaries for the 1km2 grid.
@@ -167,7 +169,7 @@ features.lookup <- list(as.factor(sort(unique(landscape.raw$land_facet))),
                        droplevels(sort(unique(landscape.raw$soil_class))),
                        droplevels(sort(unique(landscape.raw$feature_ty))))
 names(features.lookup) <- c("land_facet", "soil_class", "feature_ty")
-save(features.lookup, file = "data/lookup/features-lookup_2019-08-16.Rdata")
+save(features.lookup, file = "data/lookup/features-lookup_2021-10-07.Rdata")
 
 # Create and save long forms for the four combinations (land facet quadrant, land facet site, soil quadrant, soil site)
 
@@ -208,12 +210,16 @@ names(landfacet.long.form$landfacet.site) <- c("site_year", "nr", "nsr", "featur
 names(landfacet.long.form$soil.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "soil_class", "area")
 names(landfacet.long.form$soil.site) <- c("site_year", "nr", "nsr", "feature_ty", "soil_class", "area")
 
-save(landfacet.long.form, file = "data/processed/facet-soil-longform_2019-08-16.Rdata")
-rm(landscape.raw)
+save(landfacet.long.form, file = "data/processed/facet-soil-longform_2021-10-07.Rdata")
+rm(landfacet.long.form, landscape.raw)
+gc()
 
 ####################
 # Site proportions # 
 ####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Load the landcover layer 
+load("data/processed/facet-soil-longform_2021-10-07.Rdata")
 
 # Create blank matrix to store the resutls in
 # Should have a two lists (facet and soil) with the current and reference summaries at the site and quadrant level
@@ -253,7 +259,7 @@ soil.site <- proportion_summary(soil.site, landfacet.long.form$soil.site, soil.f
 landscape.summaries <- list(facet.quad, facet.site, soil.quad, soil.site)
 names(landscape.summaries) <- c("landfacet.quadrant", "landfacet.site", "soil.quadrant", "soil.site")
 
-save(landscape.summaries, file = "data/processed/facet-soil-proportions_2019-08-16.Rdata")
+save(landscape.summaries, file = "data/processed/facet-soil-proportions_2021-10-07.Rdata")
 
 rm(facet.quad, facet.site, soil.quad, soil.site, landfacet.long.form, landscape.summaries)
 
@@ -269,7 +275,7 @@ facet.grid["Water"] <- rowSums(facet.grid[, 2:4]) # Combine water categories
 facet.grid <- facet.grid[, c(1, 5:12)]
 facet.grid[, 2:9] <- facet.grid[, 2:9] / rowSums(facet.grid[, 2:9])
 
-save(facet.grid, file = "data/processed/facet-kgrid_2019-08-16.Rdata")
+save(facet.grid, file = "data/processed/facet-kgrid_2021-10-07.Rdata")
 
 load("data/base/habitat/veg-hf_1kmgrid_v6-fixage0.Rdata")
 soil.ref <- as.data.frame(as.matrix(dd1km_pred$soil_reference))
@@ -282,40 +288,7 @@ soil.grid <- soil.grid / rowSums(soil.grid)
 soil.grid["LinkID"] <- rownames(soil.grid)
 soil.grid <- soil.grid[, c(7, 1:6)]
 
-save(soil.grid, file = "data/processed/soil-kgrid_2019-08-16.Rdata")
+save(soil.grid, file = "data/processed/soil-kgrid_2021-10-07.Rdata")
 
 rm(list=ls())
 gc()
-
-#####################
-# Soil quadrant raw #
-#####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-source("src/landscape-summary-functions_2019-06-13.R")
-soil.facet.hf.lookup <- read.csv("data/lookup/soil-facet-hf-lookup-v61_2019.csv")
-load("data/processed/facet-soil-longform_2019-08-16.Rdata")
-
-soil.quad.raw <- landfacet.long.form$soil.quadrant
-soil.quad.raw$soil_class <- as.character(soil.quad.raw$soil_class)
-soil.quad.raw$feature_ty <- as.character(soil.quad.raw$feature_ty)
-
-# Soil Quadrant
-soil.quad.raw <- matrix_creation(site.list = unique(paste(soil.quad.raw$site_year, 
-                                                      soil.quad.raw$quadrant, sep = "_")), 
-                             feature.lookup = unique(soil.quad.raw$feature_ty[!(soil.quad.raw$feature_ty %in% "NATIVE")]), 
-                             landscape.lookup = unique(soil.quad.raw$soil_class))
-names(soil.quad.raw) <- c("curr", "ref")
-
-soil.facet.hf.lookup$Class_Use <- soil.facet.hf.lookup$Class_Fine
-
-
-soil.quad.raw <- proportion_summary(soil.quad.raw, landfacet.long.form$soil.quadrant, soil.facet.hf.lookup, FALSE, TRUE)
-
-
-save(soil.quad.raw, file = "data/processed/soil-raw_2019-08-16.Rdata")
-
-rm(list=ls())
-gc()
-
-
-
