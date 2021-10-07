@@ -14,15 +14,22 @@ With a higher spatial resolution, and larger number of classes compared to our s
 
 As this layer combines several data sources, there are a few issues we should be aware of. First, the saline soils layer is derived from the AGRASID database, where polygons are defined as saline if they are greater than 30% saline soil. This means the soil composition at our sites may be incorrect as we don’t know the distribution of saline soil in the polygon. Second, the dunes and saline soils layers have pixels masked if the topographic layers indicate the pixel is wetter or drier than expected. As we don’t have ground truthing, it makes it difficult to know which classification is correct. As Scott created the layer in a modular framework, we could choose to ignore the saline soils and/or dunes layers or create a different ruleset for stacking layers that would better meet our needs. For this exercise, I chose to remove the saline soils layer and maintain the dunes layer based on Scott's stacking process. This processes involved reclassifying Mesic, Dry, and Sloped pixels from the Terrain sub-model that overlapped with the Alberta Geological Surveys dunes layer.
 
-## Exploration
+## Landcover Distribution
+Landcover data was summarized for all ABMI sites surveyed between 2003-2018. At each site, both land facet and soil information were summarized at the 1ha and quadrant scales. Visual inspection of the data shows that under the current landscape condition (including human footprint), there are positive correlations between the land facet and soil classes (Figure 1; e.g., ClayLoamSand and Dry, Blowout and Mesic, ThinBreak and Warm slope). However, many of those relationships were not observed under the reference condition (Figure 2). 
 
+
+![Heatmap of correlation between soil and land facets under current conditions](results/figures/facet-soil-hf-curr_corr_2021-10-07.png)
+Figure 1 - Heatmap of correlation between soil and land facets under current conditions.
+
+![Heatmap of correlation between soil and land facets under reference conditions](results/figures/facet-soil-hf-ref_corr_2021-10-07.png)
+Figure 2 - eatmap of correlation between soil and land facets under reference conditions.
+
+The proportion of sites occupied by landcover classes varied between soil and land facet categories. Based on the soil data, many sites were observed to be 100% one class. However, we observed few sites with 100% coverage of a single land facet (Figure 3). The increased complexity of each site could affect our models, but may represent the landscape more accurately.
 
 ![Distribution of landcover variables across ABMI sites (2003-2018)](results/figures/facet-soil-hf_distributions_2021-10-07.png)
+Figure 3 - Distribution of landcover variables across ABMI sites (2003-2018).
 
+## Model Results
 
-We explored the following relationships:
-1) Correlations between land facets and soil data
-2) Correlations between land facets and human footprint
-3) Data uses 2003-2018
-
+THIS IS UNDERGOING A REVISION
 I explored two different approaches for using the land facet layer in our vascular plant habitat suitability models. The first option uses the ABMI soils layer but adds the continuous topographic indices from the Terrain sub-model as another spatial and climate covariate. The second option replaces the ABMI soils layer with the categories defined in the modified land facet layer. Model fit of these approaches were compared to our current models built on only the ABMI soils layer. AUC scores were calculated using all available vascular plant data and cross validation was performed using a "leave-one-out" approach.  
