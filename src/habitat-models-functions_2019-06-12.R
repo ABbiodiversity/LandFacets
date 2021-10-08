@@ -1,7 +1,7 @@
 #
 # Title: Functions to execute species habitat models
 # Created: June 13th, 2019
-# Last Updated: August 16th, 2019
+# Last Updated: October 8th, 2021
 # Author: Brandon Allen
 # Objectives: Soil and land facet habitat model functions
 # Keywords: Southern models, Grid predictions, Site predictions, AUC calculation
@@ -82,7 +82,7 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
                 
         }
         
-        names(tTypeMean) <- names(tTypeVar)<- colnames(prediction.matrix) # Rename the final intercept coefficient to productive
+        names(tTypeMean) <- names(tTypeVar) <- rownames(prediction.matrix) # Rename the final intercept coefficient to productive
         
         data.analysis$prediction <- colSums(p.site1 * aic.wt.ta.adj)  # Add logit-scaled model average prediction to data frame
         
@@ -92,7 +92,6 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         results.store$paspen.coef[species.ID, "paspen"] <- tpAspenMean
         results.store$paspen.se[species.ID, "paspen"] <- sqrt(tpAspenVar)
         
-        # Do Not Need To Adjust! HardLin is a classification and is combined with Urban Industrial as Alienating footprint
         # 3. Do the adjustments to coefficients
         # # 3.2 Variance-weighted average of hard linear (often poorly estimated) with urban/industrial (no early seral to adjust soft linear in south)
         results.store$landscape.coef[species.ID, "HardLin"] <- plogis( (qlogis(results.store$landscape.coef[species.ID, "HardLin"]) / results.store$landscape.se[species.ID, "HardLin"]^2 + qlogis(results.store$landscape.coef[species.ID, "UrbInd"])/results.store$landscape.se[species.ID, "UrbInd"]^2) / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2) )  # Inverse-variance weighted, done on logit scale then converted back
@@ -107,22 +106,22 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         p1 <- plogis(qlogis(p1) + results.store$paspen.coef[species.ID, ] * data.analysis$paspen)  # And add in effect of pAspen on logit scale
         
         wt1 <- data.analysis$nQuadrant * data.analysis$visit  # Need to do this to use model.matrix below for plotting
-        space.climate.store[[1]] <- try(glm(pcount ~ offset(qlogis(0.998 * p1 + 0.001)), data = data.analysis, family = "binomial", weights = wt1))  # Prediction can be 0 (water), so need to scale a bit to avoid infinities in logit offset. Protocol not included here, because already accounted for in offset values 
+        space.climate.store[[1]] <- try(glm(pcount ~ offset(qlogis(0.998 * p1 + 0.001)), data = data.analysis, family = "binomial", weights = visit))  # Prediction can be 0 (water), so need to scale a bit to avoid infinities in logit offset. Protocol not included here, because already accounted for in offset values 
         space.climate.store[[2]] <- try(update(space.climate.store[[1]], .~.+ PET))
         space.climate.store[[3]] <- try(update(space.climate.store[[1]], .~.+ AHM))
         space.climate.store[[4]] <- try(update(space.climate.store[[1]], .~.+ MAT))
         space.climate.store[[5]] <- try(update(space.climate.store[[1]], .~.+ FFP))
         space.climate.store[[6]] <- try(update(space.climate.store[[1]], .~.+ MAP + FFP))
-        space.climate.store[[7]] <- try(update(space.climate.store[[1]], .~.+ MAP +FFP + MAP:FFP))
+        space.climate.store[[7]] <- try(update(space.climate.store[[1]], .~.+ MAP +FFP + MAPFFP))
         space.climate.store[[8]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM))
-        space.climate.store[[9]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM + MAP:PET + MAT:AHM))
+        space.climate.store[[9]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM + MAPPET + MATAHM))
         space.climate.store[[10]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAP))
         space.climate.store[[11]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT))
         space.climate.store[[12]] <- try(update(space.climate.store[[1]] ,.~.+ AHM + PET))
-        space.climate.store[[13]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + I(MAT^2) + MWMT + I(MWMT^2)))
+        space.climate.store[[13]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAT2 + MWMT + MWMT2))
         space.climate.store[[14]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT + FFP + MAT))
-        for (i in 1:14) space.climate.store[[i + 14]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + Lat:Long)) 
-        for (i in 1:14) space.climate.store[[i + 28]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + Lat:Long + I(Lat^2) + I(Long^2)))
+        for (i in 1:14) space.climate.store[[i + 14]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong)) 
+        for (i in 1:14) space.climate.store[[i + 28]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong + Lat2 + Long2))
         
         nModels.sc<-length(space.climate.store)
         # BIC calculation to select best covariate set Uses BIC for more conservative variable set
@@ -142,17 +141,36 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         # And the subset of climate and/or spatial variables
         vnames <- names(coef(space.climate.store[[which.max(bic.wt.sc)]]))
-        vnames1 <- ifelse(vnames == "(Intercept)", "Intercept", vnames)  # This is for the names used in km2.res (where "(", "^", etc. can't be used)
-        vnames1 <- ifelse(vnames1 == "I(Lat^2)", "Lat2", vnames1)
-        vnames1 <- ifelse(vnames1 == "I(Long^2)", "Long2", vnames1)
-        vnames1 <- ifelse(vnames1 == "I(MAT^2)", "MAT2", vnames1)
-        vnames1 <- ifelse(vnames1 == "I(MWMT^2)", "MWMT2", vnames1)
-        vnames1 <- gsub(":", "", vnames1)
+        vnames1 <- ifelse(vnames == "(Intercept)", "Intercept", vnames)  # Correct the intercept name
         
-        # Storing of climate coefficients fails
-        coef.match <- colnames(results.store$climate.coef) %in% vnames1
+        # Storing of climate coefficients
         coef.match <- match(colnames(results.store$climate.coef), vnames1, nomatch = 0)
         results.store$climate.coef[species.ID, coef.match != 0] <- coef(best.model.sc)[coef.match]
+        
+        # 4.2 Store detections, surveys, and AIC information
+        results.store$fit[species.ID, "dect"] <- sum(ifelse(data.analysis[, species.ID] > 0, 1, 0)) 
+        results.store$fit[species.ID, "survey"] <- nrow(data.analysis) # Number of sites
+        
+        # Model assessment
+        land.coef <- results.store$landscape.coef[species.ID, ]
+        
+        km2.pveg.curr <- colSums(land.coef*t(data.analysis[ ,names(land.coef)])) # Prediction based on veg types only.
+        
+        # Calculate cimate and spatial prediction for each species
+        
+        km2.pres.curr <- colSums(results.store$climate.coef[species.ID, c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))] * t(data.analysis[ ,colnames(results.store$climate.coef)[c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))]])) # Prediction of residual (climate and spatial) effect
+        
+        # Take the difference between unqiue species intercept and the predicted climate residuals
+        
+        km2.pres.curr <- km2.pres.curr + results.store$climate.coef[species.ID, 1]
+        
+        # Add the paspen
+        km2.pAspen <- colSums(results.store$paspen.coef[species.ID, "paspen"] * t(data.analysis[, "paspen"])) 
+        km2.p.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pres.curr + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
+        
+        # AIC calcualtion
+        results.store$fit[species.ID, "auc_LC"] <- auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr) # AUC Calculation with landcover only
+        results.store$fit[species.ID, "auc_both"] <- auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr) # AUC Calculation with both
         
         return(results.store)
 }
