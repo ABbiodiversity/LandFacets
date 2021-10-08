@@ -1,10 +1,10 @@
 #
 # Title: Site summaries for both soil and land facet layers
 # Created: June 12th, 2019
-# Last Updated: October 7th, 2021
+# Last Updated: October 8th, 2021
 # Author: Brandon Allen
 # Objectives: Create site and quadrant level summaries of the soil and land facet layers
-# Keywords: Initialization, Long form, Site proportions, Kgrid proportions
+# Keywords: Initialization, Long form, Site proportions, Kgrid proportions, Occurrences
 # Notes: 1) Updated the soil and human footprint lookup tables to the 2021 standard
 #
 
@@ -73,7 +73,15 @@ climate.raw <- data.frame(abmi_site = xx$ABMI_Assigned_Site_ID,
                           paspen = xx$pAspen,
                           Lat = xx$PUBLIC_LATTITUDE,
                           Long = xx$PUBLIC_LONGITUDE,
-                          Elevation = xx$ELEVATION)
+                          Elevation = xx$ELEVATION,
+                          Lat2 = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LATTITUDE,
+                          Long2 = xx$PUBLIC_LONGITUDE * xx$PUBLIC_LONGITUDE,
+                          LatLong = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LONGITUDE,
+                          MWMT2 = xx$MWMT * xx$MWMT,
+                          MAT2 = xx$MAT * xx$MAT,
+                          MAPPET = xx$MAP * xx$PET,
+                          MAPFFP = xx$MAP * xx$FFP,
+                          MATAHM = xx$MAT * xx$AHM)
 
 rm(dd_150m, dd_1ha, dd_564m, dd_point, dd_qha, dw_1ha, dw_qha, xx)
 
@@ -289,6 +297,50 @@ soil.grid["LinkID"] <- rownames(soil.grid)
 soil.grid <- soil.grid[, c(7, 1:6)]
 
 save(soil.grid, file = "data/processed/soil-kgrid_2021-10-07.Rdata")
+
+rm(list=ls())
+gc()
+
+###############
+# Occurrences # 
+###############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Load the landcover data
+load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
+
+# Define the site list
+site.list <- rownames(landscape.summaries$landfacet.site$curr)
+
+# Define the species files
+species.list <- list.files("data/base/species/", full.names = TRUE)
+species.list <- species.list[grep(".RData", species.list)] # Grab only the R data ones
+names(species.list) <- c("lichen", "mite", "moss", "vplant") # Name
+
+# For each species data, standardize
+
+for(taxon in names(species.list)) {
+        
+        # Load taxon
+        load(species.list[taxon])
+        
+        # Create quandrant column
+        d$nQuadrant <- 1
+        
+        # Aggregate by site_year
+        occurrence.in <- aggregate(d[, c(FirstSpCol:(LastSpCol), ncol(d))], by = list(d$SiteYear), FUN = sum)
+        colnames(occurrence.in)[1] <- "site_year"
+        occurrence.in <- occurrence.in[, c(1, ncol(occurrence.in), 2:(ncol(occurrence.in) - 1))]
+        
+        # Filter to match sites in the landscape summary
+        occurrence.in <- occurrence.in[occurrence.in$site_year %in% site.list, ]
+        
+        # Save results
+        save(occurrence.in, file = paste0("data/processed/", taxon, "-site-occurrence.RData"))
+        
+        # Remove old information
+        rm(d, pm, FirstSpCol, LastSpCol, SpTable, SpTable.ua, occurrence.in)
+        
+}
 
 rm(list=ls())
 gc()
