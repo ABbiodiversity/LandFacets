@@ -1,7 +1,7 @@
 #
 # Title: Functions to execute species habitat models
 # Created: June 13th, 2019
-# Last Updated: October 8th, 2021
+# Last Updated: October 13th, 2021
 # Author: Brandon Allen
 # Objectives: Soil and land facet habitat model functions
 # Keywords: Southern models, Grid predictions, Site predictions, AUC calculation
@@ -161,12 +161,17 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         km2.pres.curr <- colSums(results.store$climate.coef[species.ID, c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))] * t(data.analysis[ ,colnames(results.store$climate.coef)[c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))]])) # Prediction of residual (climate and spatial) effect
         
         # Take the difference between unqiue species intercept and the predicted climate residuals
-        
-        km2.pres.curr <- km2.pres.curr + results.store$climate.coef[species.ID, 1]
+        # If there are coeffecients, remove the intercept. Otherwise don't do anything
+        if(sum(km2.pres.curr) != 0) {
+                
+                km2.pres.curr <- km2.pres.curr + results.store$climate.coef[species.ID, 1]
+                
+        }
         
         # Add the paspen
         km2.pAspen <- colSums(results.store$paspen.coef[species.ID, "paspen"] * t(data.analysis[, "paspen"])) 
         km2.p.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pres.curr + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
+        km2.pveg.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
         
         # AIC calcualtion
         results.store$fit[species.ID, "auc_LC"] <- auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr) # AUC Calculation with landcover only
