@@ -171,11 +171,11 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         # Add the paspen
         km2.pAspen <- colSums(results.store$paspen.coef[species.ID, "paspen"] * t(data.analysis[, "paspen"])) 
         km2.p.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pres.curr + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
-        km2.pveg.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
+        km2.pveg.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pAspen) # Veg + paspen, apply same transformation as used in fitting residual model
         
         # AIC calcualtion
-        results.store$fit[species.ID, "auc_LC"] <- auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr) # AUC Calculation with landcover only
-        results.store$fit[species.ID, "auc_both"] <- auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr) # AUC Calculation with both
+        results.store$fit[species.ID, "auc_LC"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr),3) # AUC Calculation with landcover only
+        results.store$fit[species.ID, "auc_both"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr), 3) # AUC Calculation with both
         
         return(results.store)
 }
