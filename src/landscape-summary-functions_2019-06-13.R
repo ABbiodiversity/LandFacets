@@ -1,7 +1,7 @@
 #
 # Title: Landscape summary functions
 # Created: June 13th, 2019
-# Last Updated: June 13th, 2019
+# Last Updated: October 18th, 2021
 # Author: Brandon Allen
 # Objectives: Functions required to summarize the landscape long-form data
 # Keywords: Matrix Creation, Proportion Summaries, Soil + HF Reclass
@@ -37,9 +37,9 @@ matrix_creation <- function(site.list, feature.lookup, landscape.lookup) {
 
 # Function to calculate the proportion matrix of each landscape class for the scale of interest.
 # This is the dataset required for the down stream species modeling. 
-proportion_summary <- function(blank.matrix, longform.matrix, feature.reclass, facet.soil, type.proportion) {
+proportion_summary <- function(blank.matrix, longform.matrix, feature.reclass, landscape.ty, type.proportion) {
         
-        landscape.ty <- ifelse(facet.soil == TRUE, "land_facet", "soil_class")
+        # Landscape type can be defined as "land_facet", "soil_class", or "soil_wet_class"
         
         temp.cur.native <- longform.matrix[longform.matrix$feature_ty %in% "NATIVE", ]
         temp.cur.HF  <- longform.matrix[!(longform.matrix$feature_ty %in% "NATIVE"), ]
