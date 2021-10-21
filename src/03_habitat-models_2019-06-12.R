@@ -1,15 +1,15 @@
 #
 # Title: Species habitat models 
 # Created: June 12th, 2019
-# Last Updated: October 8th, 2021
+# Last Updated: October 21st, 2021
 # Author: Brandon Allen
 # Objectives: Species habitat modeling for both land facet and soil data
-# Keywords: Facet models , Soil models 
+# Keywords: Terrain models, Soil models, Facet models, Soil x Wetness models
 #
 
-################
-# Facet models # MODLES ARE MOSTLY CORRECT, BUT SOME SPECIES AUC DECREASES WITH THE FULL MODEL. INVESTIGATE!!
-################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##################
+# Terrain models # MODLES ARE MOSTLY CORRECT, BUT SOME SPECIES AUC DECREASES WITH THE FULL MODEL. INVESTIGATE!!
+##################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 rm(list=ls())
 gc()
@@ -32,8 +32,8 @@ rownames(pm) <- pm$VegType
 pm <- pm[, -1]
 
 # Landscape, climate, space
-load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
-load("data/processed/spatial-climate_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/spatial-climate_2021-10-07.Rdata")
 
 # Add the number of visits to the climate data
 site.visit <- table(droplevels(climate.raw$abmi_site))
@@ -48,9 +48,18 @@ for(x in 1:length(site.visit)) {
 
 rm(site.visit, x)
 
+# Adjust the climate data to represent the quadrants instead of sites
+climate.raw <- rbind.data.frame(climate.raw, climate.raw, climate.raw, climate.raw)
+climate.raw$site_year_quad <- climate.raw$site_year
+climate.raw$site_year_quad <- paste0(climate.raw$site_year_quad, c(rep("_NW", nrow(climate.raw)/4),
+                                                                   rep("_NE", nrow(climate.raw)/4),
+                                                                   rep("_SW", nrow(climate.raw)/4),
+                                                                   rep("_SE", nrow(climate.raw)/4)))
+climate.raw <- climate.raw[, c(30, 1:29)]
+
 # Current landscape, space, and climate 
-site.data <- as.data.frame(landscape.summaries$landfacet.site$curr)
-site.data["site_year"] <- rownames(site.data)
+site.data <- as.data.frame(landscape.summaries$terrain.quadrant$curr)
+site.data["site_year_quad"] <- rownames(site.data)
 site.data <- site.data[, !(colnames(site.data) %in% c("HFor", "HWater"))] # Remove unmodeld HF
 
 # Add the new categories
@@ -72,16 +81,20 @@ for (col.id in colnames(pm)) {
 }
 
 # Define species occurrence files
-occurrence.list <- list.files("data/processed/", full.names = TRUE)
+occurrence.list <- list.files("data/processed/occurrence/", full.names = TRUE)
 
 for (taxon in c("lichen", "mite", "moss", "vplant")) {
         
         # Load the species data (vascular plants test)
-        load(occurrence.list[grep(paste0(taxon, "-site-occurrence"), occurrence.list)])
+        load(occurrence.list[grep(paste0(taxon, "-quadrant-occurrence"), occurrence.list)])
+        
+        # Remove unecessary labels
+        occurrence.in <- occurrence.in[, -c(2:6)]
+        colnames(occurrence.in)[1] <- "site_year_quad"
         
         # Merging of data sets and filter of species with less than 20 occurrences
-        model.data <- merge.data.frame(site.data, climate.raw, by = "site_year")
-        model.data <- merge.data.frame(model.data, occurrence.in, by = "site_year")
+        model.data <- merge.data.frame(site.data, climate.raw, by = "site_year_quad")
+        model.data <- merge.data.frame(model.data, occurrence.in, by = "site_year_quad")
         model.data <- model.data[, c(rep(TRUE, 59), as.logical(colSums(ifelse(model.data[, -c(1:59)] > 0, 1, 0)) > 20))]
         
         # List containing models that will be looped through by the function
@@ -127,12 +140,12 @@ for (taxon in c("lichen", "mite", "moss", "vplant")) {
                 
                 species.coef <- southern_models(data.analysis = model.data, results.store = species.coef, 
                                                 landscape.models = habitat.models, prediction.matrix = pm, 
-                                                species.ID = species.names[spp])
+                                                species.ID = species.names[spp], occurrence.type = "binary")
                 print(paste0(taxon, " ", spp, "/", length(species.names)))
                 
         }
         
-        save(species.coef, file = paste0("results/coef/land-facet-coefficients_", taxon, "_2021-10-08.Rdata"))
+        save(species.coef, file = paste0("results/coef/land-facet-coefficients_", taxon, "_2021-10-21.Rdata"))
         
 }
 
@@ -163,8 +176,8 @@ rownames(pm) <- pm$VegType
 pm <- pm[, -1]
 
 # Landscape, climate, space
-load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
-load("data/processed/spatial-climate_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/spatial-climate_2021-10-07.Rdata")
 
 # Add the number of visits to the climate data
 site.visit <- table(droplevels(climate.raw$abmi_site))
@@ -179,9 +192,18 @@ for(x in 1:length(site.visit)) {
 
 rm(site.visit, x)
 
+# Adjust the climate data to represent the quadrants instead of sites
+climate.raw <- rbind.data.frame(climate.raw, climate.raw, climate.raw, climate.raw)
+climate.raw$site_year_quad <- climate.raw$site_year
+climate.raw$site_year_quad <- paste0(climate.raw$site_year_quad, c(rep("_NW", nrow(climate.raw)/4),
+                                                                   rep("_NE", nrow(climate.raw)/4),
+                                                                   rep("_SW", nrow(climate.raw)/4),
+                                                                   rep("_SE", nrow(climate.raw)/4)))
+climate.raw <- climate.raw[, c(30, 1:29)]
+
 # Current landscape, space, and climate 
-site.data <- as.data.frame(landscape.summaries$soil.site$curr)
-site.data["site_year"] <- rownames(site.data)
+site.data <- as.data.frame(landscape.summaries$soil.quadrant$curr)
+site.data["site_year_quad"] <- rownames(site.data)
 site.data <- site.data[, !(colnames(site.data) %in% c("HFor", "HWater"))] # Remove unmodeld HF
 
 # Add the new categories
@@ -203,17 +225,21 @@ for (col.id in colnames(pm)) {
 }
 
 # Define species occurrence files
-occurrence.list <- list.files("data/processed/", full.names = TRUE)
+occurrence.list <- list.files("data/processed/occurrence/", full.names = TRUE)
 
 for (taxon in c("lichen", "mite", "moss", "vplant")) {
         
         # Load the species data (vascular plants test)
-        load(occurrence.list[grep(paste0(taxon, "-site-occurrence"), occurrence.list)])
+        load(occurrence.list[grep(paste0(taxon, "-quadrant-occurrence"), occurrence.list)])
+        
+        # Remove unecessary labels
+        occurrence.in <- occurrence.in[, -c(2:6)]
+        colnames(occurrence.in)[1] <- "site_year_quad"
         
         # Merging of data sets and filter of species with less than 20 occurrences
-        model.data <- merge.data.frame(site.data, climate.raw, by = "site_year")
-        model.data <- merge.data.frame(model.data, occurrence.in, by = "site_year")
-        model.data <- model.data[, c(rep(TRUE, 59), as.logical(colSums(ifelse(model.data[, -c(1:59)] > 0, 1, 0)) > 20))]
+        model.data <- merge.data.frame(site.data, climate.raw, by = "site_year_quad")
+        model.data <- merge.data.frame(model.data, occurrence.in, by = "site_year_quad")
+        model.data <- model.data[, c(rep(TRUE, 58), as.logical(colSums(ifelse(model.data[, -c(1:58)] > 0, 1, 0)) > 20))]
         
         # List containing models that will be looped through by the function
         habitat.models <- list(as.formula(paste("pcount ~ Blowout + ClaySub + Loamy + RapidDrain + SandyLoam + ThinBreak + Other + UrbInd + Rural + Wellsites + Crop + TameP + RoughP + EnSoftLin + EnSeismic + TrSoftLin + HardLin")),
@@ -246,7 +272,7 @@ for (taxon in c("lichen", "mite", "moss", "vplant")) {
                                  "Lat2", "Long2", "LatLong", "MAT2", "MWMT2", 
                                  "MAPPET", "MAPFFP", "MATAHM")
         
-        species.names <- colnames(model.data)[60:ncol(model.data)]
+        species.names <- colnames(model.data)[59:ncol(model.data)]
         
         species.coef <- list(matrix(ncol = length(landscape.names), nrow = length(species.names), dimnames = list(c(species.names), c(landscape.names))), 
                              matrix(ncol = length(landscape.names), nrow = length(species.names), dimnames = list(c(species.names), c(landscape.names))), 
@@ -262,12 +288,12 @@ for (taxon in c("lichen", "mite", "moss", "vplant")) {
                 
                 species.coef <- southern_models(data.analysis = model.data, results.store = species.coef, 
                                                 landscape.models = habitat.models, prediction.matrix = pm, 
-                                                species.ID = species.names[spp])
+                                                species.ID = species.names[spp], occurrence.type = "binary")
                 print(paste0(taxon, " ", spp, "/", length(species.names)))
                 
         }
         
-        save(species.coef, file = paste0("results/coef/soil-coefficients_", taxon, "_2021-10-08.Rdata"))
+        save(species.coef, file = paste0("results/coef/soil-coefficients_", taxon, "_2021-10-21.Rdata"))
         
 }
 
