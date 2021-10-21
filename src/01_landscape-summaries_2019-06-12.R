@@ -134,7 +134,7 @@ colnames(topo.continuous) <- c("site_year", name.store[-1])
 topo.continuous$site_year <- as.factor(topo.continuous$site_year)
 climate.raw <- merge.data.frame(climate.raw, topo.continuous, by = "site_year")
 
-save(climate.raw, file = "data/processed/spatial-climate_2021-10-07.Rdata")
+save(climate.raw, file = "data/processed/landcover/spatial-climate_2021-10-07.Rdata")
 
 rm(climate.raw, topo.continuous, name.store)
 
@@ -535,7 +535,7 @@ names(landfacet.long.form$soil.site) <- c("site_year", "nr", "nsr", "feature_ty"
 names(landfacet.long.form$soil.wet.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "soil_wet", "area")
 names(landfacet.long.form$soil.wet.site) <- c("site_year", "nr", "nsr", "feature_ty", "soil_wet", "area")
 
-save(landfacet.long.form, file = "data/processed/facet-soil-longform_2021-10-07.Rdata")
+save(landfacet.long.form, file = "data/processed/landcover/facet-soil-longform_2021-10-07.Rdata")
 rm(landfacet.long.form, landscape.raw)
 gc()
 
@@ -544,7 +544,7 @@ gc()
 ####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Load the landcover layer 
-load("data/processed/facet-soil-longform_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-longform_2021-10-07.Rdata")
 
 # Create blank matrix to store the resutls in
 # Should have a two lists (facet and soil) with the current and reference summaries at the site and quadrant level
@@ -620,7 +620,7 @@ landscape.summaries <- list(facet.quad, facet.site, terrain.quad, terrain.site,
 names(landscape.summaries) <- c("landfacet.quadrant", "landfacet.site", "terrain.quadrant", "terrain.site",
                                 "soil.quadrant", "soil.site", "soil.wet.quadrant", "soil.wet.site")
 
-save(landscape.summaries, file = "data/processed/facet-soil-proportions_2021-10-07.Rdata")
+save(landscape.summaries, file = "data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
 
 rm(list=ls())
 gc()
@@ -664,7 +664,7 @@ gc()
 #
 
 # Load the landcover data
-load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
 
 # Define the site list
 site.list <- rownames(landscape.summaries$landfacet.site$curr)
@@ -693,7 +693,7 @@ for(taxon in names(species.list)) {
         occurrence.in <- occurrence.in[occurrence.in$site_year %in% site.list, ]
         
         # Save results
-        save(occurrence.in, file = paste0("data/processed/", taxon, "-site-occurrence.RData"))
+        save(occurrence.in, file = paste0("data/processed/occurrence/", taxon, "-site-occurrence.RData"))
         
         # Remove old information
         rm(d, pm, FirstSpCol, LastSpCol, SpTable, SpTable.ua, occurrence.in)
@@ -708,7 +708,7 @@ gc()
 #
 
 # Load the landcover data
-load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
 
 # Define the site list
 site.list <- rownames(landscape.summaries$landfacet.quadrant$curr)
@@ -727,13 +727,13 @@ for(taxon in names(species.list)) {
     
     # Create quandrant column
     d$nQuadrant <- 1
-    occurrence.in <- d
+    occurrence.in <- d[, c(1:5, ncol(d), FirstSpCol:(LastSpCol))]
     
     # Filter to match sites in the landscape summary
     occurrence.in <- occurrence.in[occurrence.in$SiteYearQu %in% site.list, ]
     
     # Save results
-    save(occurrence.in, file = paste0("data/processed/", taxon, "-quadrant-occurrence.RData"))
+    save(occurrence.in, file = paste0("data/processed/occurrence/", taxon, "-quadrant-occurrence.RData"))
     
     # Remove old information
     rm(d, pm, FirstSpCol, LastSpCol, SpTable, SpTable.ua, occurrence.in)
