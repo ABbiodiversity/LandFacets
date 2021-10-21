@@ -422,8 +422,8 @@ landscape.raw$land_facet[landscape.raw$land_facet == 4] <- "Mesic"
 landscape.raw$land_facet[landscape.raw$land_facet == 5] <- "Dry"
 landscape.raw$land_facet[landscape.raw$land_facet == 6] <- "Sloped_wet"
 landscape.raw$land_facet[landscape.raw$land_facet == 7] <- "Sloped_mesic"
-landscape.raw$land_facet[landscape.raw$land_facet == 8] <- "Sloped_cool"
-landscape.raw$land_facet[landscape.raw$land_facet == 9] <- "Sloped_warm"
+landscape.raw$land_facet[landscape.raw$land_facet == 8] <- "Cool_slopes"
+landscape.raw$land_facet[landscape.raw$land_facet == 9] <- "Warm_slopes"
 landscape.raw$land_facet[landscape.raw$land_facet == 14] <- "Dunes"
 landscape.raw$land_facet[landscape.raw$land_facet == 15] <- "Saline"
 
@@ -562,6 +562,19 @@ facet.site <- matrix_creation(site.list = unique(paste(landfacet.long.form$landf
                               landscape.lookup = features.lookup$land_facet)
 names(facet.site) <- c("curr", "ref")
 
+# Terrain Quadrant
+terrain.quad <- matrix_creation(site.list = unique(paste(landfacet.long.form$terrain.quadrant$site_year, 
+                                                       landfacet.long.form$terrain.quadrant$quadrant, sep = "_")), 
+                              feature.lookup = features.lookup$feature_ty[!(features.lookup$feature_ty %in% "NATIVE")], 
+                              landscape.lookup = features.lookup$terrain_water)
+names(terrain.quad) <- c("curr", "ref")
+
+# Terrain Site
+terrain.site <- matrix_creation(site.list = unique(paste(landfacet.long.form$terrain.site$site_year)), 
+                              feature.lookup = features.lookup$feature_ty[!(features.lookup$feature_ty %in% "NATIVE")], 
+                              landscape.lookup = features.lookup$terrain_water)
+names(terrain.site) <- c("curr", "ref")
+
 # Soil Quadrant
 soil.quad <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.quadrant$site_year, 
                                                        landfacet.long.form$soil.quadrant$quadrant, sep = "_")), 
@@ -576,66 +589,79 @@ soil.site <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.s
 names(soil.site) <- c("curr", "ref")
 
 # Soil Wetness Quadrant
-soil.wet.quad <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.quadrant$site_year, 
-                                                      landfacet.long.form$soil.quadrant$quadrant, sep = "_")), 
+soil.wet.quad <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.wet.quadrant$site_year, 
+                                                      landfacet.long.form$soil.wet.quadrant$quadrant, sep = "_")), 
                              feature.lookup = features.lookup$feature_ty[!(features.lookup$feature_ty %in% "NATIVE")], 
-                             landscape.lookup = features.lookup$cti_123)
+                             landscape.lookup = features.lookup$soil_wet)
 names(soil.wet.quad) <- c("curr", "ref")
 
 # Soil Wetness Site
-soil.wet.site <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.site$site_year)), 
+soil.wet.site <- matrix_creation(site.list = unique(paste(landfacet.long.form$soil.wet.site$site_year)), 
                              feature.lookup = features.lookup$feature_ty[!(features.lookup$feature_ty %in% "NATIVE")], 
-                             landscape.lookup = features.lookup$soil_class)
+                             landscape.lookup = features.lookup$soil_wet)
 names(soil.wet.site) <- c("curr", "ref")
+
+# Load relevant lookup tables
+soil.facet.hf.lookup <- read.csv("data/lookup/soil-facet-hf-lookup-v61_2021.csv")
+soil.moisture.hf.lookup <- read.csv("data/lookup/soil-moisture-hf-lookup-v61_2021.csv")
 
 # Create proportion summaries
 facet.quad <- proportion_summary(facet.quad, landfacet.long.form$landfacet.quadrant, soil.facet.hf.lookup, landscape.ty = "land_facet", TRUE)
 facet.site <- proportion_summary(facet.site, landfacet.long.form$landfacet.site, soil.facet.hf.lookup, landscape.ty = "land_facet", TRUE)
+terrain.quad <- proportion_summary(terrain.quad, landfacet.long.form$terrain.quadrant, soil.facet.hf.lookup, landscape.ty = "terrain_water", TRUE)
+terrain.site <- proportion_summary(terrain.site, landfacet.long.form$terrain.site, soil.facet.hf.lookup, landscape.ty = "terrain_water", TRUE)
 soil.quad <- proportion_summary(soil.quad, landfacet.long.form$soil.quadrant, soil.facet.hf.lookup, landscape.ty = "soil_class", TRUE)
 soil.site <- proportion_summary(soil.site, landfacet.long.form$soil.site, soil.facet.hf.lookup, landscape.ty = "soil_class", TRUE)
-soil.quad <- proportion_summary(soil.quad, landfacet.long.form$soil.quadrant, soil.facet.hf.lookup, landscape.ty = "soil_wet_class", TRUE)
-soil.site <- proportion_summary(soil.site, landfacet.long.form$soil.site, soil.facet.hf.lookup, landscape.ty = "soil_wet_class", TRUE)
+soil.wet.quad <- proportion_summary(soil.wet.quad, landfacet.long.form$soil.wet.quadrant, soil.moisture.hf.lookup, landscape.ty = "soil_wet", TRUE)
+soil.wet.site <- proportion_summary(soil.wet.site, landfacet.long.form$soil.wet.site, soil.moisture.hf.lookup, landscape.ty = "soil_wet", TRUE)
 
-landscape.summaries <- list(facet.quad, facet.site, soil.quad, soil.site)
-names(landscape.summaries) <- c("landfacet.quadrant", "landfacet.site", "soil.quadrant", "soil.site")
+landscape.summaries <- list(facet.quad, facet.site, terrain.quad, terrain.site, 
+                            soil.quad, soil.site, soil.wet.quad, soil.wet.site)
+names(landscape.summaries) <- c("landfacet.quadrant", "landfacet.site", "terrain.quadrant", "terrain.site",
+                                "soil.quadrant", "soil.site", "soil.wet.quadrant", "soil.wet.site")
 
 save(landscape.summaries, file = "data/processed/facet-soil-proportions_2021-10-07.Rdata")
 
-rm(facet.quad, facet.site, soil.quad, soil.site, landfacet.long.form, landscape.summaries)
+rm(list=ls())
+gc()
 
 #####################
 # Kgrid proportions # 
 #####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-facet.grid <- read.csv("data/base/habitat/land-facet-kgrid.csv")
-colnames(facet.grid) <- c("LinkID", "Water_only", "Springs", "SnowIce", 
-                          "Wet", "Mesic", "Dry", "Sloped_wet", 
-                          "Sloped_mesic", "Cool_slopes", "Warm_slopes")
-facet.grid["Water"] <- rowSums(facet.grid[, 2:4]) # Combine water categories
-facet.grid <- facet.grid[, c(1, 5:12)]
-facet.grid[, 2:9] <- facet.grid[, 2:9] / rowSums(facet.grid[, 2:9])
-
-save(facet.grid, file = "data/processed/facet-kgrid_2021-10-07.Rdata")
-
-load("data/base/habitat/veg-hf_1kmgrid_v6-fixage0.Rdata")
-soil.ref <- as.data.frame(as.matrix(dd1km_pred$soil_reference))
-
-rm(dd1km_pred)
-
-# Soil grid
-soil.grid <- as.data.frame(landscape_hf_reclass(soil.ref, soil.facet.hf.lookup))
-soil.grid <- soil.grid / rowSums(soil.grid)
-soil.grid["LinkID"] <- rownames(soil.grid)
-soil.grid <- soil.grid[, c(7, 1:6)]
-
-save(soil.grid, file = "data/processed/soil-kgrid_2021-10-07.Rdata")
-
-rm(list=ls())
-gc()
+# facet.grid <- read.csv("data/base/habitat/land-facet-kgrid.csv")
+# colnames(facet.grid) <- c("LinkID", "Water_only", "Springs", "SnowIce", 
+#                           "Wet", "Mesic", "Dry", "Sloped_wet", 
+#                           "Sloped_mesic", "Cool_slopes", "Warm_slopes")
+# facet.grid["Water"] <- rowSums(facet.grid[, 2:4]) # Combine water categories
+# facet.grid <- facet.grid[, c(1, 5:12)]
+# facet.grid[, 2:9] <- facet.grid[, 2:9] / rowSums(facet.grid[, 2:9])
+# 
+# save(facet.grid, file = "data/processed/facet-kgrid_2021-10-07.Rdata")
+# 
+# load("data/base/habitat/veg-hf_1kmgrid_v6-fixage0.Rdata")
+# soil.ref <- as.data.frame(as.matrix(dd1km_pred$soil_reference))
+# 
+# rm(dd1km_pred)
+# 
+# # Soil grid
+# soil.grid <- as.data.frame(landscape_hf_reclass(soil.ref, soil.facet.hf.lookup))
+# soil.grid <- soil.grid / rowSums(soil.grid)
+# soil.grid["LinkID"] <- rownames(soil.grid)
+# soil.grid <- soil.grid[, c(7, 1:6)]
+# 
+# save(soil.grid, file = "data/processed/soil-kgrid_2021-10-07.Rdata")
+# 
+# rm(list=ls())
+# gc()
 
 ###############
 # Occurrences # 
 ###############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#
+# Site
+#
 
 # Load the landcover data
 load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
@@ -672,6 +698,46 @@ for(taxon in names(species.list)) {
         # Remove old information
         rm(d, pm, FirstSpCol, LastSpCol, SpTable, SpTable.ua, occurrence.in)
         
+}
+
+rm(list=ls())
+gc()
+
+#
+# Quadrant
+#
+
+# Load the landcover data
+load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
+
+# Define the site list
+site.list <- rownames(landscape.summaries$landfacet.quadrant$curr)
+
+# Define the species files
+species.list <- list.files("data/base/species/", full.names = TRUE)
+species.list <- species.list[grep(".RData", species.list)] # Grab only the R data ones
+names(species.list) <- c("lichen", "mite", "moss", "vplant") # Name
+
+# For each species data, standardize
+
+for(taxon in names(species.list)) {
+    
+    # Load taxon
+    load(species.list[taxon])
+    
+    # Create quandrant column
+    d$nQuadrant <- 1
+    occurrence.in <- d
+    
+    # Filter to match sites in the landscape summary
+    occurrence.in <- occurrence.in[occurrence.in$SiteYearQu %in% site.list, ]
+    
+    # Save results
+    save(occurrence.in, file = paste0("data/processed/", taxon, "-quadrant-occurrence.RData"))
+    
+    # Remove old information
+    rm(d, pm, FirstSpCol, LastSpCol, SpTable, SpTable.ua, occurrence.in)
+    
 }
 
 rm(list=ls())
