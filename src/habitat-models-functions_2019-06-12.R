@@ -11,10 +11,19 @@
 # Southern models # 
 ###################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-southern_models <- function (data.analysis, results.store, landscape.models, prediction.matrix, species.ID) {
+southern_models <- function (data.analysis, results.store, landscape.models, prediction.matrix, occurrence.type, species.ID) {
         
         # Convert data to probabilities based on the # of quadrants sampled
-        data.analysis["pcount"] <- data.analysis[, species.ID] / data.analysis$nQuadrant
+        if (occurrence.type == "binary") {
+                
+                data.analysis["pcount"] <- data.analysis[, species.ID]
+                
+        } else {
+                
+                data.analysis["pcount"] <- data.analysis[, species.ID] / data.analysis$nQuadrant
+                
+        }
+
         
         # Creating lists for storage of all models
         space.climate.store <- landscape.store <- list(NULL) 
