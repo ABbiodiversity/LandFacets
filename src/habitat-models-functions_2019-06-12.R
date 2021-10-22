@@ -30,7 +30,7 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         for (model in 1:length(landscape.models)) {
                 
-                landscape.store[[model]] <- try(glm(landscape.models[[model]], family = "binomial", data = data.analysis, weights = visit))
+                landscape.store[[model]] <- try(glm(landscape.models[[model]], family = "binomial", data = data.analysis, weights = visit, maxit = 250))
                 
         }
         
