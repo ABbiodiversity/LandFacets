@@ -1,7 +1,7 @@
 #
 # Title: Functions to execute species habitat models
 # Created: June 13th, 2019
-# Last Updated: October 13th, 2021
+# Last Updated: October 21st, 2021
 # Author: Brandon Allen
 # Objectives: Soil and land facet habitat model functions
 # Keywords: Southern models, Grid predictions, Site predictions, AUC calculation
@@ -41,7 +41,7 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         for (i in 1:(nModels)) {
                 
-                if (!is.null(landscape.store[[i]]) & class(landscape.store[[i]])[1] != "try-error") {  # last part is to not used non-converged models, unless none converged
+                if (!is.null(landscape.store[[i]]) & landscape.store[[i]]$converged != "FALSE") {  # last part is to not used non-converged models, unless none converged
                         aic.ta[i] <- AICc(landscape.store[[i]])
                 }
                 
@@ -60,7 +60,7 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         for (i in 1:nModels) {
                 
-                if (class(landscape.store[[i]])[1] != "try-error") {   # Prediction is 0 if model failed, but this is not used because AIC wt would equal 0
+                if (landscape.store[[i]]$converged != "FALSE") {   # Prediction is 0 if model failed, but this is not used because AIC wt would equal 0
                         
                         p <- predict(landscape.store[[i]], newdata = data.frame(prediction.matrix, paspen = 0), se.fit = TRUE)  # For each type.  Predictions made at 0% Aspen.  All predictions made with new protocol.  Aspen effect added later, and plotted as separate points
                         p1[i,] <- p$fit
