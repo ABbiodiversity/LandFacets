@@ -1,14 +1,203 @@
 #
 # Title: Functions to execute species habitat models
 # Created: June 13th, 2019
-# Last Updated: October 21st, 2021
+# Last Updated: November 5th, 2021
 # Author: Brandon Allen
 # Objectives: Soil and land facet habitat model functions
 # Keywords: Southern models, Grid predictions, Site predictions, AUC calculation
 #
 
+# ###################
+# # Southern models #  AIC weighting
+# ###################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 
+# southern_models <- function (data.analysis, results.store, landscape.models, prediction.matrix, occurrence.type, species.ID) {
+#         
+#         # Convert data to probabilities based on the # of quadrants sampled
+#         if (occurrence.type == "binary") {
+#                 
+#                 data.analysis["pcount"] <- data.analysis[, species.ID]
+#                 
+#         } else {
+#                 
+#                 data.analysis["pcount"] <- data.analysis[, species.ID] / data.analysis$nQuadrant
+#                 
+#         }
+# 
+#         
+#         # Creating lists for storage of all models
+#         space.climate.store <- landscape.store <- list(NULL) 
+#         
+#         for (model in 1:length(landscape.models)) {
+#                 
+#                 landscape.store[[model]] <- try(glm(landscape.models[[model]], family = "binomial", data = data.analysis, weights = visit, maxit = 250))
+#                 
+#         }
+#         
+#         nModels <- length(landscape.store)
+#         
+#         # If no models converge, skip
+#         if(length(warnings())/2 == nModels) {
+#                 
+#                 return(results.store)
+#                 
+#         }
+# 
+#         # AIC calculation  (I'm using AIC here, because this is primarily for prediction, rather than finding a minimial best model)
+#         aic.ta <- rep(999999999, (nModels))
+#         
+#         for (i in 1:(nModels)) {
+#                 
+#                 if (!is.null(landscape.store[[i]]) & landscape.store[[i]]$converged != "FALSE") {  # last part is to not used non-converged models, unless none converged
+#                         aic.ta[i] <- AICc(landscape.store[[i]])
+#                 }
+#                 
+#         }
+#         
+#         aic.delta <- aic.ta - min(aic.ta)
+#         aic.exp <- exp(-1 / 2 * aic.delta)
+#         aic.wt.ta <- aic.exp / sum(aic.exp)
+#         
+#         # Store coefficients
+#         # Prediction Matrix for 100% of each type of HF/Veg
+#         
+#         p1 <- p1.se <- array(0, c(nModels, nrow(pm))) # Predictions for each model for each soil and HF type type.  These are the main coefficients
+#         p.site1 <- array(0, c(nModels, nrow(data.analysis)))  # Predictions for each model and each site.  These are used as the offsets in the next stage
+#         p1.aspen <- p1.se.aspen <- rep(0, nModels)  # Predictions for each model for aspen coefficient.
+#         
+#         for (i in 1:nModels) {
+#                 
+#                 if (landscape.store[[i]]$converged != "FALSE") {   # Prediction is 0 if model failed, but this is not used because AIC wt would equal 0
+#                         
+#                         p <- predict(landscape.store[[i]], newdata = data.frame(prediction.matrix, paspen = 0), se.fit = TRUE)  # For each type.  Predictions made at 0% Aspen.  All predictions made with new protocol.  Aspen effect added later, and plotted as separate points
+#                         p1[i,] <- p$fit
+#                         p1.se[i,] <- p$se.fit
+#                         p.site1[i,] <- predict(landscape.store[[i]])  # For each site (using the original d.sp data frame)
+#                         if ("paspen" %in% names(coef(landscape.store[[i]]))) {
+#                                 p1.aspen[i] <- coefficients(summary(landscape.store[[i]]))["paspen","Estimate"]
+#                                 p1.se.aspen[i] <- coefficients(summary(landscape.store[[i]]))["paspen","Std. Error"]
+#                         }
+#                         
+#                         
+#                 }
+#                 
+#         }
+#         
+#         tTypeMean <- tTypeVar <- NULL  # Logit-scaled model averages for each veg type
+#         
+#         aic.wt.ta.adj <- ifelse(aic.wt.ta < 0.01, 0, aic.wt.ta)  # Use adjusted weight to avoid poor fitting models with extreme values for certain types (usually numerically equivalent to 0's or 1's)
+#         aic.wt.ta.adj <- aic.wt.ta.adj / sum(aic.wt.ta.adj)
+#         
+#         tpAspenMean <- sum(aic.wt.ta * p1.aspen)
+#         tpAspenVar <- sum(aic.wt.ta * sqrt(p1.se.aspen^2 + (rep(tpAspenMean, nModels) - p1.aspen)^2))^2  # AIC-weighted variance of mean...
+#         
+#         for (i in 1:nrow(prediction.matrix)) {
+#                 
+#                 tTypeMean[i] <- sum(aic.wt.ta.adj * p1[, i])  # Mean of nModels for each veg type, on transformed scale
+#                 tTypeVar[i] <- sum(aic.wt.ta.adj * sqrt(p1.se[, i]^2+(rep(tTypeMean[i], nModels) - p1[, i])^2))^2  # AIC-weighted variance of mean...
+#                 
+#         }
+#         
+#         names(tTypeMean) <- names(tTypeVar) <- rownames(prediction.matrix) # Rename the final intercept coefficient to productive
+#         
+#         data.analysis$prediction <- colSums(p.site1 * aic.wt.ta.adj)  # Add logit-scaled model average prediction to data frame
+#         
+#         # Put coefficients in Coef matrix (and SE's)
+#         results.store$landscape.coef[species.ID, na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))] <- plogis(tTypeMean[colnames(results.store$landscape.coef)[na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))]])  # On ordinal scale
+#         results.store$landscape.se[species.ID, na.omit(match(names(tTypeMean), colnames(results.store$landscape.se)))] <- sqrt(tTypeVar[colnames(results.store$landscape.se)[na.omit(match(names(tTypeMean), colnames(results.store$landscape.se)))]])  # On logit scale
+#         results.store$paspen.coef[species.ID, "paspen"] <- tpAspenMean
+#         results.store$paspen.se[species.ID, "paspen"] <- sqrt(tpAspenVar)
+#         
+#         # 3. Do the adjustments to coefficients
+#         # # 3.2 Variance-weighted average of hard linear (often poorly estimated) with urban/industrial (no early seral to adjust soft linear in south)
+#         results.store$landscape.coef[species.ID, "HardLin"] <- plogis( (qlogis(results.store$landscape.coef[species.ID, "HardLin"]) / results.store$landscape.se[species.ID, "HardLin"]^2 + qlogis(results.store$landscape.coef[species.ID, "UrbInd"])/results.store$landscape.se[species.ID, "UrbInd"]^2) / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2) )  # Inverse-variance weighted, done on logit scale then converted back
+#         results.store$landscape.se[species.ID, "HardLin"] <- sqrt(1 / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2))
+#         
+#         # 4. Residual variation due to surrounding HF 
+#         # This does climate and space covariates first, so that best model from those can be used in main models of residual surrounding-HF effects (and so that surrounding HF models can be model-averaged)
+#         # 4.1 First, find best climate and/or spatial covariates.  
+#         # Climate and spatial variables sets are tried, with surrounding THD and THD^2 as initial HF covariates
+#         p1 <- colSums(results.store$landscape.coef[species.ID, ] * t(data.analysis[ ,colnames(results.store$landscape.coef)]))  # Multiply coefficients by soil type proportion for each site to get offset
+#         
+#         p1 <- plogis(qlogis(p1) + results.store$paspen.coef[species.ID, ] * data.analysis$paspen)  # And add in effect of pAspen on logit scale
+#         
+#         wt1 <- data.analysis$nQuadrant * data.analysis$visit  # Need to do this to use model.matrix below for plotting
+#         space.climate.store[[1]] <- try(glm(pcount ~ offset(qlogis(0.998 * p1 + 0.001)), data = data.analysis, family = "binomial", weights = visit))  # Prediction can be 0 (water), so need to scale a bit to avoid infinities in logit offset. Protocol not included here, because already accounted for in offset values 
+#         space.climate.store[[2]] <- try(update(space.climate.store[[1]], .~.+ PET))
+#         space.climate.store[[3]] <- try(update(space.climate.store[[1]], .~.+ AHM))
+#         space.climate.store[[4]] <- try(update(space.climate.store[[1]], .~.+ MAT))
+#         space.climate.store[[5]] <- try(update(space.climate.store[[1]], .~.+ FFP))
+#         space.climate.store[[6]] <- try(update(space.climate.store[[1]], .~.+ MAP + FFP))
+#         space.climate.store[[7]] <- try(update(space.climate.store[[1]], .~.+ MAP +FFP + MAPFFP))
+#         space.climate.store[[8]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM))
+#         space.climate.store[[9]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM + MAPPET + MATAHM))
+#         space.climate.store[[10]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAP))
+#         space.climate.store[[11]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT))
+#         space.climate.store[[12]] <- try(update(space.climate.store[[1]] ,.~.+ AHM + PET))
+#         space.climate.store[[13]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAT2 + MWMT + MWMT2))
+#         space.climate.store[[14]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT + FFP + MAT))
+#         for (i in 1:14) space.climate.store[[i + 14]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong)) 
+#         for (i in 1:14) space.climate.store[[i + 28]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong + Lat2 + Long2))
+#         
+#         nModels.sc<-length(space.climate.store)
+#         # BIC calculation to select best covariate set Uses BIC for more conservative variable set
+#         bic.sc <- rep(999999999, nModels.sc)
+#         for (i in 1:(nModels.sc)) {
+#                 
+#                 if (!is.null(space.climate.store[[i]]) & class(space.climate.store[[i]])[1] != "try-error") {
+#                         bic.sc[i] <- BIC(space.climate.store[[i]])
+#                 }
+#                 
+#         }
+#         
+#         bic.delta.sc <- bic.sc - min(bic.sc)
+#         bic.exp.sc <- exp(-1 / 2 * bic.delta.sc)
+#         bic.wt.sc <- bic.exp.sc / sum(bic.exp.sc)
+#         best.model.sc <- space.climate.store[[which.max(bic.wt.sc)]]
+#         
+#         # And the subset of climate and/or spatial variables
+#         vnames <- names(coef(space.climate.store[[which.max(bic.wt.sc)]]))
+#         vnames1 <- ifelse(vnames == "(Intercept)", "Intercept", vnames)  # Correct the intercept name
+#         
+#         # Storing of climate coefficients
+#         coef.match <- match(colnames(results.store$climate.coef), vnames1, nomatch = 0)
+#         results.store$climate.coef[species.ID, coef.match != 0] <- coef(best.model.sc)[coef.match]
+#         
+#         # 4.2 Store detections, surveys, and AIC information
+#         results.store$fit[species.ID, "dect"] <- sum(ifelse(data.analysis[, species.ID] > 0, 1, 0)) 
+#         results.store$fit[species.ID, "survey"] <- nrow(data.analysis) # Number of sites
+#         
+#         # Model assessment
+#         land.coef <- results.store$landscape.coef[species.ID, ]
+#         
+#         km2.pveg.curr <- colSums(land.coef*t(data.analysis[ ,names(land.coef)])) # Prediction based on veg types only.
+#         
+#         # Calculate cimate and spatial prediction for each species
+#         
+#         km2.pres.curr <- colSums(results.store$climate.coef[species.ID, c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))] * t(data.analysis[ ,colnames(results.store$climate.coef)[c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))]])) # Prediction of residual (climate and spatial) effect
+#         
+#         # Take the difference between unqiue species intercept and the predicted climate residuals
+#         # If there are coeffecients, remove the intercept. Otherwise don't do anything
+#         if(sum(km2.pres.curr) != 0) {
+#                 
+#                 km2.pres.curr <- km2.pres.curr + results.store$climate.coef[species.ID, 1]
+#                 
+#         }
+#         
+#         # Add the paspen
+#         km2.pAspen <- colSums(results.store$paspen.coef[species.ID, "paspen"] * t(data.analysis[, "paspen"])) 
+#         km2.p.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pres.curr + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
+#         km2.pveg.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pAspen) # Veg + paspen, apply same transformation as used in fitting residual model
+#         
+#         # AIC calcualtion
+#         results.store$fit[species.ID, "auc_LC"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr),3) # AUC Calculation with landcover only
+#         results.store$fit[species.ID, "auc_both"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr), 3) # AUC Calculation with both
+#         
+#         return(results.store)
+# }
+
 ###################
-# Southern models # 
+# Southern models #  IWV weighting
 ###################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 southern_models <- function (data.analysis, results.store, landscape.models, prediction.matrix, occurrence.type, species.ID) {
@@ -23,7 +212,7 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
                 data.analysis["pcount"] <- data.analysis[, species.ID] / data.analysis$nQuadrant
                 
         }
-
+        
         
         # Creating lists for storage of all models
         space.climate.store <- landscape.store <- list(NULL) 
@@ -35,6 +224,17 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         }
         
         nModels <- length(landscape.store)
+        
+        # If no models converge, skip
+        nconverged <- NULL
+        
+        for(i in 1:nModels) {nconverged <- c(nconverged, landscape.store[[i]]$converged)}
+        
+        if(length(nconverged[nconverged == "FALSE"]) == nModels) {
+                
+                return(results.store)
+                
+        }
         
         # AIC calculation  (I'm using AIC here, because this is primarily for prediction, rather than finding a minimial best model)
         aic.ta <- rep(999999999, (nModels))
@@ -56,15 +256,15 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         p1 <- p1.se <- array(0, c(nModels, nrow(pm))) # Predictions for each model for each soil and HF type type.  These are the main coefficients
         p.site1 <- array(0, c(nModels, nrow(data.analysis)))  # Predictions for each model and each site.  These are used as the offsets in the next stage
-        p1.aspen <- p1.se.aspen <- rep(0, nModels)  # Predictions for each model for aspen coefficient
+        p1.aspen <- p1.se.aspen <- rep(0, nModels)  # Predictions for each model for aspen coefficient.
         
         for (i in 1:nModels) {
                 
                 if (landscape.store[[i]]$converged != "FALSE") {   # Prediction is 0 if model failed, but this is not used because AIC wt would equal 0
                         
-                        p <- predict(landscape.store[[i]], newdata = data.frame(prediction.matrix, paspen = 0), se.fit = TRUE)  # For each type.  Predictions made at 0% Aspen.  All predictions made with new protocol.  Aspen effect added later, and plotted as separate points
-                        p1[i,] <- p$fit
-                        p1.se[i,] <- p$se.fit
+                        p <- predict(landscape.store[[i]], newdata = data.frame(prediction.matrix, paspen = 0))  # For each type.  Predictions made at 0% Aspen.  All predictions made with new protocol.  Aspen effect added later, and plotted as separate points
+                        p1[i,] <- p
+                        #p1.se[i,] <- p$se.fit
                         p.site1[i,] <- predict(landscape.store[[i]])  # For each site (using the original d.sp data frame)
                         if ("paspen" %in% names(coef(landscape.store[[i]]))) {
                                 p1.aspen[i] <- coefficients(summary(landscape.store[[i]]))["paspen","Estimate"]
@@ -76,24 +276,28 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
                 
         }
         
-        tTypeMean <- tTypeVar <- NULL  # Logit-scaled model averages for each veg type
+        tTypeMean <- tTypeVar <- NULL  # Logit-scaled IVW for each veg type
         
-        aic.wt.ta.adj <- ifelse(aic.wt.ta < 0.01, 0, aic.wt.ta)  # Use adjusted weight to avoid poor fitting models with extreme values for certain types (usually numerically equivalent to 0's or 1's)
-        aic.wt.ta.adj <- aic.wt.ta.adj / sum(aic.wt.ta.adj)
+        mod.converged <- NULL
         
-        tpAspenMean <- sum(aic.wt.ta * p1.aspen)
-        tpAspenVar <- sum(aic.wt.ta * sqrt(p1.se.aspen^2 + (rep(tpAspenMean, nModels) - p1.aspen)^2))^2  # AIC-weighted variance of mean...
+        # If paspen coefficients / SE is 0, remove
+        p1.aspen <- p1.aspen[p1.aspen > 0]
+        p1.se.aspen <- p1.se.aspen[p1.se.aspen > 0]
+        
+        tpAspenMean <- sum(p1.aspen / p1.se.aspen^2) / sum(1 / p1.se.aspen^2)
+        tpAspenVar <-  1/sum(1/p1.se.aspen^2 ) # IVWvariance of mean...
+        
+        for (i in 1:nModels) {mod.converged[i] <- landscape.store[[i]]$converged} # Only use models that have converged
         
         for (i in 1:nrow(prediction.matrix)) {
                 
-                tTypeMean[i] <- sum(aic.wt.ta.adj * p1[, i])  # Mean of nModels for each veg type, on transformed scale
-                tTypeVar[i] <- sum(aic.wt.ta.adj * sqrt(p1.se[, i]^2+(rep(tTypeMean[i], nModels) - p1[, i])^2))^2  # AIC-weighted variance of mean...
+                tTypeMean[i]<- sum(p1[mod.converged ,i] / p1.se[mod.converged ,i]^2 )  / sum(1/p1.se[mod.converged ,i]^2 )# IVW mean of  nModels for each veg type, on transformed scale
+                tTypeVar[i]<-  1/sum(1/p1.se[mod.converged ,i]^2 ) # IVWvariance of mean...
                 
         }
         
-        names(tTypeMean) <- names(tTypeVar) <- rownames(prediction.matrix) # Rename the final intercept coefficient to productive
-        
-        data.analysis$prediction <- colSums(p.site1 * aic.wt.ta.adj)  # Add logit-scaled model average prediction to data frame
+        names(tTypeMean) <- names(tTypeVar) <- rownames(prediction.matrix)
+        data.analysis$prediction <-  colSums(tTypeMean * t(data.analysis[, names(tTypeMean)]))  # Add logit-scaled model average prediction to data frame
         
         # Put coefficients in Coef matrix (and SE's)
         results.store$landscape.coef[species.ID, na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))] <- plogis(tTypeMean[colnames(results.store$landscape.coef)[na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))]])  # On ordinal scale
@@ -103,9 +307,9 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         
         # 3. Do the adjustments to coefficients
         # # 3.2 Variance-weighted average of hard linear (often poorly estimated) with urban/industrial (no early seral to adjust soft linear in south)
-        results.store$landscape.coef[species.ID, "HardLin"] <- plogis( (qlogis(results.store$landscape.coef[species.ID, "HardLin"]) / results.store$landscape.se[species.ID, "HardLin"]^2 + qlogis(results.store$landscape.coef[species.ID, "UrbInd"])/results.store$landscape.se[species.ID, "UrbInd"]^2) / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2) )  # Inverse-variance weighted, done on logit scale then converted back
-        results.store$landscape.se[species.ID, "HardLin"] <- sqrt(1 / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2))
-        
+        # results.store$landscape.coef[species.ID, "HardLin"] <- plogis( (qlogis(results.store$landscape.coef[species.ID, "HardLin"]) / results.store$landscape.se[species.ID, "HardLin"]^2 + qlogis(results.store$landscape.coef[species.ID, "UrbInd"])/results.store$landscape.se[species.ID, "UrbInd"]^2) / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2) )  # Inverse-variance weighted, done on logit scale then converted back
+        # results.store$landscape.se[species.ID, "HardLin"] <- sqrt(1 / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2))
+        # 
         # 4. Residual variation due to surrounding HF 
         # This does climate and space covariates first, so that best model from those can be used in main models of residual surrounding-HF effects (and so that surrounding HF models can be model-averaged)
         # 4.1 First, find best climate and/or spatial covariates.  
@@ -185,6 +389,9 @@ southern_models <- function (data.analysis, results.store, landscape.models, pre
         # AIC calcualtion
         results.store$fit[species.ID, "auc_LC"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr),3) # AUC Calculation with landcover only
         results.store$fit[species.ID, "auc_both"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr), 3) # AUC Calculation with both
+        
+        # Prediction store
+        results.store$predictions[, species.ID] <- km2.pveg.curr
         
         return(results.store)
 }
@@ -332,3 +539,193 @@ model_auc <- function(soil.matrix, facet.matrix, obs, pred, species.ID) {
                       dimnames = list(species.ID, c("facetAUC", "soilAUC", "pvalue"))))
         
 }
+
+########################
+# Test southern models # 
+########################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+southern_models_test <- function (data.analysis, results.store, landscape.models, prediction.matrix, occurrence.type, species.ID) {
+        
+        # Convert data to probabilities based on the # of quadrants sampled
+        if (occurrence.type == "binary") {
+                
+                data.analysis["pcount"] <- data.analysis[, species.ID]
+                
+        } else {
+                
+                data.analysis["pcount"] <- data.analysis[, species.ID] / data.analysis$nQuadrant
+                
+        }
+        
+        
+        # Creating lists for storage of all models
+        space.climate.store <- landscape.store <- list(NULL) 
+        
+        for (model in 1:length(landscape.models)) {
+                
+                landscape.store[[model]] <- try(glm(landscape.models[[model]], family = "binomial", data = data.analysis, weights = visit, maxit = 250))
+                
+        }
+        
+        nModels <- length(landscape.store)
+        
+        # If no models converge, skip
+        if(length(warnings())/2 == nModels) {
+                
+                return(results.store)
+                
+        }
+        
+        # AIC calculation  (I'm using AIC here, because this is primarily for prediction, rather than finding a minimial best model)
+        aic.ta <- rep(999999999, (nModels))
+        
+        for (i in 1:(nModels)) {
+                
+                if (!is.null(landscape.store[[i]]) & landscape.store[[i]]$converged != "FALSE") {  # last part is to not used non-converged models, unless none converged
+                        aic.ta[i] <- AICc(landscape.store[[i]])
+                }
+                
+        }
+        
+        aic.delta <- aic.ta - min(aic.ta)
+        aic.exp <- exp(-1 / 2 * aic.delta)
+        aic.wt.ta <- aic.exp / sum(aic.exp)
+        
+        # Store coefficients
+        # Prediction Matrix for 100% of each type of HF/Veg
+        
+        p1 <- p1.se <- array(0, c(nModels, nrow(pm))) # Predictions for each model for each soil and HF type type.  These are the main coefficients
+        p.site1 <- array(0, c(nModels, nrow(data.analysis)))  # Predictions for each model and each site.  These are used as the offsets in the next stage
+        p1.aspen <- p1.se.aspen <- rep(0, nModels)  # Predictions for each model for aspen coefficient.
+        
+        for (i in 1:nModels) {
+                
+                if (landscape.store[[i]]$converged != "FALSE") {   # Prediction is 0 if model failed, but this is not used because AIC wt would equal 0
+                        
+                        p <- predict(landscape.store[[i]], newdata = data.frame(prediction.matrix, paspen = 0))  # For each type.  Predictions made at 0% Aspen.  All predictions made with new protocol.  Aspen effect added later, and plotted as separate points
+                        p1[i,] <- p
+                        #p1.se[i,] <- p$se.fit
+                        p.site1[i,] <- predict(landscape.store[[i]])  # For each site (using the original d.sp data frame)
+                        if ("paspen" %in% names(coef(landscape.store[[i]]))) {
+                                p1.aspen[i] <- coefficients(summary(landscape.store[[i]]))["paspen","Estimate"]
+                                p1.se.aspen[i] <- coefficients(summary(landscape.store[[i]]))["paspen","Std. Error"]
+                        }
+                        
+                        
+                }
+                
+        }
+        
+        tTypeMean <- tTypeVar <- NULL  # Logit-scaled model averages for each veg type
+        
+        aic.wt.ta.adj <- ifelse(aic.wt.ta < 0.01, 0, aic.wt.ta)  # Use adjusted weight to avoid poor fitting models with extreme values for certain types (usually numerically equivalent to 0's or 1's)
+        aic.wt.ta.adj <- aic.wt.ta.adj / sum(aic.wt.ta.adj)
+        
+        tpAspenMean <- sum(aic.wt.ta * p1.aspen)
+        tpAspenVar <- sum(aic.wt.ta * sqrt(p1.se.aspen^2 + (rep(tpAspenMean, nModels) - p1.aspen)^2))^2  # AIC-weighted variance of mean...
+        
+        for (i in 1:nrow(prediction.matrix)) {
+                
+                tTypeMean[i] <- sum(aic.wt.ta.adj * p1[, i])  # Mean of nModels for each veg type, on transformed scale
+                tTypeVar[i] <- sum(aic.wt.ta.adj * sqrt(p1.se[, i]^2+(rep(tTypeMean[i], nModels) - p1[, i])^2))^2  # AIC-weighted variance of mean...
+                
+        }
+        
+        names(tTypeMean) <- names(tTypeVar) <- rownames(prediction.matrix) # Rename the final intercept coefficient to productive
+        
+        data.analysis$prediction <- colSums(p.site1 * aic.wt.ta.adj)  # Add logit-scaled model average prediction to data frame
+        
+        # Put coefficients in Coef matrix (and SE's)
+        results.store$landscape.coef[species.ID, na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))] <- plogis(tTypeMean[colnames(results.store$landscape.coef)[na.omit(match(names(tTypeMean), colnames(results.store$landscape.coef)))]])  # On ordinal scale
+        results.store$landscape.se[species.ID, na.omit(match(names(tTypeMean), colnames(results.store$landscape.se)))] <- sqrt(tTypeVar[colnames(results.store$landscape.se)[na.omit(match(names(tTypeMean), colnames(results.store$landscape.se)))]])  # On logit scale
+        results.store$paspen.coef[species.ID, "paspen"] <- tpAspenMean
+        results.store$paspen.se[species.ID, "paspen"] <- sqrt(tpAspenVar)
+        
+        # 3. Do the adjustments to coefficients
+        # # 3.2 Variance-weighted average of hard linear (often poorly estimated) with urban/industrial (no early seral to adjust soft linear in south)
+        # results.store$landscape.coef[species.ID, "HardLin"] <- plogis( (qlogis(results.store$landscape.coef[species.ID, "HardLin"]) / results.store$landscape.se[species.ID, "HardLin"]^2 + qlogis(results.store$landscape.coef[species.ID, "UrbInd"])/results.store$landscape.se[species.ID, "UrbInd"]^2) / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2) )  # Inverse-variance weighted, done on logit scale then converted back
+        # results.store$landscape.se[species.ID, "HardLin"] <- sqrt(1 / (1 / results.store$landscape.se[species.ID, "HardLin"]^2 + 1 / results.store$landscape.se[species.ID, "UrbInd"]^2))
+        
+        # 4. Residual variation due to surrounding HF 
+        # This does climate and space covariates first, so that best model from those can be used in main models of residual surrounding-HF effects (and so that surrounding HF models can be model-averaged)
+        # 4.1 First, find best climate and/or spatial covariates.  
+        # Climate and spatial variables sets are tried, with surrounding THD and THD^2 as initial HF covariates
+        p1 <- colSums(results.store$landscape.coef[species.ID, ] * t(data.analysis[ ,colnames(results.store$landscape.coef)]))  # Multiply coefficients by soil type proportion for each site to get offset
+        
+        p1 <- plogis(qlogis(p1) + results.store$paspen.coef[species.ID, ] * data.analysis$paspen)  # And add in effect of pAspen on logit scale
+        
+        wt1 <- data.analysis$nQuadrant * data.analysis$visit  # Need to do this to use model.matrix below for plotting
+        space.climate.store[[1]] <- try(glm(pcount ~ offset(qlogis(0.998 * p1 + 0.001)), data = data.analysis, family = "binomial", weights = visit))  # Prediction can be 0 (water), so need to scale a bit to avoid infinities in logit offset. Protocol not included here, because already accounted for in offset values 
+        space.climate.store[[2]] <- try(update(space.climate.store[[1]], .~.+ PET))
+        space.climate.store[[3]] <- try(update(space.climate.store[[1]], .~.+ AHM))
+        space.climate.store[[4]] <- try(update(space.climate.store[[1]], .~.+ MAT))
+        space.climate.store[[5]] <- try(update(space.climate.store[[1]], .~.+ FFP))
+        space.climate.store[[6]] <- try(update(space.climate.store[[1]], .~.+ MAP + FFP))
+        space.climate.store[[7]] <- try(update(space.climate.store[[1]], .~.+ MAP +FFP + MAPFFP))
+        space.climate.store[[8]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM))
+        space.climate.store[[9]] <- try(update(space.climate.store[[1]], .~.+ MAT + MAP + PET + AHM + MAPPET + MATAHM))
+        space.climate.store[[10]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAP))
+        space.climate.store[[11]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT))
+        space.climate.store[[12]] <- try(update(space.climate.store[[1]] ,.~.+ AHM + PET))
+        space.climate.store[[13]] <- try(update(space.climate.store[[1]] ,.~.+ MAT + MAT2 + MWMT + MWMT2))
+        space.climate.store[[14]] <- try(update(space.climate.store[[1]] ,.~.+ MWMT + MCMT + FFP + MAT))
+        for (i in 1:14) space.climate.store[[i + 14]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong)) 
+        for (i in 1:14) space.climate.store[[i + 28]] <- try(update(space.climate.store[[i]], .~.+ Lat + Long + LatLong + Lat2 + Long2))
+        
+        nModels.sc<-length(space.climate.store)
+        # BIC calculation to select best covariate set Uses BIC for more conservative variable set
+        bic.sc <- rep(999999999, nModels.sc)
+        for (i in 1:(nModels.sc)) {
+                
+                if (!is.null(space.climate.store[[i]]) & class(space.climate.store[[i]])[1] != "try-error") {
+                        bic.sc[i] <- BIC(space.climate.store[[i]])
+                }
+                
+        }
+        
+        bic.delta.sc <- bic.sc - min(bic.sc)
+        bic.exp.sc <- exp(-1 / 2 * bic.delta.sc)
+        bic.wt.sc <- bic.exp.sc / sum(bic.exp.sc)
+        best.model.sc <- space.climate.store[[which.max(bic.wt.sc)]]
+        
+        # And the subset of climate and/or spatial variables
+        vnames <- names(coef(space.climate.store[[which.max(bic.wt.sc)]]))
+        vnames1 <- ifelse(vnames == "(Intercept)", "Intercept", vnames)  # Correct the intercept name
+        
+        # Storing of climate coefficients
+        coef.match <- match(colnames(results.store$climate.coef), vnames1, nomatch = 0)
+        results.store$climate.coef[species.ID, coef.match != 0] <- coef(best.model.sc)[coef.match]
+        
+        # 4.2 Store detections, surveys, and AIC information
+        results.store$fit[species.ID, "dect"] <- sum(ifelse(data.analysis[, species.ID] > 0, 1, 0)) 
+        results.store$fit[species.ID, "survey"] <- nrow(data.analysis) # Number of sites
+        
+        # Model assessment
+        land.coef <- results.store$landscape.coef[species.ID, ]
+        
+        km2.pveg.curr <- colSums(land.coef*t(data.analysis[ ,names(land.coef)])) # Prediction based on veg types only.
+        
+        # Calculate cimate and spatial prediction for each species
+        
+        km2.pres.curr <- colSums(results.store$climate.coef[species.ID, c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))] * t(data.analysis[ ,colnames(results.store$climate.coef)[c(FALSE, as.logical(!is.na(results.store$climate.coef[species.ID, -1])))]])) # Prediction of residual (climate and spatial) effect
+        
+        # Take the difference between unqiue species intercept and the predicted climate residuals
+        # If there are coeffecients, remove the intercept. Otherwise don't do anything
+        if(sum(km2.pres.curr) != 0) {
+                
+                km2.pres.curr <- km2.pres.curr + results.store$climate.coef[species.ID, 1]
+                
+        }
+        
+        # Add the paspen
+        km2.pAspen <- colSums(results.store$paspen.coef[species.ID, "paspen"] * t(data.analysis[, "paspen"])) 
+        km2.p.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pres.curr + km2.pAspen) # Veg + paspen + climate, apply same transformation as used in fitting residual model
+        km2.pveg.curr <- plogis(qlogis(0.998*km2.pveg.curr+0.001) + km2.pAspen) # Veg + paspen, apply same transformation as used in fitting residual model
+        
+        # AIC calcualtion
+        results.store$fit[species.ID, "auc_LC"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.pveg.curr),3) # AUC Calculation with landcover only
+        results.store$fit[species.ID, "auc_both"] <- round(auc(ifelse(data.analysis[, species.ID] > 0, 1, 0), km2.p.curr), 3) # AUC Calculation with both
+        
+        return(results.store)
+}
+
