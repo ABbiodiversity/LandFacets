@@ -55,7 +55,7 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
     }
 }
 
-load("data/processed/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
 
 # Remove the duplicated HF information from one of the current conditions 
 facet.temp <- as.data.frame(landscape.summaries$landfacet.quadrant$curr)
