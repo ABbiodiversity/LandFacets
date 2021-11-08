@@ -93,37 +93,61 @@ levels(landscape.raw$feature_ty) <- c(levels(landscape.raw$feature_ty), "NATIVE"
 landscape.raw$feature_ty[is.na(landscape.raw$feature_ty)] <- as.factor("NATIVE")
 
 # Load and clean climate and spatial data
-load("data/base/habitat/veg-hf_SiteCenter_v6verified.Rdata")
-xx <- xx[xx$NATURAL_REGIONS %in% c("Grassland", "Parkland") | xx$NATURAL_SUBREGIONS == "Dry Mixedwood", ]
+load("data/base/habitat/veg-hf_SITE-all-years-combined.RData")
+clim_qha <- clim_qha[clim_qha$NRNAME %in% c("Grassland", "Parkland") | clim_qha$NSRNAME == "Dry Mixedwood", ]
 
-climate.raw <- data.frame(abmi_site = xx$ABMI_Assigned_Site_ID,
-                          year = xx$survey_year,
-                          site_year = xx$Site_YEAR,
-                          on_off = xx$On_Off,
-                          AHM = xx$AHM,
-                          Eref = xx$Eref,
-                          FFP = xx$FFP,
-                          MAP = xx$MAP,
-                          MAT = xx$MAT,
-                          MCMT = xx$MCMT,
-                          MWMT = xx$MWMT,
-                          PET = xx$PET,
-                          paspen = xx$pAspen,
-                          Lat = xx$PUBLIC_LATTITUDE,
-                          Long = xx$PUBLIC_LONGITUDE,
-                          Elevation = xx$ELEVATION,
-                          Lat2 = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LATTITUDE,
-                          Long2 = xx$PUBLIC_LONGITUDE * xx$PUBLIC_LONGITUDE,
-                          LatLong = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LONGITUDE,
-                          MWMT2 = xx$MWMT * xx$MWMT,
-                          MAT2 = xx$MAT * xx$MAT,
-                          MAPPET = xx$MAP * xx$PET,
-                          MAPFFP = xx$MAP * xx$FFP,
-                          MATAHM = xx$MAT * xx$AHM)
 
-rm(dd_150m, dd_1ha, dd_564m, dd_point, dd_qha, dw_1ha, dw_qha, xx)
+# climate.raw <- data.frame(abmi_site = clim_qha$site_id,
+#                           year = clim_qha$survey_year,
+#                           site_year = xx$Site_YEAR,
+#                           on_off = xx$On_Off,
+#                           AHM = xx$AHM,
+#                           Eref = xx$Eref,
+#                           FFP = xx$FFP,
+#                           MAP = xx$MAP,
+#                           MAT = xx$MAT,
+#                           MCMT = xx$MCMT,
+#                           MWMT = xx$MWMT,
+#                           PET = xx$PET,
+#                           paspen = xx$pAspen,
+#                           Lat = xx$PUBLIC_LATTITUDE,
+#                           Long = xx$PUBLIC_LONGITUDE,
+#                           Elevation = xx$ELEVATION,
+#                           Lat2 = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LATTITUDE,
+#                           Long2 = xx$PUBLIC_LONGITUDE * xx$PUBLIC_LONGITUDE,
+#                           LatLong = xx$PUBLIC_LATTITUDE * xx$PUBLIC_LONGITUDE,
+#                           MWMT2 = xx$MWMT * xx$MWMT,
+#                           MAT2 = xx$MAT * xx$MAT,
+#                           MAPPET = xx$MAP * xx$PET,
+#                           MAPFFP = xx$MAP * xx$FFP,
+#                           MATAHM = xx$MAT * xx$AHM)
 
-# Filter the climate and landscape data to include only matching sites
+climate.raw <- data.frame(abmi_site = clim_qha$site_id,
+                          year = clim_qha$survey_year,
+                          site_year = paste(clim_qha$site_id, clim_qha$survey_year, sep = "_"),
+                          on_off = clim_qha$offgrid,
+                          AHM = clim_qha$AHM,
+                          FFP = clim_qha$FFP,
+                          MAP = clim_qha$MAP,
+                          MAT = clim_qha$MAT,
+                          MCMT = clim_qha$MCMT,
+                          MWMT = clim_qha$MWMT,
+                          PET = clim_qha$PET,
+                          paspen = clim_qha$pAspen,
+                          Lat = clim_qha$X,
+                          Long = clim_qha$Y,
+                          Lat2 = clim_qha$X * clim_qha$X,
+                          Long2 = clim_qha$Y * clim_qha$Y,
+                          LatLong = clim_qha$X * clim_qha$Y,
+                          MWMT2 = clim_qha$MWMT * clim_qha$MWMT,
+                          MAT2 = clim_qha$MAT * clim_qha$MAT,
+                          MAPPET = clim_qha$MAP * clim_qha$PET,
+                          MAPFFP = clim_qha$MAP * clim_qha$FFP,
+                          MATAHM = clim_qha$MAT * clim_qha$AHM)
+
+rm(dd_1ha, dd_564m, dd_qha, clim_1ha, clim_qha)
+
+# Filter the climate and landscape data to include only matching sites ( there are 40 sites of 968 in the climate data not found in landcover)
 landscape.raw <- landscape.raw[landscape.raw$site_year %in% climate.raw$site_year, ]
 climate.raw <- climate.raw[climate.raw$site_year %in% unique(landscape.raw$site_year), ]
 
@@ -134,7 +158,7 @@ colnames(topo.continuous) <- c("site_year", name.store[-1])
 topo.continuous$site_year <- as.factor(topo.continuous$site_year)
 climate.raw <- merge.data.frame(climate.raw, topo.continuous, by = "site_year")
 
-save(climate.raw, file = "data/processed/landcover/spatial-climate_2021-10-07.Rdata")
+save(climate.raw, file = "data/processed/landcover/spatial-climate_2021-11-08.Rdata")
 
 rm(climate.raw, topo.continuous, name.store)
 
@@ -371,41 +395,41 @@ dev.off()
 # 
 # dev.off()
 
-# Kgrid distribution
-facet.grid <- read.csv("data/base/habitat/land-facet-kgrid.csv")
-colnames(facet.grid) <- c("LinkID", "Water_only", "Springs", "SnowIce", 
-                          "Wet", "Mesic", "Dry", "Sloped_wet", 
-                          "Sloped_mesic", "Cool_slopes", "Warm_slopes")
-facet.grid["Water"] <- rowSums(facet.grid[, 2:4]) # Combine water categories
-facet.grid <- facet.grid[, c(1, 5:12)]
-facet.grid[, 2:9] <- facet.grid[, 2:9] / rowSums(facet.grid[, 2:9]) # Convert to proportions (~km2)
-
-load("data/base/habitat/kgrid_table_km.Rdata")
-kgrid <- kgrid[, c("Row_Col", "NSRNAME", "NRNAME")]
-colnames(kgrid)[1] <- "LinkID"
-facet.grid <- merge.data.frame(kgrid, facet.grid, by = "LinkID")
-rm(kgrid)
-
-facet.grid <- facet.grid[facet.grid$NRNAME %in% c("Grassland", "Parkland") | facet.grid$NSRNAME == "Dry Mixedwood", ]
-
-grid.summary <- colSums(facet.grid[, 4:11])
-grid.summary <- data.frame(Facet = names(grid.summary),
-                           Area = as.numeric(grid.summary))
-
-png(filename = "results/figures/land-facet-kgrid-distribution_2021-10-15.png",
-    height = 4800,
-    width = 2400,
-    res = 300)
-
-ggplot(data = grid.summary) +
-        geom_bar(stat="identity", aes(x = Facet, y = Area, color = "Area", fill = "Area"), show.legend = FALSE) +
-        scale_color_manual(values = c("#2D415B")) +
-        scale_fill_manual(values = c("#2D415B")) +
-        xlab("Land Facet") +
-        ylab("Area (km2)") + 
-        theme_light()
-
-dev.off()
+# # Kgrid distribution
+# facet.grid <- read.csv("data/base/habitat/land-facet-kgrid.csv")
+# colnames(facet.grid) <- c("LinkID", "Water_only", "Springs", "SnowIce", 
+#                           "Wet", "Mesic", "Dry", "Sloped_wet", 
+#                           "Sloped_mesic", "Cool_slopes", "Warm_slopes")
+# facet.grid["Water"] <- rowSums(facet.grid[, 2:4]) # Combine water categories
+# facet.grid <- facet.grid[, c(1, 5:12)]
+# facet.grid[, 2:9] <- facet.grid[, 2:9] / rowSums(facet.grid[, 2:9]) # Convert to proportions (~km2)
+# 
+# load("data/base/habitat/kgrid_table_km.Rdata")
+# kgrid <- kgrid[, c("Row_Col", "NSRNAME", "NRNAME")]
+# colnames(kgrid)[1] <- "LinkID"
+# facet.grid <- merge.data.frame(kgrid, facet.grid, by = "LinkID")
+# rm(kgrid)
+# 
+# facet.grid <- facet.grid[facet.grid$NRNAME %in% c("Grassland", "Parkland") | facet.grid$NSRNAME == "Dry Mixedwood", ]
+# 
+# grid.summary <- colSums(facet.grid[, 4:11])
+# grid.summary <- data.frame(Facet = names(grid.summary),
+#                            Area = as.numeric(grid.summary))
+# 
+# png(filename = "results/figures/land-facet-kgrid-distribution_2021-10-15.png",
+#     height = 4800,
+#     width = 2400,
+#     res = 300)
+# 
+# ggplot(data = grid.summary) +
+#         geom_bar(stat="identity", aes(x = Facet, y = Area, color = "Area", fill = "Area"), show.legend = FALSE) +
+#         scale_color_manual(values = c("#2D415B")) +
+#         scale_fill_manual(values = c("#2D415B")) +
+#         xlab("Land Facet") +
+#         ylab("Area (km2)") + 
+#         theme_light()
+# 
+# dev.off()
 
 #############
 # Long form # 
@@ -503,33 +527,46 @@ features.lookup <- list(as.factor(sort(unique(landscape.raw$land_facet))),
 names(features.lookup) <- c("land_facet", "terrain_water", "soil_class", "feature_ty", "soil_wet")
 save(features.lookup, file = "data/lookup/features-lookup_2021-10-07.Rdata")
 
+# Add the site and year information for continuity
+load("data/processed/landcover/spatial-climate_2021-11-08.Rdata")
+climate.raw <- climate.raw[, c("abmi_site", "year", "site_year")]
+landscape.raw <- merge.data.frame(landscape.raw, climate.raw, by = "site_year")
+
 # Create and save long forms for the four combinations (land facet quadrant, land facet site, soil quadrant, soil site)
 
 landfacet.long.form <- list(aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "quadrant"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
                                                 landscape.raw[, "site_year"], 
+                                                landscape.raw[, "quadrant"],
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"], 
                                                 landscape.raw[, "land_facet"]), 
                                       FUN = sum),
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "site_year"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
+                                                landscape.raw[, "site_year"],
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"], 
                                                 landscape.raw[, "land_facet"]), 
                                       FUN = sum),
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "quadrant"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
                                                 landscape.raw[, "site_year"], 
+                                                landscape.raw[, "quadrant"], 
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"], 
                                                 landscape.raw[, "terrain_water"]), 
                                       FUN = sum),
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "site_year"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
+                                                landscape.raw[, "site_year"], 
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"],
@@ -537,15 +574,19 @@ landfacet.long.form <- list(aggregate(landscape.raw[, "shape_area"],
                                       FUN = sum),
                             
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "quadrant"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
                                                 landscape.raw[, "site_year"], 
+                                                landscape.raw[, "quadrant"], 
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"], 
                                                 landscape.raw[, "soil_class"]), 
                                       FUN = sum),
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "site_year"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
+                                                landscape.raw[, "site_year"],  
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"],
@@ -553,15 +594,19 @@ landfacet.long.form <- list(aggregate(landscape.raw[, "shape_area"],
                                       FUN = sum),
                             
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "quadrant"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
                                                 landscape.raw[, "site_year"], 
+                                                landscape.raw[, "quadrant"],
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"], 
                                                 landscape.raw[, "soil_wet"]), 
                                       FUN = sum),
                             aggregate(landscape.raw[, "shape_area"], 
-                                      by = list(landscape.raw[, "site_year"], 
+                                      by = list(landscape.raw[, "abmi_site"], 
+                                                landscape.raw[, "year"], 
+                                                landscape.raw[, "site_year"],  
                                                 landscape.raw[, "nr"], 
                                                 landscape.raw[, "nsr"],
                                                 landscape.raw[, "feature_ty"],
@@ -570,16 +615,16 @@ landfacet.long.form <- list(aggregate(landscape.raw[, "shape_area"],
 
 names(landfacet.long.form) <- c("landfacet.quadrant", "landfacet.site", "terrain.quadrant", "terrain.site", 
                                 "soil.quadrant", "soil.site", "soil.wet.quadrant", "soil.wet.site")
-names(landfacet.long.form$landfacet.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "land_facet", "area")
-names(landfacet.long.form$landfacet.site) <- c("site_year", "nr", "nsr", "feature_ty", "land_facet", "area")
-names(landfacet.long.form$terrain.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "terrain_water", "area")
-names(landfacet.long.form$terrain.site) <- c("site_year", "nr", "nsr", "feature_ty", "terrain_water", "area")
-names(landfacet.long.form$soil.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "soil_class", "area")
-names(landfacet.long.form$soil.site) <- c("site_year", "nr", "nsr", "feature_ty", "soil_class", "area")
-names(landfacet.long.form$soil.wet.quadrant) <- c("quadrant", "site_year", "nr", "nsr", "feature_ty", "soil_wet", "area")
-names(landfacet.long.form$soil.wet.site) <- c("site_year", "nr", "nsr", "feature_ty", "soil_wet", "area")
+names(landfacet.long.form$landfacet.quadrant) <- c("site", "year", "site_year", "quadrant", "nr", "nsr", "feature_ty", "land_facet", "area")
+names(landfacet.long.form$landfacet.site) <- c("site", "year", "site_year", "nr", "nsr", "feature_ty", "land_facet", "area")
+names(landfacet.long.form$terrain.quadrant) <- c("site", "year", "site_year", "quadrant", "nr", "nsr", "feature_ty", "terrain_water", "area")
+names(landfacet.long.form$terrain.site) <- c("site", "year", "site_year", "nr", "nsr", "feature_ty", "terrain_water", "area")
+names(landfacet.long.form$soil.quadrant) <- c("site", "year", "site_year", "quadrant", "nr", "nsr", "feature_ty", "soil_class", "area")
+names(landfacet.long.form$soil.site) <- c("site", "year", "site_year", "nr", "nsr", "feature_ty", "soil_class", "area")
+names(landfacet.long.form$soil.wet.quadrant) <- c("site", "year", "site_year", "quadrant", "nr", "nsr", "feature_ty", "soil_wet", "area")
+names(landfacet.long.form$soil.wet.site) <- c("site", "year", "site_year", "nr", "nsr", "feature_ty", "soil_wet", "area")
 
-save(landfacet.long.form, file = "data/processed/landcover/facet-soil-longform_2021-10-07.Rdata")
+save(landfacet.long.form, file = "data/processed/landcover/facet-soil-longform_2021-11-08.Rdata")
 rm(landfacet.long.form, landscape.raw)
 gc()
 
@@ -588,7 +633,7 @@ gc()
 ####################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Load the landcover layer 
-load("data/processed/landcover/facet-soil-longform_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-longform_2021-11-08.Rdata")
 
 # Create blank matrix to store the resutls in
 # Should have a two lists (facet and soil) with the current and reference summaries at the site and quadrant level
@@ -664,7 +709,7 @@ landscape.summaries <- list(facet.quad, facet.site, terrain.quad, terrain.site,
 names(landscape.summaries) <- c("landfacet.quadrant", "landfacet.site", "terrain.quadrant", "terrain.site",
                                 "soil.quadrant", "soil.site", "soil.wet.quadrant", "soil.wet.site")
 
-save(landscape.summaries, file = "data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
+save(landscape.summaries, file = "data/processed/landcover/facet-soil-proportions_2021-11-08.Rdata")
 
 rm(list=ls())
 gc()
@@ -708,7 +753,7 @@ gc()
 #
 
 # Load the landcover data
-load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-11-08.Rdata")
 
 # Define the site list
 site.list <- rownames(landscape.summaries$landfacet.site$curr)
@@ -752,7 +797,7 @@ gc()
 #
 
 # Load the landcover data
-load("data/processed/landcover/facet-soil-proportions_2021-10-07.Rdata")
+load("data/processed/landcover/facet-soil-proportions_2021-11-08.Rdata")
 
 # Define the site list
 site.list <- rownames(landscape.summaries$landfacet.quadrant$curr)
