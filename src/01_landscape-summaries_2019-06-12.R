@@ -1,7 +1,7 @@
 #
 # Title: Site summaries for both soil and land facet layers
 # Created: June 12th, 2019
-# Last Updated: October 18th, 2021
+# Last Updated: November 8th, 2021
 # Author: Brandon Allen
 # Objectives: Create site and quadrant level summaries of the soil and land facet layers
 # Keywords: Initialization, Exploring layer, Long form, Site proportions, Kgrid proportions, Occurrences
@@ -268,6 +268,50 @@ ggplot(data = simplified.soil) +
         xlab("Soil") +
         ylab("Equivalent Quadrants") + 
         theme_light()
+
+dev.off()
+
+# Create Terrain layer
+landscape.raw["terrain"] <- paste(landscape.raw$cti_123, landscape.raw$solar_123, sep = "_")
+landscape.raw$terrain[landscape.raw$terrain == "1_1"] <- "Cool_slopes"
+landscape.raw$terrain[landscape.raw$terrain == "1_2"] <- "Dry"
+landscape.raw$terrain[landscape.raw$terrain == "1_3"] <- "Warm_slopes"
+landscape.raw$terrain[landscape.raw$terrain == "2_1"] <- "Sloped_mesic"
+landscape.raw$terrain[landscape.raw$terrain == "2_2"] <- "Mesic"
+landscape.raw$terrain[landscape.raw$terrain == "2_3"] <- "Sloped_mesic"
+landscape.raw$terrain[landscape.raw$terrain == "3_1"] <- "Sloped_wet"
+landscape.raw$terrain[landscape.raw$terrain == "3_2"] <- "Wet"
+landscape.raw$terrain[landscape.raw$terrain == "3_3"] <- "Sloped_wet"
+
+# Rule set for creating the terrain x Water land facet layer 
+# terrain x water_01 x springs_01 x snowice_01 = terrain
+# If any of the three water groups = 1, replace value from the terrain model
+
+# Create terrain + water layer
+landscape.raw["terrain_water"] <- landscape.raw$terrain
+landscape.raw$terrain_water[landscape.raw$water_01 == 1] <- "Water"
+landscape.raw$terrain_water[landscape.raw$snowice_01 == 1] <- "Snowice"
+landscape.raw$terrain_water[landscape.raw$springs_01 == 1] <- "Springs"
+
+# Wetness by soil quadrants
+facet.summary <- aggregate(landscape.raw$shape_area, by = list(Terrain = landscape.raw$terrain_water),
+                           FUN = sum)
+
+colnames(facet.summary)[2] <- "Area"
+facet.summary$Area <- facet.summary$Area / 2500
+
+png(filename = "results/figures/terrain-water-site-distribution_2021-10-15.png",
+    height = 2400,
+    width = 2400,
+    res = 300)
+
+ggplot(data = facet.summary) +
+    geom_bar(stat="identity", aes(x = Terrain, y = Area, color = "Area", fill = "Area"), show.legend = FALSE) +
+    scale_color_manual(values = c("#2D415B")) +
+    scale_fill_manual(values = c("#2D415B")) +
+    xlab("Terrain by Water") +
+    ylab("Equivalent Quadrants") + 
+    theme_light()
 
 dev.off()
 
