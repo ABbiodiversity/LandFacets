@@ -5,12 +5,12 @@ library(kableExtra)
 # Bookdown resources https://bookdown.org/yihui/bookdown/github.html
 
 # Confirms the nojekyll is created
-file.create('D:/ABMI/Amphibians/docs/.nojekyll')
+file.create('\\\\142.244.87.176/abmisc/github-repos-data/LandFacets/docs/.nojekyll')
 
 # Render bookdown
 bookdown::render_book(input = "bookdown/", 
                       output_format = "bookdown::gitbook",
-                      output_dir = "D:/ABMI/Amphibians/docs/")
+                      output_dir = "\\\\142.244.87.176/abmisc/github-repos-data/LandFacets/docs/")
 
 
 
