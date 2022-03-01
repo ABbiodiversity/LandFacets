@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Discussion | Exploration of soil-based species distribution models</title>
+  <meta name="description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Discussion | Exploration of soil-based species distribution models" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Discussion | Exploration of soil-based species distribution models" />
+  
+  <meta name="twitter:description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
+  
+
+<meta name="author" content="Brandon Allen and Ermias Azeria" />
+
+
+<meta name="date" content="2022-03-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="results.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Land Facets</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#acknowledgement"><i class="fa fa-check"></i><b>1.1</b> Acknowledgement</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#suggested-citation"><i class="fa fa-check"></i><b>1.2</b> Suggested citation</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>1.3</b> Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>2</b> Methods</a></li>
+<li class="chapter" data-level="3" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>3</b> Results</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="results.html"><a href="results.html#auc-scores"><i class="fa fa-check"></i><b>3.1</b> AUC Scores</a></li>
+<li class="chapter" data-level="3.2" data-path="results.html"><a href="results.html#predictions"><i class="fa fa-check"></i><b>3.2</b> Predictions</a></li>
+<li class="chapter" data-level="3.3" data-path="results.html"><a href="results.html#cluster-analysis"><i class="fa fa-check"></i><b>3.3</b> Cluster analysis</a></li>
+<li class="chapter" data-level="3.4" data-path="results.html"><a href="results.html#supplementary"><i class="fa fa-check"></i><b>3.4</b> Supplementary</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> Discussion</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="discussion.html"><a href="discussion.html#possible-path-forward"><i class="fa fa-check"></i><b>4.1</b> Possible path forward</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/ABbiodiversity" target="blank">Published by ABMI</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Exploration of soil-based species distribution models</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="discussion" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Discussion</h1>
+<p>Overall, the results are mixed. Though the soil moisture landcover layer appears to improve models for the majority of species, the gains in model fit are marginal. In addition, species with decreases in model performance often experienced larger declines than those with increasing model fit. We also did not observe large changes in the discrimination ability of models across the landcover layers. We might be able to resolve some of these issues by improving or modeling framework, but those improvements are not guaranteed.</p>
+<p>Another option to use other data to augment and refine the existing complex soil polygon layer. Eric and Jen identified soil layers available through Google Earth Engine that we could also explore. They are raster-based layers (250m) and have provincial coverage, but they might have similar issues to our current soils layer. The soil textures class layer has similar categories to our current soils layer. Therefore, this layer could be used to refine the classification of complex polygons (e.g., multiple soil classes for a single polygon). In addition, we have a small number of “unknown” soils in our current layer (9 sites) which this new layer could help classify.</p>
+<div id="possible-path-forward" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Possible path forward</h2>
+<ol style="list-style-type: decimal">
+<li>Accept the flaws in the alternative landcover layers, choose one, and move forward with creating the final modeling framework.</li>
+<li>Information like moisture potential is important for many species, and we could include this information in the space/climate section of our current soil-based models.</li>
+<li>Explore the Google Earth Engine layers and see if they can be used to improve our current soils layer information (particularly at ABMI sites)
+(<a href="https://www.openlandmap.org/#/?base=Stamen%20(OpenStreetMap)&amp;center=54.7834,-110.1490&amp;zoom=5.737560184630052&amp;opacity=40&amp;layer=sol_texture.class_usda.tt_m&amp;depth=0" class="uri">https://www.openlandmap.org/#/?base=Stamen%20(OpenStreetMap)&amp;center=54.7834,-110.1490&amp;zoom=5.737560184630052&amp;opacity=40&amp;layer=sol_texture.class_usda.tt_m&amp;depth=0</a>).
+a. Upon brief inspection the GEE layers seem promising for updating/refining our soil layer.</li>
+<li>Continue with a literature review to find an alternative layer that works across species groups.
+a. New GIS layers are constantly being developed. Therefore, we could perform another literature review to find a suitable replacement layer. (e.g., <a href="https://adaptwest.databasin.org/pages/adaptwest-landfacets/" class="uri">https://adaptwest.databasin.org/pages/adaptwest-landfacets/</a></li>
+<li>Discuss what we want the landcover layer in the south to capture and how we would expect it to relative to species. (what’s the limitation in using the broad shrub/herb/wetland classes in south and combine with south)</li>
+</ol>
+<p>Currently, we will not be moving forward with the land facet layer and will be exploring alternative layers as resources permit.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="results.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
