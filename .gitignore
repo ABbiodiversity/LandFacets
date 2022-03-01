@@ -2,11 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-**/beta/
-/data/base/ 
-/data/processed/ 
-/beta/
-/results/boot/facet/
-/results/boot/pred/
-/results/boot/soil/
-/results/tables/
+/beta/**
+/data/**
+/results/**
