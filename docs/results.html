@@ -24,7 +24,7 @@
 <meta name="author" content="Brandon Allen and Ermias Azeria" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -117,7 +117,7 @@
 <h1><span class="header-section-number">3</span> Results</h1>
 <div id="auc-scores" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> AUC Scores</h2>
-<p>AUC scores comparing model fit from the soil models to each alternative soil landcover layer showed marginal, if any, improvements depending on the taxa. On the other hand, model performance for some species declined substantially compared to soil-based model (e.g., vascular plants, cf. soil wetness model). On average, the number of models which improved were highest for using the soil moisture layer, and lowest using the land facet layer.</p>
+<p>AUC scores comparing model fit from the soil models to each alternative soil land cover layer showed marginal, if any, improvements depending on the taxa. On the other hand, model performance for some species declined substantially compared to soil-based model (e.g., vascular plants, cf. soil wetness model). On average, the number of models which improved were highest for using the soil moisture layer, and lowest using the land facet layer.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/results/moss-full-model-comparison_2021-11-10.png" style="width:80.0%" alt="" />
@@ -145,7 +145,7 @@
 </div>
 <div id="predictions" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Predictions</h2>
-<p>Predictions between the soil layer and the three alternative layers were often highly correlated. We did observe vertical bands in the correlation plots suggesting some ABMI sites with a consistent soil classification (e.g., 100% clay) are actually multiple landcover types.</p>
+<p>Predictions between the soil layer and the three alternative layers were often highly correlated. We did observe vertical bands in the correlation plots suggesting some ABMI sites with a consistent soil classification (e.g., 100% clay) were multiple land cover types using the alternative layers.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/results/Camisia.biverrucata-prediction-comparison_2021-11-10.png" style="width:80.0%" alt="" />
@@ -158,7 +158,7 @@
 <p class="caption">Correlation plots of site level predictions between the soil models and each alternative landcover for Agoseris glauca. Blue represents absences and pink represents occurrences.</p>
 </div>
 </center>
-<p>We visually assessed the discrimination power of the models vis-à-vis detection and found that the apparent difference in predicted probabilities between landcover layers largely did not reflect difference in detections.</p>
+<p>We visually assessed the discrimination power of the models vis-à-vis detection and found that the apparent difference in predicted probabilities between land cover layers largely did not reflect difference in detections.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/results/Camisia.biverrucata-boxplot-prediction_2021-11-10.png" style="width:80.0%" alt="" />
@@ -174,7 +174,7 @@
 </div>
 <div id="cluster-analysis" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Cluster analysis</h2>
-<p>Cluster analyses of both the use-available and model-based coefficients show reasonable clustering of coefficients (Figure 8, 9). However, there are coefficients which are not clustered appropriately. For example, the Other_Wet category with human footprint features in the soil moisture model (Figure 9). These errors are often resolved when looking at the use-availability, so this could indicate that our simple modeling approach has issues with properly estimating certain coefficient types.</p>
+<p>Cluster analyses of both the use-available and model-based coefficients show reasonable clustering of coefficients. However, there are coefficients which are not clustered appropriately. For example, the Other_Wet category clustered with human footprint features in the soil moisture model. These errors are often resolved when looking at the use-availability, so this could indicate that our simple modeling approach has issues with properly estimating certain coefficient types.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/results/cluster-analysis-1.png" style="width:80.0%" alt="" />

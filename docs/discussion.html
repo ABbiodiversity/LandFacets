@@ -24,7 +24,7 @@
 <meta name="author" content="Brandon Allen and Ermias Azeria" />
 
 
-<meta name="date" content="2022-03-01" />
+<meta name="date" content="2022-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -115,19 +115,23 @@
             <section class="normal" id="section-">
 <div id="discussion" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Discussion</h1>
-<p>Overall, the results are mixed. Though the soil moisture landcover layer appears to improve models for the majority of species, the gains in model fit are marginal. In addition, species with decreases in model performance often experienced larger declines than those with increasing model fit. We also did not observe large changes in the discrimination ability of models across the landcover layers. We might be able to resolve some of these issues by improving or modeling framework, but those improvements are not guaranteed.</p>
-<p>Another option to use other data to augment and refine the existing complex soil polygon layer. Eric and Jen identified soil layers available through Google Earth Engine that we could also explore. They are raster-based layers (250m) and have provincial coverage, but they might have similar issues to our current soils layer. The soil textures class layer has similar categories to our current soils layer. Therefore, this layer could be used to refine the classification of complex polygons (e.g., multiple soil classes for a single polygon). In addition, we have a small number of “unknown” soils in our current layer (9 sites) which this new layer could help classify.</p>
+<p>Overall, the results of our model exploration are mixed. Though the soil moisture land cover layer appears to improve models for the majority of species, the gains in model fit are marginal. In addition, species with decreases in model performance often experienced larger declines than those with increasing model fit. We also did not observe large changes in the discrimination ability of models across the land cover layers. We might be able to resolve some of these issues by improving or modeling framework, but those improvements are not guaranteed.</p>
+<p>Another option for imroving the models is to use other data to augment and refine the existing complex soil polygon layer. Our geospatial experts identified soil layers available through Google Earth Engine that we could explore. They are raster-based layers (250m) and have provincial coverage, but they might have similar issues to our current soils layer. The soil textures class layer has similar categories to our current soils layer. Therefore, this layer could be used to refine the classification of complex polygons (e.g., multiple soil classes for a single polygon). In addition, we have a small number of “unknown” soils in our current layer (9 sites) which this new layer could help classify.</p>
 <div id="possible-path-forward" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Possible path forward</h2>
 <ol style="list-style-type: decimal">
-<li>Accept the flaws in the alternative landcover layers, choose one, and move forward with creating the final modeling framework.</li>
+<li>Accept the flaws in the alternative land cover layers, choose one, and move forward with creating the final modeling framework.</li>
 <li>Information like moisture potential is important for many species, and we could include this information in the space/climate section of our current soil-based models.</li>
 <li>Explore the Google Earth Engine layers and see if they can be used to improve our current soils layer information (particularly at ABMI sites)
 (<a href="https://www.openlandmap.org/#/?base=Stamen%20(OpenStreetMap)&amp;center=54.7834,-110.1490&amp;zoom=5.737560184630052&amp;opacity=40&amp;layer=sol_texture.class_usda.tt_m&amp;depth=0" class="uri">https://www.openlandmap.org/#/?base=Stamen%20(OpenStreetMap)&amp;center=54.7834,-110.1490&amp;zoom=5.737560184630052&amp;opacity=40&amp;layer=sol_texture.class_usda.tt_m&amp;depth=0</a>).
-a. Upon brief inspection the GEE layers seem promising for updating/refining our soil layer.</li>
+<ul>
+<li>Upon brief inspection the GEE layers seem promising for updating/refining our soil layer.</li>
+</ul></li>
 <li>Continue with a literature review to find an alternative layer that works across species groups.
-a. New GIS layers are constantly being developed. Therefore, we could perform another literature review to find a suitable replacement layer. (e.g., <a href="https://adaptwest.databasin.org/pages/adaptwest-landfacets/" class="uri">https://adaptwest.databasin.org/pages/adaptwest-landfacets/</a></li>
-<li>Discuss what we want the landcover layer in the south to capture and how we would expect it to relative to species. (what’s the limitation in using the broad shrub/herb/wetland classes in south and combine with south)</li>
+<ul>
+<li>New GIS layers are constantly being developed. Therefore, we could perform another literature review to find a suitable replacement layer. (e.g., <a href="https://adaptwest.databasin.org/pages/adaptwest-landfacets/" class="uri">https://adaptwest.databasin.org/pages/adaptwest-landfacets/</a></li>
+</ul></li>
+<li>Discuss what we want the land cover layer in the south to capture and how we would expect it to relative to species.</li>
 </ol>
 <p>Currently, we will not be moving forward with the land facet layer and will be exploring alternative layers as resources permit.</p>
 
