@@ -1,7 +1,7 @@
 #
 # Title: Site summaries for both soil and land facet layers
 # Created: June 12th, 2019
-# Last Updated: November 8th, 2021
+# Last Updated: March 24th, 2022
 # Author: Brandon Allen
 # Objectives: Create site and quadrant level summaries of the soil and land facet layers
 # Keywords: Initialization, Exploring layer, Long form, Site proportions, Kgrid proportions, Occurrences
@@ -240,6 +240,8 @@ png(filename = "results/figures/land-facet-soil-solar-site-distribution_2021-10-
 
 ggplot(data = simplified.soil) +
         geom_bar(position="dodge", stat="identity", aes(x = Soil, y = Area, fill = Solar)) +
+        scale_color_manual(values = c("#62929a", "#ffbb44", "#ee8577")) +
+        scale_fill_manual(values = c("#62929a", "#ffbb44", "#ee8577")) +
         xlab("Soil") +
         ylab("Equivalent Quadrants") + 
         theme_light()
@@ -289,6 +291,8 @@ png(filename = "results/figures/land-facet-soil-wetness-site-distribution_2021-1
 
 ggplot(data = simplified.soil) +
         geom_bar(position="dodge", stat="identity", aes(x = Soil, y = Area, fill = Wetness)) +
+        scale_color_manual(values = c("#ee8577", "#ffbb44", "#62929a")) +
+        scale_fill_manual(values = c("#ee8577", "#ffbb44", "#62929a")) +
         xlab("Soil") +
         ylab("Equivalent Quadrants") + 
         theme_light()
