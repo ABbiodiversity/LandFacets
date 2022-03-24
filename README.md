@@ -11,7 +11,7 @@ We would like to acknowledge that this work would not be possible without the de
 
 ## Suggested citation
 
-Alberta Biodiversity Monitoring Institute. 2022. Exploration of soil-based species distribution models. Alberta Biodiversity Monitoring Institute, Alberta, Canada. (https://beallen.github.io/LandFacets/) 
+Alberta Biodiversity Monitoring Institute. 2022. Land facets versus soil composition: how choice of land cover layers impacts species distribution models. Alberta Biodiversity Monitoring Institute, Alberta, Canada. (https://abbiodiversity.github.io/LandFacets/) 
 
 ## Contact
 

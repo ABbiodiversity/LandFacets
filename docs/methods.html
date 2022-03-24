@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Methods | Exploration of soil-based species distribution models</title>
+  <title>2 Methods | Land facets versus soil composition: how choice of land cover layers impacts species distribution models</title>
   <meta name="description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Methods | Exploration of soil-based species distribution models" />
+  <meta property="og:title" content="2 Methods | Land facets versus soil composition: how choice of land cover layers impacts species distribution models" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Methods | Exploration of soil-based species distribution models" />
+  <meta name="twitter:title" content="2 Methods | Land facets versus soil composition: how choice of land cover layers impacts species distribution models" />
   
   <meta name="twitter:description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Brandon Allen and Ermias Azeria" />
 
 
-<meta name="date" content="2022-03-02" />
+<meta name="date" content="2022-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -105,7 +105,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Exploration of soil-based species distribution models</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Land facets versus soil composition: how choice of land cover layers impacts species distribution models</a>
           </h1>
         </div>
 
@@ -115,29 +115,29 @@
             <section class="normal" id="section-">
 <div id="methods" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Methods</h1>
-<p>As a potential alternative to the soils layer, we explored Scott Nielsen’s “Land facets of Alberta” for modelling species-habitat relationships. This layer uses information on solar radiation, terrain wetness, and provincial soil and geological data to classify unique land facets. Using this layer, as well as the sub-layers used to create it, we explored three alternative land cover layers:</p>
-<p>First, we used the composite classification system designed by Scott (<strong>land facet model</strong>). This layer is composed of 16 categories, 10 of which have been sampled at ABMI sites within the southern analysis region. The majority (~85%, and additional 4.5% being water) of our surveyed sites fall within the flat dry, flat mesic, and flat wet categories (i.e., the sites reflect heterogeneity along wetness gradient).</p>
+<p>As a potential alternative to the current ABMI soils layer, we explored the Land facets of Alberta layer (<a href="https://ace-lab.ca/atlas.php?atlas=5" class="uri">https://ace-lab.ca/atlas.php?atlas=5</a>) for modelling species-habitat relationships. This layer was developed by the Applied Conservation Ecology Lab (<a href="https://ace-lab.ca/" class="uri">https://ace-lab.ca/</a>) and uses information on solar radiation, terrain wetness, and provincial soil and geological data to classify unique land facets. Using this layer, as well as the sub-layers used to create it, we explored three alternative land cover layers:</p>
+<p><strong>Land facet model</strong> - This layer is composed of 16 categories, 10 of which have been sampled at ABMI sites within the southern analysis region (i.e., Grassland and Parkland natural regions). The majority (~85%, and additional 4.5% being water) of our surveyed sites fall within the flat dry, flat mesic, and flat wet categories (i.e., the sites reflect heterogeneity along wetness gradient).</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/methods/land-facet-site-distribution_2021-10-15.png" style="width:80.0%" alt="" />
 <p class="caption">The number of equivalent quadrants surveyed for the 9 landcover types and water class defined in the land facet layer.</p>
 </div>
 </center>
-<p>The second alternative layer was the terrain sub-model (<strong>terrain model</strong>). This is a simplified version of the land facet model where both the saline and dunes categories have been removed. By removing these two categories, we are able to use land facet classes which are derived from a consistent source (solar radiation and terrain wetness). The current sampling effort of these categories at ABMI sites is dominated by the flat dry, flat mesic, and flat wet categories.</p>
+<p><strong>Terrain model</strong> - This is a simplified version of the <strong>land facet model</strong> where both the saline and dunes categories have been removed. By removing these two categories, we are able to use land facet classes which are derived from a consistent source (solar radiation and terrain wetness) and not rely on on alternative sources. The current sampling effort of these categories at ABMI sites is dominated by the flat dry, flat mesic, and flat wet categories.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/methods/terrain-water-site-distribution_2021-10-15.png" style="width:80.0%" alt="" />
 <p class="caption">The number of equivalent quadrants surveyed for the 7 terrain and water classes defined in the terrain layer.</p>
 </div>
 </center>
-<p>The last layer we investigated was an intersection between the current ABMI soil layer with the classifications from the <strong>Terrain wetness</strong> sub-layer (dry, mesic, wet; soil moisture model). This allows for large polygons of a single soil class to be subdivided into more refined moisture regimes. However, this intersection also results in 21 habitat classes which we may be unable to successfully model. Due to the low sample size for the thin break along wetness category, we combined it into a single habitat class for a total of 19 habitat classes.</p>
+<p><strong>Terrain wetness</strong> - This layer represents an intersection between the current ABMI soil layer with the classifications from the terrain wetness sub-layer (dry, mesic, wet; soil moisture model). This allows for large polygons of a single soil class to be subdivided into more refined moisture regimes. However, this intersection also results in 21 habitat classes. Due to the low sample size for the thin break along wetness category, we combined it into a single habitat class for a total of 19 habitat classes.</p>
 <center>
 <div class="figure">
 <img src="LandFacets_files/figures-html/methods/land-facet-soil-wetness-site-distribution_2021-10-15.png" style="width:80.0%" alt="" />
-<p class="caption">The number of equivalent quadrants surveyed for the 8 soil and three moisture-based classes in the soil moisture layer.</p>
+<p class="caption">The number of equivalent quadrants surveyed for the 7 soil and three moisture-based classes in the soil moisture layer.</p>
 </div>
 </center>
-<p>Using each land cover layer, we created SDMs for bryophytes, lichens, mites, and vascular plants. We only created models for species which currently have soil models that have been approved for publication on the ABMI Biodiversity Browser. Initially we modeled each species using only the most complex model (all land cover &amp; all footprint types). However, we consistently encountered convergence issues. To address this issue, we created a set of four models representing the most complex and simplest possible model sets (Table 1). This approach is not representative of our final model sets (i.e., multiple nested models), but should provide a general understanding on the benefits of alternative land cover layers. If multiple models converged, coefficients were weighted using an inverse weighted variance approach.</p>
+<p>Using each land cover layer, we created SDMs for bryophytes, lichens, mites, and vascular plants. We only created models for species which currently have soil models that have been approved for publication on the ABMI Biodiversity Browser. Initially we modeled each species using only the most complex model (all land cover &amp; all footprint types). However, we consistently encountered convergence issues. To address this issue, we created a set of four models representing the most complex and simplest possible model sets (Table 1). This approach is not representative of our final modeling framework (i.e., multiple nested models), but should provide a general understanding on the benefits of alternative land cover layers. If multiple models converged, coefficients were weighted using an inverse weighted variance approach.</p>
 <table class="kable_wrapper lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:models">Table 2.1: </span>Broad definitions of candidate models.

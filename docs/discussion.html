@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Discussion | Exploration of soil-based species distribution models</title>
+  <title>4 Discussion | Land facets versus soil composition: how choice of land cover layers impacts species distribution models</title>
   <meta name="description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Discussion | Exploration of soil-based species distribution models" />
+  <meta property="og:title" content="4 Discussion | Land facets versus soil composition: how choice of land cover layers impacts species distribution models" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Discussion | Exploration of soil-based species distribution models" />
+  <meta name="twitter:title" content="4 Discussion | Land facets versus soil composition: how choice of land cover layers impacts species distribution models" />
   
   <meta name="twitter:description" content="Technical documentation describing exploration of the ABMI soil-based species models." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Brandon Allen and Ermias Azeria" />
 
 
-<meta name="date" content="2022-03-02" />
+<meta name="date" content="2022-03-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -105,7 +105,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Exploration of soil-based species distribution models</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Land facets versus soil composition: how choice of land cover layers impacts species distribution models</a>
           </h1>
         </div>
 
@@ -115,8 +115,8 @@
             <section class="normal" id="section-">
 <div id="discussion" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Discussion</h1>
-<p>Overall, the results of our model exploration are mixed. Though the soil moisture land cover layer appears to improve models for the majority of species, the gains in model fit are marginal. In addition, species with decreases in model performance often experienced larger declines than those with increasing model fit. We also did not observe large changes in the discrimination ability of models across the land cover layers. We might be able to resolve some of these issues by improving or modeling framework, but those improvements are not guaranteed.</p>
-<p>Another option for imroving the models is to use other data to augment and refine the existing complex soil polygon layer. Our geospatial experts identified soil layers available through Google Earth Engine that we could explore. They are raster-based layers (250m) and have provincial coverage, but they might have similar issues to our current soils layer. The soil textures class layer has similar categories to our current soils layer. Therefore, this layer could be used to refine the classification of complex polygons (e.g., multiple soil classes for a single polygon). In addition, we have a small number of “unknown” soils in our current layer (9 sites) which this new layer could help classify.</p>
+<p>Overall, the results of our exploration of landcover layers was mixed. Though the <strong>Terrain wetness</strong> layer appears to improve models for the majority of species, the gains in model fit are marginal. In addition, species with decreases in model performance often experienced larger declines than those with increasing model fit. We also did not observe large changes in the discrimination ability of models across the land cover layers. We might be able to resolve some of these issues by improving our modeling framework, but those improvements are not guaranteed.</p>
+<p>Another option for improving the models is to use other data to augment and refine the existing complex soil polygon layer. Our geospatial experts identified soil layers available through Google Earth Engine that we could explore. They are raster-based layers (250m) and have provincial coverage, but they might have similar issues to our current soils layer. The soil textures class layer has similar categories to our current soils layer. Therefore, this layer could be used to refine the classification of complex polygons (e.g., multiple soil classes for a single polygon). In addition, we have a small number of “unknown” soils in our current layer (9 sites) which this new layer could help classify.</p>
 <div id="possible-path-forward" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Possible path forward</h2>
 <ol style="list-style-type: decimal">
